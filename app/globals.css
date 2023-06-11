@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../public/fonts/Aeonik-Black.woff') format('woff'),
+      url('../public/fonts/Aeonik-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../public/fonts/Aeonik-Bold.woff') format('woff'),
+      url('../public/fonts/Aeonik-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url('../public/fonts/Aeonik-Medium.woff') format('woff'),
+      url('../public/fonts/Aeonik-Medium.woff') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../public/fonts/GeneralSans-Regular.woff') format('woff'),
+      url('../public/fonts/GeneralSans-Regular.woff') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../public/fonts/GeneralSans-Medium.woff') format('woff'),
+      url('../public/fonts/GeneralSans-Medium.woff') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('../public/fonts/GeneralSans-Semibold.woff') format('woff'),
+      url('../public/fonts/GeneralSans-Semibold.woff') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

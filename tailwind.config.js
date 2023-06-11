@@ -16,6 +16,10 @@ module.exports = {
         "inactive-white": "#B1B1B1",
         "body-white": "#CECECE",
       },
+      fontFamily: {
+        aeonik: ["Aeonik", "sans-serif"],
+        "general-sans": ["GeneralSans", "sans-serif"],
+      },
     },
   },
   plugins: [],
