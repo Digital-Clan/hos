@@ -14,6 +14,7 @@ export default function Page() {
       <h1 className="text-primary font-aeonik text-4xl font-medium mb-2">
         Hour of Solution Website
       </h1>
+      
 
       <div className="my-10" />
 
