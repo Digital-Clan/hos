@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
 @font-face {
   font-family: 'Aeonik';
   src: url('../public/fonts/Aeonik-Black.woff') format('woff'),
@@ -54,4 +55,87 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
+}
+
+/* Typography */
+.text-smallest {
+  font-size: 12px;
+  line-height: 19px;
+}
+
+.text-detail {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.text-body {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.text-button {
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.text-heading-4 {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.text-heading-3 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.text-heading-2 {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+.text-heading-1 {
+  font-size: 26px;
+  line-height: 32px;
+}
+
+@media (min-width: 1024px) {
+  .text-smallest {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .text-detail {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .text-body {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  .text-button {
+    font-size: 23px;
+    line-height: 37px;
+  }
+  
+  .text-heading-4 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  
+  .text-heading-3 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  
+  .text-heading-2 {
+    font-size: 40px;
+    line-height: 53px;
+  }
+  
+  .text-heading-1 {
+    font-size: 56px;
+    line-height: 65px;
+  }
 }
