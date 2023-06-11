@@ -20,6 +20,9 @@ module.exports = {
         aeonik: ["Aeonik", "sans-serif"],
         "general-sans": ["GeneralSans", "sans-serif"],
       },
+      borderRadius: {
+        btn: "40px",
+      },
     },
   },
   plugins: [],
