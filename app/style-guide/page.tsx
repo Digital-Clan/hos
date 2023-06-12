@@ -32,28 +32,28 @@ export default function Page() {
 
       <div className="flex flex-col space-y-3">
         <p className="text-smallest text-primary font-aeonik">
-          I am here testing the shit - Smallest Text
+          I am here testing the stuff - Smallest Text
         </p>
         <p className="text-detail text-primary font-aeonik">
-          I am here testing the shit - Detail Text
+          I am here testing the stuff - Detail Text
         </p>
         <p className="text-body text-primary font-aeonik">
-          I am here testing the shit - Body Text
+          I am here testing the stuff - Body Text
         </p>
         <button className="text-button text-white bg-primary font-aeonik px-8 py-2 rounded-3xl">
-          I am here testing the shit - Button Text
+          I am here testing the stuff - Button Text
         </button>
         <p className="text-heading-4 text-primary font-aeonik">
-          I am here testing the shit - Heading 4 Text
+          I am here testing the stuff - Heading 4 Text
         </p>
         <p className="text-heading-3 text-primary font-aeonik">
-          I am here testing the shit - Heading 2 Text
+          I am here testing the stuff - Heading 2 Text
         </p>
         <p className="text-heading-2 text-primary font-aeonik">
-          I am here testing the shit - Heading 2 Text
+          I am here testing the stuff - Heading 2 Text
         </p>
         <p className="text-heading-1 text-primary font-aeonik">
-          I am here testing the shit - Heading 1 Text
+          I am here testing the stuff - Heading 1 Text
         </p>
       </div>
     </div>
