@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
-import { VideoIcon, TimeIcon, CalendarIcon, LocationIcon } from "@/app/icons";
+import Link from "next/link";
+import { VideoIcon, TimeIcon, CalendarIcon, LocationIcon, ArrowIcon } from "@/app/icons";
 
 export default function Events() {
   const events = [
@@ -101,6 +102,11 @@ export default function Events() {
               </div>
             </div>
           ))}
+
+          <Link href="/events" className="flex items-center justify-center space-x-3 button-link">
+            <span className="font-general-sans font-medium text-button">View all Events</span>
+            <ArrowIcon />
+          </Link>
         </div>
       )}
     </section>

@@ -333,6 +333,14 @@
   background-image: linear-gradient(to right, #b94d4d, #b94d4d 50%, #121212 50%);
 }
 
+.button-link svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-link:hover svg {
+  transform: translateX(5px);
+}
+
 /* Home */
 .home-hero {
   background-image: url('https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png');

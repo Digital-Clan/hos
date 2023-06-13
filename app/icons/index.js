@@ -5,3 +5,4 @@ export { default as VideoIcon } from "./Video";
 export { default as TimeIcon } from "./Time";
 export { default as CalendarIcon } from "./Calendar";
 export { default as LocationIcon } from "./Location";
+export { default as ArrowIcon } from "./Arrow";
