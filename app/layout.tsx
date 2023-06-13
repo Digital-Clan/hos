@@ -22,7 +22,7 @@ export default function RootLayout({
             <div className="flex items-center space-x-5">
               <Link href="/" className="bg-white rounded-[56px] py-2 px-4 flex items-center space-x-3">
                 <span className="text-black text-[15px]">Donate</span>
-                <span>
+                <span className="heart-animation">
                   <HeartIcon />
                 </span>
               </Link>

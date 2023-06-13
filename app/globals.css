@@ -303,6 +303,14 @@
   transition-timing-function: linear;
 }
 
+.heart-animation {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	10% {transform: scale(1.5)}
+}
+
 /* Link */
 .link {
   color: #fff;
