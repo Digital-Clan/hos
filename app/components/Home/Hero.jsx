@@ -8,7 +8,7 @@ export default function Hero() {
         <h1 className="text-heading-1 mb-5 font-black">
           Welcome to <br /> Hour of Solution
         </h1>
-        <p className="font-general-sans text-body mb-8">
+        <p className="font-general-sans text-body-1 font-medium mb-8">
           We are an inter-denominational group of God&apos;s people who believe
           in the saving power of Jesus Christ. Our mission is to raise people
           who are part of God&apos;s End Time Army.
