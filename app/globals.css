@@ -396,6 +396,13 @@
   background-size: cover;  
 }
 
+@media (min-width: 768px) {
+  .home-memoriam {
+    background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686698208/hos/memoriam-img-pc_aaz5j8.png");
+    background-size: cover;
+  }
+}
+
 .trumpet-left {
   background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686679407/hos/left-trumpet_ulteif.png");
   background-size: cover;
