@@ -155,14 +155,24 @@
   height: 100%;
 }
 
-.button--white {
-  overflow: hidden;
-  color: #304098;
-  background: #fff;
+.button--white,
+.button--red {
   font-weight: bold;
+  overflow: hidden;
 }
 
-.button--white span {
+.button--white {
+  color: #304098;
+  background: #fff;
+}
+
+.button--red {
+  color: #fff;
+  background: #983030;
+}
+
+.button--white span,
+.button--red span {
   display: block;
   position: relative;
   z-index: 10;
@@ -170,6 +180,10 @@
 
 .button--white:hover span {
   animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
+}
+
+.button--red:hover span {
+  animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEndRed 0.3s forwards 0.3s;
 }
 
 @keyframes MoveScaleUpInitial {
@@ -191,10 +205,22 @@
   }
 }
 
-.button--white::before {
+@keyframes MoveScaleUpEndRed {
+  from {
+    transform: translate3d(0, 100%, 0) scale3d(1, 2, 1);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+    color: #b94d4d;
+  }
+}
+
+.button--white::before,
+.button--red::before {
   overflow: hidden;
   content: "";
-  background: #304098;
   width: 120%;
   height: 0;
   padding-bottom: 120%;
@@ -204,20 +230,38 @@
   transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
 }
 
-.button--white:hover::before {
+.button--white::before {
+  background: #304098;
+}
+
+.button--red::before {
+  background: #fff;
+}
+
+.button--white:hover::before,
+.button--red:hover::before {
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 }
 
-.button--white::after {
+.button--white::after,
+.button--red::after {
   overflow: hidden;
   content: "";
-  background: #304098;
   transform: translate3d(0, -100%, 0);
   transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 }
 
-.button--white:hover::after {
+.button--white::after {
+  background: #304098;
+}
+
+.button--red::after {
+  background: #fff;
+}
+
+.button--white:hover::after,
+.button--red:hover::after {
   transform: translate3d(0, 0, 0);
   transition-duration: 0.05s;
   transition-delay: 0.5s;
@@ -237,4 +281,11 @@
 
 .link:hover {
   background-position: 0;
+}
+
+/* Home */
+.home-hero {
+  background-image: url('https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png');
+  background-size: cover;
+  background-position: center right;
 }
