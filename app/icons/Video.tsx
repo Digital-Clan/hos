@@ -1,4 +1,8 @@
-export default function VideoIcon({ fillColor }) {
+interface ComponentProps {
+  fillColor: string;
+}
+
+export default function VideoIcon({ fillColor }: ComponentProps) {
   return (
     <svg
       width="25"
