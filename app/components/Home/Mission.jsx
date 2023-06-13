@@ -1,4 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Mission() {
   return (
@@ -23,6 +25,31 @@ export default function Mission() {
               </span>
             </button>
           </Link>
+        </div>
+      </div>
+      <div className="flex flex-col space-y-5 mt-8">
+        <div className="flex space-x-5">
+          <div>
+            <img
+              className=""
+              src="https://res.cloudinary.com/dljsalifp/image/upload/v1686663719/hos/mission-img-1-mobile_mbcaul.png"
+              alt="gathering of church members"
+            />
+          </div>
+          <div>
+            <img
+              className=""
+              src="https://res.cloudinary.com/dljsalifp/image/upload/v1686663350/hos/mission-img-2-mobile_sdmrqr.png"
+              alt="gathering of church members"
+            />
+          </div>
+        </div>
+        <div className="w-full">
+          <img
+            className=""
+            src="https://res.cloudinary.com/dljsalifp/image/upload/v1686663356/hos/mission-img-3-mobile_hpuumc.png"
+            alt="gathering of church members"
+          />
         </div>
       </div>
     </section>

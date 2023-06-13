@@ -304,7 +304,7 @@
 }
 
 .heart-animation {
-  animation: pulse 1s infinite;
+  animation: pulse 1.2s infinite;
 }
 
 @keyframes pulse {
