@@ -12,7 +12,7 @@ module.exports = {
         primary: "#304098",
         secondary: "#983030",
         black: "#121212",
-        body: "#77777",
+        body: "#777777",
         help: "#909090",
         "inactive-white": "#B1B1B1",
         "body-white": "#CECECE",
