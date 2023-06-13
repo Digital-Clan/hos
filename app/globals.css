@@ -313,8 +313,6 @@
 
 /* Link */
 .link {
-  color: #fff;
-  background-image: linear-gradient(to right, #b94d4d, #b94d4d 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: 100%;
   -webkit-background-clip: text;
@@ -324,6 +322,15 @@
 
 .link:hover {
   background-position: 0;
+}
+
+.white-link {
+  color: #fff;
+  background-image: linear-gradient(to right, #b94d4d, #b94d4d 50%, #fff 50%);
+}
+
+.black-link {
+  background-image: linear-gradient(to right, #b94d4d, #b94d4d 50%, #121212 50%);
 }
 
 /* Home */
@@ -336,4 +343,15 @@
 .home-memoriam {
   background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686664429/hos/memoriam-img-mobile_sasva8.png");
   background-size: cover;  
+}
+
+.trumpet-left {
+  background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686679407/hos/left-trumpet_ulteif.png");
+  background-size: cover;
+}
+
+.trumpet-right {
+  background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686679407/hos/right-trumpet_rvgly3.png");
+  background-size: cover;
+  background-position: center;
 }

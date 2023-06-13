@@ -1,4 +1,4 @@
-import { Hero, Mission, Memoriam } from '@/app/components/Home'
+import { Hero, Mission, Memoriam, Events } from '@/app/components/Home'
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Hero />
       <Mission />
       <Memoriam />
+      <Events />
     </main>
   )
 }
