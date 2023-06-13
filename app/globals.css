@@ -57,6 +57,11 @@
   font-display: swap;
 }
 
+.container-block {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+
 /* Typography */
 .text-smallest {
   font-size: 12px;
@@ -98,8 +103,50 @@
   line-height: 32px;
 }
 
+@media (min-width: 768px) {
+  /* .text-smallest {
+    font-size: 14px;
+    line-height: 22px;
+  } */
+
+  /* .text-detail {
+    font-size: 20px;
+    line-height: 32px;
+  } */
+
+  /* .text-body {
+    font-size: 24px;
+    line-height: 38px;
+  } */
+
+  /* .text-button {
+    font-size: 23px;
+    line-height: 37px;
+  } */
+  
+  /* .text-heading-4 {
+    font-size: 18px;
+    line-height: 24px;
+  } */
+  
+  /* .text-heading-3 {
+    font-size: 32px;
+    line-height: 42px;
+  } */
+  
+  /* .text-heading-2 {
+    font-size: 40px;
+    line-height: 53px;
+  } */
+  
+  /* .text-heading-1 {
+    font-size: 56px;
+    line-height: 65px;
+  } */
+}
+
 @media (min-width: 1024px) {
-  .text-smallest {
+  /* .text-smallest {
     font-size: 16px;
     line-height: 26px;
   }
@@ -137,7 +184,7 @@
   .text-heading-1 {
     font-size: 56px;
     line-height: 65px;
-  }
+  } */
 }
 
 /* Animations */
