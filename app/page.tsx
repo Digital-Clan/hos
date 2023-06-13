@@ -1,10 +1,11 @@
 import Image from 'next/image'
-import { Hero } from '@/app/components/Home'
+import { Hero, Mission } from '@/app/components/Home'
 
 export default function Home() {
   return (
     <main>
       <Hero />
+      <Mission />
     </main>
   )
 }
