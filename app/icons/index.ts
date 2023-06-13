@@ -6,3 +6,7 @@ export { default as TimeIcon } from "./Time";
 export { default as CalendarIcon } from "./Calendar";
 export { default as LocationIcon } from "./Location";
 export { default as ArrowIcon } from "./Arrow";
+export { default as TwitterIcon } from "./Twitter";
+export { default as InstagramIcon } from "./Instagram";
+export { default as FacebookIcon } from "./Facebook";
+export { default as YoutubeIcon } from "./Youtube";
