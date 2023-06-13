@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -17,7 +18,7 @@ module.exports = {
         "body-white": "#CECECE",
       },
       fontFamily: {
-        aeonik: ["Aeonik", "sans-serif"],
+        sans: ["Aeonik", defaultTheme.fontFamily.sans],
         "general-sans": ["GeneralSans", "sans-serif"],
       },
       borderRadius: {
