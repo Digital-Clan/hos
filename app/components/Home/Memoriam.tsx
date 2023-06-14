@@ -5,7 +5,7 @@ export default function Memoriam() {
     <section className="px-5 pb-10 pt-28 home-memoriam text-white lg:pb-20">
       <div className="container-block lg:flex lg:justify-end">
         <div className="lg:w-[560px]">
-          <span className="block font-general-sans text-detail lg:text-[26px] lg:leading-[31px] lg:font-semibold lg:text-[#C4C4C4]">
+          <span className="block font-general-sans text-detail lg:text-sm-1x lg:font-semibold lg:text-[#C4C4C4]">
             IN MEMORIAM
           </span>
           <h2 className="my-2 max-w-[240px] text-heading-2 font-bold md:text-2xl lg:text-[40px] lg:leading-[53px] lg:mb-6 lg:max-w-full">
@@ -20,8 +20,8 @@ export default function Memoriam() {
           </p>
           <div className="lg:flex lg:justify-center lg:items-center">
             <Link href="/">
-              <button className="w-[189px] button button--red border-none outline-none m-0 py-3 px-8 font-medium font-aeonik relative inline-block overflow-hidden rounded-btn lg:px-10 lg:py-6 lg:w-auto lg:font-semibold">
-                <span className="uppercase text-button text-white font-medium font-general-sans lg:text-[23px]">
+              <button className="button button--red border-none outline-none m-0 py-3 px-16 font-medium font-aeonik relative inline-block overflow-hidden rounded-btn lg:px-12 lg:py-6 lg:w-auto lg:font-semibold">
+                <span className="uppercase text-button text-white font-medium font-general-sans lg:text-btn-1x lg:font-semibold">
                   Learn More
                 </span>
               </button>
