@@ -1,7 +1,10 @@
+import { Hero, Form } from "../components/Donate"
+
 export default function Donate() {
   return (
     <main>
-      <h1>Donate</h1>
+      <Hero />
+      <Form />
     </main>
   )
 }
