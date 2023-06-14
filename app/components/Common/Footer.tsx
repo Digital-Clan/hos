@@ -45,17 +45,17 @@ export default function Footer() {
     <footer className="py-7 bg-primary text-white">
       <div className="container-block lg:px-8">
         <div className="flex flex-col space-y-10 lg:flex-row lg:space-y-0 lg:justify-between lg:border-b-2 lg:border-[#FEFEFE] lg:pb-5">
-          <div className="grid grid-cols-2 gap-x-10 gap-y-5 px-5 lg:flex lg:items-center lg:px-0">
+          <ul className="grid grid-cols-2 gap-x-10 gap-y-5 px-5 lg:flex lg:items-center lg:px-0">
             {links.map((link) => (
               <Link
                 href={link.href}
                 key={link.id}
-                className="link white-link text-center font-general-sans text-heading-4 font-bold lg:text-[22px]"
+                className="link white-link text-center font-general-sans text-heading-4 font-bold lg:text-[22px] lg:leading-[34px]"
               >
                 {link.name}
               </Link>
             ))}
-          </div>
+          </ul>
 
           <div className="flex space-x-10 justify-center items-center p-5 border-y-2 border-[#435098] lg:border-none lg:px-0 lg:space-x-8">
             {socialLinks.map((link) => (
