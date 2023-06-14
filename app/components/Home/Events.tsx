@@ -60,7 +60,7 @@ export default function Events() {
               {events.map((event) => (
                 <div
                   key={event.id}
-                  className="w-full flex flex-col items-stretch lg:flex-row-reverse"
+                  className="transition-transform duration-300 ease-in-out hover:translate-y-5 w-full flex flex-col items-stretch lg:flex-row-reverse"
                 >
                   <div className="w-full h-[240px] lg:w-[55%] lg:h-auto">
                     <img
