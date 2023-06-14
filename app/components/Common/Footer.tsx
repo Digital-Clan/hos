@@ -42,8 +42,8 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="py-7 bg-primary text-white">
-      <div className="container-block lg:px-8">
+    <footer className="py-7 bg-primary text-white lg:px-8">
+      <div className="container-block">
         <div className="flex flex-col space-y-10 lg:flex-row lg:space-y-0 lg:justify-between lg:border-b-2 lg:border-[#FEFEFE] lg:pb-5">
           <ul className="grid grid-cols-2 gap-x-10 gap-y-5 px-5 lg:flex lg:items-center lg:px-0">
             {links.map((link) => (

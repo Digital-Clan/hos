@@ -13,7 +13,7 @@ export default function Nav() {
   return (
     <nav className="bg-primary text-white p-5 lg:py-6">
       <div className="container-block flex items-center justify-between">
-        <span className="text-xl lg:text-3xl">Logo ipsum</span>
+        <Link href="/" className="text-xl lg:text-3xl">Logo ipsum</Link>
 
         <ul className="hidden lg:flex lg:space-x-12">
           {links.map((link) => (
@@ -25,7 +25,7 @@ export default function Nav() {
 
         <div className="flex items-center space-x-5">
           <Link
-            href="/"
+            href="/donate"
             className="bg-white rounded-[56px] py-2 px-4 flex items-center space-x-3 hover:scale-90 transition-transform duration-200 ease-in-out lg:px-10 lg:py-4"
           >
             <span className="text-black text-[15px] lg:text-btn-1x lg:font-semibold">
