@@ -1,5 +1,5 @@
 interface ComponentProps {
-  fillColor: string;
+  fillColor?: string;
 }
 
 export default function VideoIcon({ fillColor }: ComponentProps) {
