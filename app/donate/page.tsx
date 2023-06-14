@@ -1,4 +1,4 @@
-import { Hero, Form } from "../components/Donate"
+import { Hero, Form } from "../components/Donate";
 
 export default function Donate() {
   return (
@@ -6,5 +6,5 @@ export default function Donate() {
       <Hero />
       <Form />
     </main>
-  )
+  );
 }
