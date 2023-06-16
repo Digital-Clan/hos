@@ -18,25 +18,25 @@ export default function Footer() {
     {
       id: 1,
       name: "Twitter",
-      href: "https://twitter.com",
+      href: "https://twitter.com/HourofSolutions",
       icon: <TwitterIcon />,
     },
     {
       id: 2,
       name: "Instagram",
-      href: "https://instagram.com",
+      href: "https://www.instagram.com/hour_of_solution/",
       icon: <InstagramIcon />,
     },
     {
       id: 3,
       name: "Facebook",
-      href: "https://facebook.com",
+      href: "https://www.facebook.com/Hourofsolution/",
       icon: <FacebookIcon />,
     },
     {
       id: 4,
       name: "Youtube",
-      href: "https://youtube.com",
+      href: "https://youtube.com/@hourofsolutionuk",
       icon: <YoutubeIcon />,
     },
   ];
