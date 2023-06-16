@@ -10,3 +10,6 @@ export { default as TwitterIcon } from "./Twitter";
 export { default as InstagramIcon } from "./Instagram";
 export { default as FacebookIcon } from "./Facebook";
 export { default as YoutubeIcon } from "./Youtube";
+export { default as ShareIcon } from "./Share";
+export { default as ListenIcon } from "./Listen";
+export { default as DownloadIcon } from "./Download";
