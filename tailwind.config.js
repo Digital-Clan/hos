@@ -28,6 +28,7 @@ module.exports = {
         "btn-1x": ["23px", "20px"],
         "btn-2x": ["30px", "48px"],
         "sm-1x": ["26px", "31px"],
+        "para-1x": ["15px", "25px"],
       },
     },
   },

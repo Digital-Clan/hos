@@ -414,3 +414,16 @@
   background-size: cover;
   background-position: center;
 }
+
+/* Events */
+.events-hero {
+  background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686916798/hos/events-hero-mobile-bg_q2bhpn.png");
+  background-size: cover;
+  background-position: center left;
+}
+
+@media (min-width: 1024px) {
+  .events-hero {
+    background-image: url('https://res.cloudinary.com/dljsalifp/image/upload/v1686909635/hos/events-hero-bg_giheqn.png');
+  }
+}
