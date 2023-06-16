@@ -4,8 +4,8 @@ export default function Media() {
   return (
     <main>
       <Hero />
-      <VideoMessages />
-      {/* <AudioMessages /> */}
+      {/* <VideoMessages /> */}
+      <AudioMessages />
     </main>
   )
 }
