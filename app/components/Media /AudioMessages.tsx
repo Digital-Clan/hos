@@ -1,6 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { useState } from "react";
 import { ShareIcon, ListenIcon, DownloadIcon, CalendarIcon } from "@/app/icons";
+import ShareDialog from "./ShareDialog";
+
+export interface Message {
+  link: string;
+  title: string;
+  minister: string;
+}
 
 interface AudioMessageCardProps {
   item: {
@@ -11,17 +19,32 @@ interface AudioMessageCardProps {
     link: string;
     image: string;
   };
+  handleOpenDialog: (message: Message) => void;
 }
 
 const AudioMessageCard = ({
   item: { title, minister, date, link, image },
+  handleOpenDialog,
 }: AudioMessageCardProps) => {
   const handleDownload = () => {
     window.open(link, "_blank");
   };
 
+  const handleShareMessage = (
+    link: string,
+    title: string,
+    minister: string
+  ) => {
+    console.log(link, title, minister);
+    handleOpenDialog({
+      link,
+      title,
+      minister,
+    });
+  };
+
   return (
-    <div className="transition-transform duration-300 ease-in-out hover:translate-y-5 w-full flex flex-col items-stretch md:flex-row-reverse md:h-[250px] lg:h-[326px]">
+    <div className="w-full flex flex-col items-stretch md:flex-row-reverse md:h-[250px] lg:h-[326px]">
       <div className="w-full h-full md:w-[55%] md:h-auto">
         <img
           src={image}
@@ -46,7 +69,10 @@ const AudioMessageCard = ({
           </span>
         </div>
         <div className="flex items-center justify-between space-x-3">
-          <button className="flex items-center space-x-2">
+          <button
+            className="flex items-center space-x-2"
+            onClick={() => handleShareMessage(link, title, minister)}
+          >
             <ShareIcon />
             <span className="text-para-1x">Share</span>
           </button>
@@ -54,7 +80,10 @@ const AudioMessageCard = ({
             <ListenIcon />
             <span className="text-para-1x">Listen</span>
           </button>
-          <button className="flex items-center space-x-2" onClick={handleDownload}>
+          <button
+            className="flex items-center space-x-2"
+            onClick={handleDownload}
+          >
             <DownloadIcon />
             <span className="text-para-1x">Download</span>
           </button>
@@ -86,18 +115,46 @@ export default function AudioMessages() {
     },
   ];
 
+  const [isShareDialogOpen, setIsShareDialogOpen] = useState<boolean>(false);
+  const [currentMessage, setCurrentMessage] = useState<Message>({
+    link: "",
+    title: "",
+    minister: "",
+  });
+
+  const handleOpenDialog = (message: Message) => {
+    setIsShareDialogOpen(true);
+    setCurrentMessage(message);
+  };
+
+  const handleCloseDialog = () => {
+    setIsShareDialogOpen(false);
+  };
+
   return (
-    <section className="px-5 py-10">
-      <div className="container-block">
-        <h2 className="font-medium text-base leading-[20px] mb-5 text-help sm:text-lg md:text-xl lg:text-[32px] lg:mb-8">
-          Audio Messages
-        </h2>
-        <div className="mt-5 flex flex-col space-y-10">
-          {audioMessages.map((audioMessage) => (
-            <AudioMessageCard key={audioMessage.id} item={audioMessage} />
-          ))}
+    <>
+      <ShareDialog
+        isShareDialogOpen={isShareDialogOpen}
+        handleCloseDialog={handleCloseDialog}
+        message={currentMessage}
+      />
+
+      <section className="px-5 py-10">
+        <div className="container-block">
+          <h2 className="font-medium text-base leading-[20px] mb-5 text-help sm:text-lg md:text-xl lg:text-[32px] lg:mb-8">
+            Audio Messages
+          </h2>
+          <div className="mt-5 flex flex-col space-y-10">
+            {audioMessages.map((audioMessage) => (
+              <AudioMessageCard
+                key={audioMessage.id}
+                item={audioMessage}
+                handleOpenDialog={handleOpenDialog}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
