@@ -62,6 +62,7 @@ export default function Footer() {
               <Link
                 href={link.href}
                 key={link.id}
+                target="_blank"
                 className="text-heading-4 font-bold hover:-translate-y-2 transition duration-300 ease-in-out"
               >
                 {link.icon}
