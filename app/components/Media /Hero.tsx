@@ -1,0 +1,16 @@
+export default function Hero() {
+  return (
+    <header className="px-5 md:px-8 py-20 text-center media-hero text-white md:py-36 lg:text-left">
+      <div className="container-block">
+        <div className="w-[220px] mx-auto sm:w-2/3 lg:mx-0">
+          <h1 className="text-heading-1 mb-3 font-black md:text-4xl lg:text-5xl xl:text-[56px] xl:leading-[65px]">
+            Media
+          </h1>
+          <p className="font-general-sans para-1x text-body-white sm:text-base md:text-lg lg:text-2xl">
+            Tune in to the latest events at Hour of Solution
+          </p>
+        </div>
+      </div>
+    </header>
+  );
+}

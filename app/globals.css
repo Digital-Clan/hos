@@ -4,54 +4,54 @@
 
 /* Fonts */
 @font-face {
-  font-family: 'Aeonik';
-  src: url('../public/fonts/Aeonik-Black.woff') format('woff'),
-      url('../public/fonts/Aeonik-Black.woff2') format('woff2');
+  font-family: "Aeonik";
+  src: url("../public/fonts/Aeonik-Black.woff") format("woff"),
+    url("../public/fonts/Aeonik-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aeonik';
-  src: url('../public/fonts/Aeonik-Bold.woff') format('woff'),
-      url('../public/fonts/Aeonik-Bold.woff2') format('woff2');
+  font-family: "Aeonik";
+  src: url("../public/fonts/Aeonik-Bold.woff") format("woff"),
+    url("../public/fonts/Aeonik-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Aeonik';
-  src: url('../public/fonts/Aeonik-Medium.woff') format('woff'),
-      url('../public/fonts/Aeonik-Medium.woff') format('woff2');
+  font-family: "Aeonik";
+  src: url("../public/fonts/Aeonik-Medium.woff") format("woff"),
+    url("../public/fonts/Aeonik-Medium.woff") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GeneralSans';
-  src: url('../public/fonts/GeneralSans-Regular.woff') format('woff'),
-      url('../public/fonts/GeneralSans-Regular.woff') format('woff2');
+  font-family: "GeneralSans";
+  src: url("../public/fonts/GeneralSans-Regular.woff") format("woff"),
+    url("../public/fonts/GeneralSans-Regular.woff") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GeneralSans';
-  src: url('../public/fonts/GeneralSans-Medium.woff') format('woff'),
-      url('../public/fonts/GeneralSans-Medium.woff') format('woff2');
+  font-family: "GeneralSans";
+  src: url("../public/fonts/GeneralSans-Medium.woff") format("woff"),
+    url("../public/fonts/GeneralSans-Medium.woff") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'GeneralSans';
-  src: url('../public/fonts/GeneralSans-Semibold.woff') format('woff'),
-      url('../public/fonts/GeneralSans-Semibold.woff') format('woff2');
+  font-family: "GeneralSans";
+  src: url("../public/fonts/GeneralSans-Semibold.woff") format("woff"),
+    url("../public/fonts/GeneralSans-Semibold.woff") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -123,22 +123,22 @@
     font-size: 23px;
     line-height: 37px;
   } */
-  
+
   /* .text-heading-4 {
     font-size: 18px;
     line-height: 24px;
   } */
-  
+
   /* .text-heading-3 {
     font-size: 32px;
     line-height: 42px;
   } */
-  
+
   /* .text-heading-2 {
     font-size: 40px;
     line-height: 53px;
   } */
-  
+
   /* .text-heading-1 {
     font-size: 56px;
     line-height: 65px;
@@ -233,11 +233,13 @@
 }
 
 .button--red:hover span {
-  animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEndRed 0.3s forwards 0.3s;
+  animation: MoveScaleUpInitial 0.3s forwards,
+    MoveScaleUpEndRed 0.3s forwards 0.3s;
 }
 
 .button--blue:hover span {
-  animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEndBlue 0.3s forwards 0.3s;
+  animation: MoveScaleUpInitial 0.3s forwards,
+    MoveScaleUpEndBlue 0.3s forwards 0.3s;
 }
 
 @keyframes MoveScaleUpInitial {
@@ -351,7 +353,9 @@
 }
 
 @keyframes pulse {
-	10% {transform: scale(1.5)}
+  10% {
+    transform: scale(1.5);
+  }
 }
 
 /* Link */
@@ -373,7 +377,12 @@
 }
 
 .black-link {
-  background-image: linear-gradient(to right, #b94d4d, #b94d4d 50%, #121212 50%);
+  background-image: linear-gradient(
+    to right,
+    #b94d4d,
+    #b94d4d 50%,
+    #121212 50%
+  );
 }
 
 .button-link svg {
@@ -387,14 +396,14 @@
 /* Home */
 .home-hero,
 .donate-hero {
-  background-image: url('https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png');
+  background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png");
   background-size: cover;
   background-position: center right;
 }
 
 .home-memoriam {
   background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686664429/hos/memoriam-img-mobile_sasva8.png");
-  background-size: cover;  
+  background-size: cover;
 }
 
 @media (min-width: 768px) {
@@ -424,6 +433,19 @@
 
 @media (min-width: 1024px) {
   .events-hero {
-    background-image: url('https://res.cloudinary.com/dljsalifp/image/upload/v1686909635/hos/events-hero-bg_giheqn.png');
+    background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686909635/hos/events-hero-bg_giheqn.png");
+  }
+}
+
+/* Media */
+.media-hero {
+  background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686926800/hos/media-hero-mobile-bg_ztkmuv.png");
+  background-size: cover;
+  background-position: center left;
+}
+
+@media (min-width: 1024px) {
+  .events-hero {
+    background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686926807/hos/media-hero-bg_b7ludx.png");
   }
 }
