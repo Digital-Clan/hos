@@ -14,7 +14,7 @@ interface EventCardProps {
   date: string;
 }
 
-export default function EventsCard({
+export default function EventCard({
   event: {
     id,
     image,
@@ -33,19 +33,19 @@ export default function EventsCard({
   return (
     <div
       key={id}
-      className="transition-transform duration-300 ease-in-out hover:translate-y-5 w-full flex flex-col items-stretch lg:flex-row-reverse"
+      className="transition-transform duration-300 ease-in-out hover:translate-y-5 w-full flex flex-col items-stretch md:flex-row-reverse"
     >
-      <div className="w-full h-[240px] lg:w-[55%] lg:h-auto">
+      <div className="w-full h-full md:w-[55%] md:h-auto">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-fill lg:h-[450px] rounded-tr-[32px] rounded-tl-[32px] lg:rounded-tr-[48px] lg:rounded-tl-none lg:rounded-br-[48px]"
+          className="w-full h-full object-fill lg:h-[450px] rounded-tr-[32px] rounded-tl-[32px] md:rounded-tr-[48px] md:rounded-tl-none md:rounded-br-[48px] lg:rounded-tr-[48px] lg:rounded-br-[48px]"
         />
       </div>
       <div
         className={`p-5 
       ${liveEvent ? "bg-[#F2FDFF]" : "bg-[#FFF2F2]"}
-      rounded-bl-[24px] rounded-br-[24px] lg:w-[45%] lg:p-10 lg:rounded-br-none lg:rounded-tl-[48px] lg:rounded-bt-[48px]`}
+      rounded-bl-[24px] rounded-br-[24px] md:rounded-br-none md:rounded-tl-[24px] lg:w-[45%] lg:p-10 lg:rounded-br-none lg:rounded-tl-[48px] lg:rounded-bl-[48px]`}
       >
         {liveEvent && (
           <p className="text-primary font-medium uppercase text-smallest font-general-sans lg:text-xl lg:leading-[28px]">
