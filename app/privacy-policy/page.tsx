@@ -61,7 +61,7 @@ export default function PrivacyPolicy() {
                   you may be linked to the information stored in and obtained
                   from cookies.
                 </p>
-                <ul className="mt-8 flex flex-col space-y-2 list-disc list-inside text-body text-para-1x font-general-sans font-medium md:text-base md:leading-[27px] lg:text-para-2x">
+                <ul className="mt-5 flex flex-col space-y-2 list-disc list-inside text-body text-para-1x font-general-sans font-medium md:text-base md:leading-[27px] lg:text-para-2x">
                   <li>
                     Where strictly necessary. These cookies and other
                     technologies are essential to the proper functioning of our
