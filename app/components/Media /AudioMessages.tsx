@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import { ShareIcon, ListenIcon, DownloadIcon, CalendarIcon } from "@/app/icons";
 
 interface AudioMessageCardProps {
@@ -15,6 +16,10 @@ interface AudioMessageCardProps {
 const AudioMessageCard = ({
   item: { title, minister, date, link, image },
 }: AudioMessageCardProps) => {
+  const handleDownload = () => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div className="transition-transform duration-300 ease-in-out hover:translate-y-5 w-full flex flex-col items-stretch md:flex-row-reverse md:h-[250px] lg:h-[326px]">
       <div className="w-full h-full md:w-[55%] md:h-auto">
@@ -49,7 +54,7 @@ const AudioMessageCard = ({
             <ListenIcon />
             <span className="text-para-1x">Listen</span>
           </button>
-          <button className="flex items-center space-x-2">
+          <button className="flex items-center space-x-2" onClick={handleDownload}>
             <DownloadIcon />
             <span className="text-para-1x">Download</span>
           </button>
@@ -66,7 +71,7 @@ export default function AudioMessages() {
       title: "DAILY PROPHETIC ENCOUNTER WITH PROPHET SUNDAY.",
       minister: "Prophet Sunday Iyunade",
       date: "Sunday, 22nd April 2023",
-      link: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
+      link: "https://naijasermons.com.ng/wp-content/uploads/Oyedepo/17_HEALING_AND_DELIVERANCE_SHILOH.mp3",
       image:
         "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
     },
@@ -75,7 +80,7 @@ export default function AudioMessages() {
       title: "DAILY PROPHETIC ENCOUNTER WITH PROPHET SUNDAY.",
       minister: "Prophet Sunday Iyunade",
       date: "Sunday, 22nd April 2023",
-      link: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
+      link: "https://naijasermons.com.ng/wp-content/uploads/Oyedepo/17_HEALING_AND_DELIVERANCE_SHILOH.mp3",
       image:
         "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
     },
