@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { ShareIcon, ListenIcon, DownloadIcon, CalendarIcon } from "@/app/icons";
 import ShareDialog from "./ShareDialog";
 
@@ -23,11 +23,52 @@ interface AudioMessageCardProps {
 }
 
 const AudioMessageCard = ({
-  item: { title, minister, date, link, image },
+  item: { id, title, minister, date, link, image },
   handleOpenDialog,
 }: AudioMessageCardProps) => {
   const handleDownload = () => {
     window.open(link, "_blank");
+  };
+
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [currentTime, setCurrentTime] = useState<number>(0);
+  const [currentSongIndex, setCurrentSongIndex] = useState<number | null>(null);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+
+  const playAudio = (id: number) => {
+    if (currentSongIndex === id && isPlaying) {
+      if (audioRef.current) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    } else {
+      if (audioRef.current) {
+        setCurrentSongIndex(id);
+        audioRef.current.src = link;
+        audioRef.current.play();
+        setIsPlaying(true);
+        audioRef.current.currentTime = currentTime;
+      }
+    }
+  };
+
+  const pauseAudio = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      setCurrentTime(audioRef.current.currentTime);
+      setIsPlaying(false);
+    }
+  };
+
+  const getPlaybackStatus = (id: number) => {
+    if (currentSongIndex === id) {
+      return isPlaying ? (
+        <button onClick={pauseAudio}>Pause</button>
+      ) : (
+        <button onClick={() => playAudio(id)}>Listen</button>
+      );
+    }
+    return <button onClick={() => playAudio(id)}>Listen</button>;
   };
 
   const handleShareMessage = (
@@ -35,7 +76,6 @@ const AudioMessageCard = ({
     title: string,
     minister: string
   ) => {
-    console.log(link, title, minister);
     handleOpenDialog({
       link,
       title,
@@ -62,6 +102,12 @@ const AudioMessageCard = ({
         <p className="text-detail font-general-sans font-medium text-body lg:text-xl lg:leading-[32px]">
           By: {minister}
         </p>
+        {/* <div className="border border-red-500">
+          <audio ref={audioRef} className="w-full">
+            <source src={link} type="audio/mpeg" />
+          </audio>
+          {getPlaybackStatus(id)}
+        </div> */}
         <div className="flex space-x-2 items-center">
           <CalendarIcon />
           <span className="text-body-1 font-general-sans font-medium text-black lg:text-base lg:leading-[26px]">
@@ -100,7 +146,7 @@ export default function AudioMessages() {
       title: "DAILY PROPHETIC ENCOUNTER WITH PROPHET SUNDAY.",
       minister: "Prophet Sunday Iyunade",
       date: "Sunday, 22nd April 2023",
-      link: "https://naijasermons.com.ng/wp-content/uploads/Oyedepo/17_HEALING_AND_DELIVERANCE_SHILOH.mp3",
+      link: "https://cdn.trendybeatz.com/audio/Burna-Boy-Alone-[TrendyBeatz.com].mp3",
       image:
         "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
     },
@@ -109,7 +155,7 @@ export default function AudioMessages() {
       title: "DAILY PROPHETIC ENCOUNTER WITH PROPHET SUNDAY.",
       minister: "Prophet Sunday Iyunade",
       date: "Sunday, 22nd April 2023",
-      link: "https://naijasermons.com.ng/wp-content/uploads/Oyedepo/17_HEALING_AND_DELIVERANCE_SHILOH.mp3",
+      link: "https://cdn.trendybeatz.com/audio/Burna-Boy-I-Be-Common-Person-(TrendyBeatz.com).mp3",
       image:
         "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
     },

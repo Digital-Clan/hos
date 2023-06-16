@@ -1,8 +1,9 @@
 "use client";
 import { useRef } from "react";
-import { Autoplay, Navigation } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiper } from "swiper/react";
+import { VideoDesktopIcon, VideoMobileIcon } from "@/app/icons";
 import "swiper/css";
 
 interface VideoMessageCardProps {
@@ -35,7 +36,7 @@ const VideoMessageCard = ({
   item: { title, embedCode },
 }: VideoMessageCardProps) => {
   return (
-    <div className="w-full flex flex-col space-y-5">
+    <div className="w-full flex flex-col space-y-5 video-message">
       <div className="h-[240px] sm:h-[320px]">
         <iframe
           width="100%"
@@ -194,7 +195,7 @@ export default function VideoMessages() {
             slidesPerView={1}
             navigation
             autoplay={true}
-            modules={[Navigation, Autoplay]}
+            modules={[Navigation]}
             loop={true}
             breakpoints={{
               640: {
@@ -227,4 +228,4 @@ export default function VideoMessages() {
       </div>
     </section>
   );
-}
+};

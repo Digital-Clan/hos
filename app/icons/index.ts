@@ -13,3 +13,5 @@ export { default as YoutubeIcon } from "./Youtube";
 export { default as ShareIcon } from "./Share";
 export { default as ListenIcon } from "./Listen";
 export { default as DownloadIcon } from "./Download";
+export { default as VideoMobileIcon } from "./VideoMobile";
+export { default as VideoDesktopIcon } from "./VideoDesktop";

@@ -25,7 +25,6 @@ export default function ShareDialog({
   handleCloseDialog: () => void;
   message: Message;
 }) {
-  console.log(message);
   return (
     <>
       <Transition appear show={isShareDialogOpen} as={Fragment}>
