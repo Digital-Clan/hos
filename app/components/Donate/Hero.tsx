@@ -8,7 +8,7 @@ export default function Hero() {
         <h1 className="text-heading-1 mb-5 font-black md:text-4xl lg:text-5xl lg:mb-8 xl:text-[56px] xl:leading-[65px]">
           Support our cause
         </h1>
-        <p className="font-general-sans text-body-1 font-medium mb-8 sm:text-base md:text-lg lg:text-2xl lg:leading-[38px] lg:mb-10">
+        <p className="font-general-sans text-body-1 font-medium sm:text-base md:text-lg lg:text-2xl lg:leading-[38px]">
           Lorem ipsum dolor sit amet consectetur adipssising elit, dolor sit
           amet, lorem ipsum dolor sit amet, dolor sit amet, lorem ipsum dolor
           sit amet lorem ipsum.

@@ -438,7 +438,8 @@
 }
 
 /* Media */
-.media-hero {
+.media-hero,
+.contact-hero {
   background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686926800/hos/media-hero-mobile-bg_ztkmuv.png");
   background-size: cover;
   background-position: center left;
@@ -449,3 +450,5 @@
     background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686926807/hos/media-hero-bg_b7ludx.png");
   }
 }
+
+/* Contact */
