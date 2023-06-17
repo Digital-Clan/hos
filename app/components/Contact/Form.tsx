@@ -56,7 +56,9 @@ export default function Form() {
                 <div className="">
                   <select
                     name="subject"
-                    className="w-full h-[50px] py-3 px-2 text-base text-gray-400 placeholder:gray-400 border-b font-general-sans font-medium border-[#E8E8E8] focus:border-primary outline-none lg:text-xl"
+                    className={`
+                    ${formData.subject ? "text-primary" : "text-gray-400"}
+                    w-full h-[50px] py-3 px-2 text-base placeholder:gray-400 border-b font-general-sans font-medium border-[#E8E8E8] focus:border-primary outline-none lg:text-xl`}
                     required
                     value={formData.subject}
                     onChange={(e) => handleFormData(e)}
