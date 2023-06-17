@@ -3,11 +3,11 @@ import { HeartIcon, MenuIcon } from "@/app/icons";
 
 export default function Nav() {
   const links = [
-    { id: 1, name: "About", href: "/about" },
+    { id: 1, name: "About", href: "/about-us" },
     { id: 2, name: "Media", href: "/media" },
     { id: 3, name: "Events", href: "/events" },
     { id: 4, name: "Blog", href: "/blog" },
-    { id: 5, name: "Contact Us", href: "/contact" },
+    { id: 5, name: "Contact Us", href: "/contact-us" },
   ];
 
   return (

@@ -8,8 +8,8 @@ import {
 
 export default function Footer() {
   const links = [
-    { id: 1, name: "About Us", href: "/about" },
-    { id: 2, name: "Contact Us", href: "/contact" },
+    { id: 1, name: "About Us", href: "/about-us" },
+    { id: 2, name: "Contact Us", href: "/contact-us" },
     { id: 3, name: "Privacy Policy", href: "/privacy-policy" },
     { id: 4, name: "Terms & Conditions", href: "/terms-and-conditions" },
   ];
