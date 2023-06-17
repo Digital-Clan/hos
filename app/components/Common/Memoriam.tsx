@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function Memoriam() {
+export default function Memoriam({ showButton }: { showButton: boolean }) {
   return (
     <section className="px-5 pb-10 pt-28 home-memoriam text-white lg:pb-20">
       <div className="container-block lg:flex lg:justify-end">
@@ -18,15 +18,17 @@ export default function Memoriam() {
             continuation of the ministry he started based on instructions given
             to him by the Holy Spirit.
           </p>
-          <div className="lg:flex lg:justify-center lg:items-center">
-            <Link href="/">
-              <button className="button button--red border-none outline-none m-0 py-3 px-16 font-medium font-aeonik relative inline-block overflow-hidden rounded-btn lg:px-12 lg:py-6 lg:w-auto lg:font-semibold">
-                <span className="uppercase text-button text-white font-medium font-general-sans lg:text-btn-1x lg:font-semibold">
-                  Learn More
-                </span>
-              </button>
-            </Link>
-          </div>
+          {showButton && (
+            <div className="lg:flex lg:justify-center lg:items-center">
+              <Link href="/">
+                <button className="button button--red border-none outline-none m-0 py-3 px-16 font-medium font-aeonik relative inline-block overflow-hidden rounded-btn lg:px-12 lg:py-6 lg:w-auto lg:font-semibold">
+                  <span className="uppercase text-button text-white font-medium font-general-sans lg:text-btn-1x lg:font-semibold">
+                    Learn More
+                  </span>
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -1,7 +1,9 @@
+import { Memoriam } from "../components/Common";
+
 export default function Memorial() {
   return (
     <main>
-      <h1>Memorial</h1>
+      <Memoriam showButton={false} />
     </main>
   );
 }

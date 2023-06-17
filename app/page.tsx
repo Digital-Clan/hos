@@ -1,11 +1,12 @@
-import { Hero, Mission, Memoriam, Events } from '@/app/components/Home'
+import { Hero, Mission, Events } from '@/app/components/Home'
+import { Memoriam } from './components/Common'
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <Mission />
-      <Memoriam />
+      <Memoriam showButton={true} />
       <Events />
     </main>
   )
