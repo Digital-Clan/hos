@@ -11,7 +11,11 @@ export default function Memoriam({ showButton }: { showButton: boolean }) {
           <h2 className="my-2 max-w-[240px] text-heading-2 font-bold md:text-2xl lg:text-[40px] lg:leading-[53px] lg:mb-6 lg:max-w-full">
             A life dedicated to the service of GOD.
           </h2>
-          <p className="text-body-1 text-body-white font-medium font-general-sans mb-4 max-w-2xl lg:text-2xl lg:mb-8 lg:leading-[38px]">
+          <p
+            className={`
+          ${showButton ? "mb-4 lg:mb-8" : ""}
+          text-body-1 text-body-white font-medium font-general-sans max-w-2xl lg:text-2xl lg:leading-[38px]`}
+          >
             Pastor Paul Adewunmi was a man of exceptional character while he was
             here with us. He lived a life that glorified GOD in his time on
             earth. This section is dedicated to his memory and to the
