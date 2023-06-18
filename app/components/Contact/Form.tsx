@@ -17,8 +17,14 @@ export default function Form() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     setShowConfirmationModal(true);
+    setFormData({
+      fullname: "",
+      email: "",
+      subject: "",
+      message: "",
+    });
   };
 
   const handleModalClose = () => {
