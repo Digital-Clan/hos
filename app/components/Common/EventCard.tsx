@@ -83,15 +83,17 @@ export default function EventCard({
             </span>
           </div>
         </div>
-        <a
-          href=""
-          className="mt-7 inline-flex items-center space-x-3 black-link link lg:mt-10"
-        >
-          <VideoIcon fillColor="#121212" />
-          <span className="text-detail font-general-sans font-medium lg:text-xl">
-            WATCH LIVE
-          </span>
-        </a>
+        {liveEvent && (
+          <a
+            href=""
+            className="mt-7 inline-flex items-center space-x-3 black-link link lg:mt-10"
+          >
+            <VideoIcon fillColor="#121212" />
+            <span className="text-detail font-general-sans font-medium lg:text-xl">
+              WATCH LIVE
+            </span>
+          </a>
+        )}
       </div>
     </div>
   );
