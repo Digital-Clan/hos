@@ -9,7 +9,7 @@ export default function Home() {
       <Memoriam
         showButton={true}
         buttonType="red"
-        additionnalClasses="bg-cover bg-memoriam-home-mobile sm:bg-memoriam-home-pc"
+        additionnalClasses="bg-cover bg-memoriam-home-m sm:bg-memoriam-home-d"
         description="Pastor Paul Adewunmi was a man of exceptional 
         character while he was here with us. He lived a 
         life that glorified GOD in his time on earth. This

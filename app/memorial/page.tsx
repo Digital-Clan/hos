@@ -6,7 +6,7 @@ export default function Memorial() {
     <main className="mx-auto max-w-screen-2xl">
       <Memoriam
         showButton={false}
-        additionnalClasses="pt-40 pb-12 bg-cover bg-memoriam-home-mobile sm:bg-memoriam-home-pc"
+        additionnalClasses="pt-40 pb-12 bg-cover bg-memoriam-home-m sm:bg-memoriam-home-d"
         description="Pastor Paul Adewunmi was a man of exceptional 
         character while he was here with us. He lived a 
         life that glorified GOD in his time on earth. This

@@ -47,13 +47,16 @@ module.exports = {
         "h3-d": ["40px", "53px"],
       },
       backgroundImage: {
-        "memoriam-home-pc":
-          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686698208/hos/memoriam-img-pc_aaz5j8.png')",
-        "memoriam-home-mobile":
+        "memoriam-home-d":
+          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1687199596/hos/memoriam-img-desktop_xpm5ha.png')",
+        "memoriam-home-m":
           "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686664429/hos/memoriam-img-mobile_sasva8.png')",
         bio: "url('https://res.cloudinary.com/dljsalifp/image/upload/v1687171360/hos/pastor-bio-bg_gbd4nq.png')",
         interview:
           "url('https://res.cloudinary.com/dljsalifp/image/upload/v1687171361/hos/pastor-interview-bg_ymykgk.png')",
+        "media-m":
+          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686926800/hos/media-hero-mobile-bg_ztkmuv.png')",
+        "media-d": "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686926807/hos/media-hero-bg_b7ludx.png')",
       },
     },
   },
