@@ -48,7 +48,7 @@ export default function Events() {
       <div className="container-block relative z-10">
         {events.length > 0 && (
           <>
-            <div className="mt-10 flex w-full flex-col space-y-10 px-5 sm:mt-14 sm:flex-row sm:space-x-3 sm:space-y-0 md:mt-20 md:space-x-8 lg:flex-col lg:space-x-0 lg:space-y-12">
+            <div className="mt-10 flex w-full flex-col space-y-10 px-5 sm:mt-14 md:mt-20 lg:space-y-12">
               {events.map((event) => (
                 <EventCard key={event.id} event={event} />
               ))}

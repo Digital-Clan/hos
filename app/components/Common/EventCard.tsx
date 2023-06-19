@@ -25,7 +25,7 @@ export default function EventCard({
         <img
           src={image}
           alt={title}
-          className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-br-[48px] md:rounded-tl-none md:rounded-tr-[48px] lg:h-[450px] lg:rounded-br-[48px] lg:rounded-tr-[48px]"
+          className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-br-[48px] md:rounded-tl-none md:rounded-tr-[48px] md:object-cover lg:rounded-br-[48px] lg:rounded-tr-[48px] xl:h-[450px]"
         />
       </div>
       <div
