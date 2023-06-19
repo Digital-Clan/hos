@@ -3,7 +3,6 @@ import { useRef } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiper } from "swiper/react";
-import { VideoDesktopIcon, VideoMobileIcon } from "@/app/icons";
 import "swiper/css";
 
 interface VideoMessageCardProps {

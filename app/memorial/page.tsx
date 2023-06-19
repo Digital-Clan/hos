@@ -1,4 +1,4 @@
-import { Memoriam } from "../components/Common";
+import { Memoriam, AudioMessages, VideoMessages } from "../components/Common";
 import { Hero } from "../components/Memorial";
 
 export default function Memorial() {
@@ -22,6 +22,8 @@ export default function Memorial() {
         </h2>
       </Memoriam>
       <Hero />
+      <VideoMessages />
+      <AudioMessages />
     </main>
   );
 }
