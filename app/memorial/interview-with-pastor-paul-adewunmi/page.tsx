@@ -1,20 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { Fragment } from "react";
 import { interviewData } from "@/app/data/interview";
-import { twMerge } from "tailwind-merge";
-
-function Text({ text, additionnalClasses }: { text: string; additionnalClasses?: string }) {
-  return (
-    <p
-      className={twMerge(
-        "font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d",
-        additionnalClasses
-      )}
-    >
-      {text}
-    </p>
-  );
-}
+import { Text } from "@/app/components/Memorial";
 
 function Item({ question, answers }: { question: string; answers: string[] }) {
   return (
