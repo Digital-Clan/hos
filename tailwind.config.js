@@ -67,6 +67,7 @@ module.exports = {
           "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686916798/hos/events-hero-mobile-bg_q2bhpn.png')",
         "events-d":
           "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686909635/hos/events-hero-bg_giheqn.png')",
+        donate: "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png')",
       },
     },
   },

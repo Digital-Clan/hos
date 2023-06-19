@@ -322,8 +322,7 @@
 }
 
 /* Home */
-.home-hero,
-.donate-hero {
+.home-hero {
   background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png");
   background-size: cover;
   background-position: center right;
