@@ -28,6 +28,7 @@ module.exports = {
         "btn-2x": ["30px", "48px"],
         "bt-m": ["15px", "24px"],
         "bt-d": ["23px", "20px"],
+        "bt-d2": ["23px", "37px"],
         "xs-m": ["12px", "19px"],
         "xs-t": ["14px", "21px"],
         "xs-d": ["20px", "36px"],
