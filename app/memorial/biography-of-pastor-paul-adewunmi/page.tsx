@@ -3,9 +3,9 @@ import { Text } from "@/app/components/Memorial";
 
 export default function Biography() {
   return (
-    <section className="px-5 py-12 lg:py-16">
+    <section className="memorial-page relative px-5 py-12 lg:py-16">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-5 lg:mb-10">
+        <div className="mb-5 md:mb-10 lg:mb-14">
           <h2 className="mb-5 text-center text-h1-m font-black text-black md:text-4xl lg:mb-10 lg:text-h1-d">
             Biography of the Pastor
           </h2>

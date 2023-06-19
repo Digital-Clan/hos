@@ -377,6 +377,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: background-position 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .link:hover {
@@ -455,4 +456,16 @@
 
 .about-hero {
   background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686975511/hos/about-hero-bg_nurzs2.png");
+}
+
+/* Memorial Page */
+.memorial-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 70vh;
+  width: 100%;
+  background-color: #fff2f2;
+  z-index: -1;
 }
