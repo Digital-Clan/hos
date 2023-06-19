@@ -92,10 +92,8 @@ const AudioMessageCard = ({
         className="flex flex-col space-y-5 rounded-bl-[24px] rounded-br-[24px] bg-[#F2FDFF] px-5
       py-8 md:rounded-none md:px-8 lg:w-[45%] lg:justify-between lg:bg-[#F7F7F7] lg:p-10"
       >
-        <p className="text-heading-4 font-bold lg:text-[28px] lg:leading-[36px]">{title}</p>
-        <p className="text-detail font-general-sans font-medium text-body lg:text-xl lg:leading-[32px]">
-          By: {minister}
-        </p>
+        <p className="text-h4-m font-bold md:text-h4-t lg:text-h4-d">{title}</p>
+        <p className="font-general-sans text-sm-m font-medium text-body md:text-sm-t lg:text-h3-t">By: {minister}</p>
         {/* <div className="border border-red-500">
           <audio ref={audioRef} className="w-full">
             <source src={link} type="audio/mpeg" />
@@ -104,22 +102,20 @@ const AudioMessageCard = ({
         </div> */}
         <div className="flex items-center space-x-2">
           <CalendarIcon />
-          <span className="text-body-1 font-general-sans font-medium text-black lg:text-base lg:leading-[26px]">
-            {date}
-          </span>
+          <span className="font-general-sans text-sm-m font-medium text-black md:text-sm-t">{date}</span>
         </div>
         <div className="flex items-center justify-between space-x-3">
           <button className="flex items-center space-x-2" onClick={() => handleShareMessage(link, title, minister)}>
             <ShareIcon />
-            <span className="text-para-1x">Share</span>
+            <span className="text-p1-m">Share</span>
           </button>
           <button className="flex items-center space-x-2">
             <ListenIcon />
-            <span className="text-para-1x">Listen</span>
+            <span className="text-p1-m">Listen</span>
           </button>
           <button className="flex items-center space-x-2" onClick={handleDownload}>
             <DownloadIcon />
-            <span className="text-para-1x">Download</span>
+            <span className="text-p1-m">Download</span>
           </button>
         </div>
       </div>

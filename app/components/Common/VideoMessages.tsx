@@ -43,7 +43,7 @@ const VideoMessageCard = ({ item: { title, embedCode } }: VideoMessageCardProps)
         />
       </div>
 
-      <h3 className="text-h-3 font-bold">{title}</h3>
+      <h3 className="text-h4-t font-bold lg:text-xl">{title}</h3>
     </div>
   );
 };
