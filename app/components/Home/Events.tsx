@@ -40,7 +40,7 @@ export default function Events() {
       <div className="trumpet-left absolute -top-3 left-0 h-[160px] w-[80px] lg:-top-16 lg:h-[520px] lg:w-[260px]" />
       <div className="trumpet-right absolute -top-3 right-0 h-[160px] w-[80px] lg:-top-12 lg:h-[500px] lg:w-[260px]" />
       <div className="relative z-10 mb-5 px-10 text-center sm:mx-auto sm:w-4/6 lg:w-5/6 lg:px-0">
-        <h2 className="text-heading-3 font-bold md:text-2xl lg:mx-auto lg:w-[764px] lg:text-[40px] lg:leading-[53px]">
+        <h2 className="text-h3-m font-bold md:text-h3-t lg:mx-auto lg:w-[764px] lg:text-h3-d">
           Join us at one of our events and become a beneficiary of the Lord&apos;s blessings.
         </h2>
       </div>
@@ -55,7 +55,7 @@ export default function Events() {
             </div>
             <div className="mt-10 flex items-center justify-center px-5 lg:justify-end">
               <Link href="/events" className="button-link inline-flex w-auto items-center justify-center space-x-3">
-                <span className="text-button font-general-sans font-medium lg:text-2xl lg:font-semibold lg:leading-[32px] lg:text-black">
+                <span className="font-general-sans text-p1-m font-medium md:text-p1-t lg:text-p1-d lg:font-semibold lg:text-black">
                   View all Events
                 </span>
                 <ArrowIcon />

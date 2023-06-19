@@ -72,7 +72,7 @@ export default function EventCard({
         {liveEvent ? (
           <a href="" className="black-link link mt-7 inline-flex items-center space-x-3 lg:mt-10">
             <VideoIcon fillColor="#121212" />
-            <span className="text-detail font-general-sans font-medium lg:text-xl">WATCH LIVE</span>
+            <span className="font-general-sans text-sm-m font-medium md:text-sm-t lg:text-xs-d">WATCH LIVE</span>
           </a>
         ) : (
           <a href="" className="black-link link mt-7 inline-flex items-center space-x-3 lg:mt-10">

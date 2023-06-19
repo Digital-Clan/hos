@@ -45,7 +45,7 @@ export default function Footer() {
               <Link
                 href={link.href}
                 key={link.id}
-                className="link white-link text-heading-4 text-center font-general-sans font-bold lg:text-[22px] lg:leading-[34px]"
+                className="link white-link text-center font-general-sans text-h4-m font-bold md:text-h4-t lg:text-[22px] lg:leading-[34px]"
               >
                 {link.name}
               </Link>
@@ -58,14 +58,14 @@ export default function Footer() {
                 href={link.href}
                 key={link.id}
                 target="_blank"
-                className="text-heading-4 font-bold transition duration-300 ease-in-out hover:-translate-y-2"
+                className="font-bold transition duration-300 ease-in-out hover:-translate-y-2"
               >
                 {link.icon}
               </Link>
             ))}
           </div>
         </div>
-        <div className="lg:text-xs-d mt-8 px-5 text-center font-general-sans text-xs-m font-medium lg:px-8">
+        <div className="mt-8 px-5 text-center font-general-sans text-xs-m font-medium lg:px-8 lg:text-xs-d">
           <p>{new Date().getFullYear()} © Hour of Solution. All rights reserved.</p>
         </div>
       </div>
