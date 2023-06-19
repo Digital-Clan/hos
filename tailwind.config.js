@@ -32,8 +32,9 @@ module.exports = {
         "para-2x": ["24px", "38px"],
         "h-3": ["18px", "24px"],
         "h-3-2x": ["40px", "53px"],
-        "h-1": ["26px", "32px"],
-        "h-1-2x": ["56px", "65px"],
+        "h1-m": ["26px", "32px"],
+        "h1-t": ["40px", "48px"],
+        "h1-d": ["56px", "65px"],
       },
       backgroundImage: {
         "memoriam-home-pc":

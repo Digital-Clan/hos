@@ -11,8 +11,7 @@ export default function EventsList() {
       date: "Sunday, 22nd April 2023",
       timeStart: "10:00 AM",
       timeEnd: "06:00 PM",
-      venue:
-        "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
+      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
       liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
       image:
         "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
@@ -29,8 +28,7 @@ export default function EventsList() {
       date: "Sunday, 22nd April 2023",
       timeStart: "10:00 AM",
       timeEnd: "06:00 PM",
-      venue:
-        "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
+      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
       liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
       image:
         "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
@@ -44,8 +42,7 @@ export default function EventsList() {
       date: "Sunday, 22nd April 2023",
       timeStart: "10:00 AM",
       timeEnd: "06:00 PM",
-      venue:
-        "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
+      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
       liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
       image:
         "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
@@ -53,10 +50,10 @@ export default function EventsList() {
   ];
 
   return (
-    <section className="py-12 px-5 md:px-8">
+    <section className="px-5 py-12 md:px-8">
       <div className="container-block">
         <div className="mb-20 lg:mb-24">
-          <h2 className="font-medium text-base leading-[20px] mb-5 text-help sm:text-lg md:text-xl lg:text-[32px] lg:mb-8">
+          <h2 className="mb-5 text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:mb-8 lg:text-[32px]">
             Live Events
           </h2>
           <div className="flex flex-col space-y-10">
@@ -67,7 +64,7 @@ export default function EventsList() {
         </div>
 
         <div>
-          <h2 className="font-medium text-base leading-[20px] mb-5 text-help sm:text-lg md:text-xl lg:text-[32px] lg:mb-8">
+          <h2 className="mb-5 text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:mb-8 lg:text-[32px]">
             Upcoming Events
           </h2>
           <div className="flex flex-col space-y-10">

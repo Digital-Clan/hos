@@ -18,24 +18,19 @@ interface SwiperButtonsProps {
   nextButtonRef: any;
 }
 
-const SwiperButtons = ({
-  prevButtonRef,
-  nextButtonRef,
-}: SwiperButtonsProps) => {
+const SwiperButtons = ({ prevButtonRef, nextButtonRef }: SwiperButtonsProps) => {
   const swiper = useSwiper();
   return (
-    <div className="hidden space-x-5 mt-10 justify-center items-center">
+    <div className="mt-10 hidden items-center justify-center space-x-5">
       <button ref={prevButtonRef} onClick={() => swiper.slidePrev()}></button>
       <button ref={nextButtonRef} onClick={() => swiper.slideNext()}></button>
     </div>
   );
 };
 
-const VideoMessageCard = ({
-  item: { title, embedCode },
-}: VideoMessageCardProps) => {
+const VideoMessageCard = ({ item: { title, embedCode } }: VideoMessageCardProps) => {
   return (
-    <div className="w-full flex flex-col space-y-5 video-message">
+    <div className="video-message flex w-full flex-col space-y-5">
       <div className="h-[240px] sm:h-[320px]">
         <iframe
           width="100%"
@@ -109,21 +104,15 @@ export default function VideoMessages() {
   };
 
   return (
-    <section className="py-10 px-5">
+    <section className="px-5 py-10">
       <div className="container-block">
-        <div className="flex justify-between items-center mb-5 lg:mb-8">
-          <h2 className="font-medium text-base leading-[20px] text-help sm:text-lg md:text-xl lg:text-[32px]">
+        <div className="mb-5 flex items-center justify-between lg:mb-8">
+          <h2 className="text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:text-[32px]">
             Video Messages
           </h2>
-          <div className="flex space-x-3 justify-center items-center lg:space-x-3">
+          <div className="flex items-center justify-center space-x-3 lg:space-x-3">
             <button onClick={handlePrev} className="button">
-              <svg
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="md:hidden"
-              >
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" className="md:hidden">
                 <path
                   stroke="#304098"
                   strokeLinecap="round"
@@ -152,13 +141,7 @@ export default function VideoMessages() {
               </svg>
             </button>
             <button onClick={handleNext} className="button">
-              <svg
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="md:hidden"
-              >
+              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" className="md:hidden">
                 <path
                   stroke="#304098"
                   strokeLinecap="round"
@@ -218,13 +201,10 @@ export default function VideoMessages() {
               </SwiperSlide>
             ))}
 
-            <SwiperButtons
-              prevButtonRef={prevButtonRef}
-              nextButtonRef={nextButtonRef}
-            />
+            <SwiperButtons prevButtonRef={prevButtonRef} nextButtonRef={nextButtonRef} />
           </Swiper>
         </div>
       </div>
     </section>
   );
-};
+}

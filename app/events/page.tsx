@@ -1,4 +1,4 @@
-import { Hero, EventsList } from "../components/Events"
+import { Hero, EventsList } from "../components/Events";
 
 export default function Events() {
   return (
@@ -6,5 +6,5 @@ export default function Events() {
       <Hero />
       <EventsList />
     </main>
-  )
+  );
 }

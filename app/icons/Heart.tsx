@@ -1,12 +1,6 @@
 export default function HeartIcon() {
   return (
-    <svg
-      width="20"
-      height="20"
-      viewBox="0 0 20 20"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M13.4429 3.09521C12.0143 3.09521 10.7524 3.81426 10 4.9095C9.24766 3.81426 7.98574 3.09521 6.55717 3.09521C4.25241 3.09521 2.38098 4.96664 2.38098 7.2714C2.38098 12.3619 10 16.9381 10 16.9381C10 16.9381 17.6191 12.3619 17.6191 7.2714C17.6191 4.96664 15.7477 3.09521 13.4429 3.09521Z"
         fill="url(#paint0_radial_479_1714)"

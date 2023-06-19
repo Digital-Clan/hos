@@ -17,10 +17,10 @@ export default function Home() {
         continuation of the ministry he started based 
         on instructions given to him by the Holy Spirit."
       >
-        <span className="block font-general-sans text-detail lg:text-sm-1x lg:font-semibold lg:text-[#C4C4C4]">
+        <span className="text-detail block font-general-sans lg:text-sm-1x lg:font-semibold lg:text-[#C4C4C4]">
           IN MEMORIAM
         </span>
-        <h2 className="my-2 max-w-[240px] text-heading-2 font-bold md:text-2xl lg:text-[40px] lg:leading-[53px] lg:mb-6 lg:max-w-full">
+        <h2 className="text-heading-2 my-2 max-w-[240px] font-bold md:text-2xl lg:mb-6 lg:max-w-full lg:text-[40px] lg:leading-[53px]">
           A life dedicated to the service of GOD.
         </h2>
       </Memoriam>

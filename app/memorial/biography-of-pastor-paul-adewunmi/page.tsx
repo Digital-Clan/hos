@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
 export default function Biography() {
   return (
-    <section className="py-12 px-5 lg:py-16">
-      <div className="max-w-5xl mx-auto">
+    <section className="px-5 py-12 lg:py-16">
+      <div className="mx-auto max-w-5xl">
         <div className="mb-5 lg:mb-10">
-          <h2 className="text-black text-h-1 font-black text-center mb-5 md:text-4xl lg:text-h-1-2x lg:mb-10">
+          <h2 className="text-h-1 lg:text-h-1-2x mb-5 text-center font-black text-black md:text-4xl lg:mb-10">
             Biography of the Pastor
           </h2>
           <img
@@ -15,38 +15,30 @@ export default function Biography() {
         </div>
 
         <div>
-          <p className="text-body text-para-1x font-general-sans font-medium md:text-base md:leading-[27px] lg:text-para-2x">
-            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit
-            amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem
-            ipsum, amet consectetur dolor sit amet lorem sit. ipsum sit amet
-            consectetur adipscising. Lorem ipsum dolor sit amet consectetur
-            adipscising elit, dolor sit amet dolor sit amet dolor sit amet
-            consectetur dolor sit amet lorem ipsum, amet. Lorem ipsum dolor sit
-            amet consectetur adipscising elit, dolor sit amet dolor sit amet
-            dolor sit amet consectetur dolor sit amet lorem ipsum, amet
-            consectetur dolor sit amet lorem sit. ipsum sit amet consectetur
-            adipscising. Lorem ipsum dolor sit amet consectetur adipscising
-            elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor
-            sit amet lorem ipsum, amet.
+          <p className="font-general-sans text-para-1x font-medium text-body md:text-base md:leading-[27px] lg:text-para-2x">
+            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet
+            consectetur dolor sit amet lorem ipsum, amet consectetur dolor sit amet lorem sit. ipsum sit amet
+            consectetur adipscising. Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit
+            amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet. Lorem ipsum dolor sit amet consectetur
+            adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet
+            consectetur dolor sit amet lorem sit. ipsum sit amet consectetur adipscising. Lorem ipsum dolor sit amet
+            consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem
+            ipsum, amet.
           </p>
 
-          <h2 className="mt-8 text-h-3 font-bold text-[#4C4C4C] mb-3 md:text-xl lg:text-h-3-2x lg:mt-10">
+          <h2 className="mb-3 mt-8 text-h-3 font-bold text-[#4C4C4C] md:text-xl lg:mt-10 lg:text-h-3-2x">
             Lorem ipsum dolor sit amet?
           </h2>
 
-          <p className="text-body text-para-1x font-general-sans font-medium md:text-base md:leading-[27px] lg:text-para-2x">
-            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit
-            amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem
-            ipsum, amet consectetur dolor sit amet lorem sit. ipsum sit amet
-            consectetur adipscising. Lorem ipsum dolor sit amet consectetur
-            adipscising elit, dolor sit amet dolor sit amet dolor sit amet
-            consectetur dolor sit amet lorem ipsum, amet. Lorem ipsum dolor sit
-            amet consectetur adipscising elit, dolor sit amet dolor sit amet
-            dolor sit amet consectetur dolor sit amet lorem ipsum, amet
-            consectetur dolor sit amet lorem sit. ipsum sit amet consectetur
-            adipscising. Lorem ipsum dolor sit amet consectetur adipscising
-            elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor
-            sit amet lorem ipsum, amet.
+          <p className="font-general-sans text-para-1x font-medium text-body md:text-base md:leading-[27px] lg:text-para-2x">
+            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet
+            consectetur dolor sit amet lorem ipsum, amet consectetur dolor sit amet lorem sit. ipsum sit amet
+            consectetur adipscising. Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit
+            amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet. Lorem ipsum dolor sit amet consectetur
+            adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet
+            consectetur dolor sit amet lorem sit. ipsum sit amet consectetur adipscising. Lorem ipsum dolor sit amet
+            consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem
+            ipsum, amet.
           </p>
         </div>
       </div>

@@ -11,13 +11,19 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="bg-primary text-white p-5 lg:py-6">
+    <nav className="bg-primary p-5 text-white lg:py-6">
       <div className="container-block flex items-center justify-between">
-        <Link href="/" className="text-xl lg:text-3xl">Logo ipsum</Link>
+        <Link href="/" className="text-xl lg:text-3xl">
+          Logo ipsum
+        </Link>
 
         <ul className="hidden lg:flex lg:space-x-12">
           {links.map((link) => (
-            <Link href={link.href} key={link.id} className="link white-link text-center font-general-sans font-bold text-[23px] leading-[37px]">
+            <Link
+              href={link.href}
+              key={link.id}
+              className="link white-link text-center font-general-sans text-[23px] font-bold leading-[37px]"
+            >
               {link.name}
             </Link>
           ))}
@@ -26,11 +32,9 @@ export default function Nav() {
         <div className="flex items-center space-x-5">
           <Link
             href="/donate"
-            className="bg-white rounded-[56px] py-2 px-4 flex items-center space-x-3 hover:scale-90 transition-transform duration-200 ease-in-out lg:px-10 lg:py-4"
+            className="flex items-center space-x-3 rounded-[56px] bg-white px-4 py-2 transition-transform duration-200 ease-in-out hover:scale-90 lg:px-10 lg:py-4"
           >
-            <span className="text-black text-[15px] lg:text-btn-1x lg:font-semibold">
-              Donate
-            </span>
+            <span className="text-[15px] text-black lg:text-btn-1x lg:font-semibold">Donate</span>
             <span className="heart-animation">
               <HeartIcon />
             </span>

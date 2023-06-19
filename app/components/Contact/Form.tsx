@@ -33,19 +33,19 @@ export default function Form() {
 
   return (
     <>
-      <section className="px-5 pt-10 pb-14">
+      <section className="px-5 pb-14 pt-10">
         <div className="container-block">
-          <div className="max-w-5xl mx-auto">
+          <div className="mx-auto max-w-5xl">
             <form onSubmit={handleSubmit}>
               <div className="flex flex-col space-y-3 lg:space-y-7">
-                <div className="flex flex-col space-y-3 md:flex-row md:space-y-0 md:space-x-5">
+                <div className="flex flex-col space-y-3 md:flex-row md:space-x-5 md:space-y-0">
                   <input
                     type="text"
                     name="fullname"
                     placeholder="Full Name"
                     value={formData.fullname}
                     onChange={(e) => handleFormData(e)}
-                    className="w-full h-[50px] py-3 px-2 text-base text-primary placeholder:gray-400 font-general-sans font-medium border-b border-[#E8E8E8] focus:border-primary outline-none lg:text-xl"
+                    className="placeholder:gray-400 h-[50px] w-full border-b border-[#E8E8E8] px-2 py-3 font-general-sans text-base font-medium text-primary outline-none focus:border-primary lg:text-xl"
                     required
                   />
                   <input
@@ -54,7 +54,7 @@ export default function Form() {
                     placeholder="Email Address"
                     value={formData.email}
                     onChange={(e) => handleFormData(e)}
-                    className="w-full h-[50px] py-3 px-2 text-base text-primary placeholder:gray-400 border-b font-general-sans font-medium border-[#E8E8E8] focus:border-primary outline-none lg:text-xl"
+                    className="placeholder:gray-400 h-[50px] w-full border-b border-[#E8E8E8] px-2 py-3 font-general-sans text-base font-medium text-primary outline-none focus:border-primary lg:text-xl"
                     required
                   />
                 </div>
@@ -64,7 +64,7 @@ export default function Form() {
                     name="subject"
                     className={`
                     ${formData.subject ? "text-primary" : "text-gray-400"}
-                    w-full h-[50px] py-3 px-2 text-base placeholder:gray-400 border-b font-general-sans font-medium border-[#E8E8E8] focus:border-primary outline-none lg:text-xl`}
+                    placeholder:gray-400 h-[50px] w-full border-b border-[#E8E8E8] px-2 py-3 font-general-sans text-base font-medium outline-none focus:border-primary lg:text-xl`}
                     required
                     value={formData.subject}
                     onChange={(e) => handleFormData(e)}
@@ -84,21 +84,18 @@ export default function Form() {
                     placeholder="Enter your message here..."
                     value={formData.message}
                     onChange={(e) => handleFormData(e)}
-                    className="w-full h-[50px] resize-none py-3 px-2 text-base text-primary placeholder:gray-400 border-b font-general-sans font-medium border-[#E8E8E8] focus:border-primary outline-none lg:text-xl"
+                    className="placeholder:gray-400 h-[50px] w-full resize-none border-b border-[#E8E8E8] px-2 py-3 font-general-sans text-base font-medium text-primary outline-none focus:border-primary lg:text-xl"
                   />
                 </div>
               </div>
 
-              <div className="mt-5 md:flex md:justify-end md:mt-8">
+              <div className="mt-5 md:mt-8 md:flex md:justify-end">
                 <button
                   type="submit"
                   className={`
-              w-full rounded-[64px] px-8 py-4 text-center text-white text-para-1x md:w-auto md:px-14 md:text-lg lg:px-16
+              w-full rounded-[64px] px-8 py-4 text-center text-para-1x text-white md:w-auto md:px-14 md:text-lg lg:px-16
               ${
-                formData.fullname &&
-                formData.email &&
-                formData.subject &&
-                formData.message
+                formData.fullname && formData.email && formData.subject && formData.message
                   ? "bg-primary"
                   : "bg-primary opacity-50"
               }

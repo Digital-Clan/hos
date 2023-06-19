@@ -3,5 +3,5 @@ export default function Form() {
     <section className="">
       <h1>Donate Form</h1>
     </section>
-  )
+  );
 }

@@ -54,51 +54,28 @@ export default function ShareDialog({
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg font-medium leading-6 text-gray-900 mb-3"
-                  >
+                  <Dialog.Title as="h3" className="mb-3 text-lg font-medium leading-6 text-gray-900">
                     Share this message
                   </Dialog.Title>
                   <div className="flex items-center space-x-3">
-                    <EmailShareButton
-                      url={message.link}
-                      subject={message.title}
-                      body={message.link}
-                    >
+                    <EmailShareButton url={message.link} subject={message.title} body={message.link}>
                       <EmailIcon size={32} round={true} />
                     </EmailShareButton>
-                    <FacebookShareButton
-                      url={message.link}
-                      quote={message.title}
-                    >
+                    <FacebookShareButton url={message.link} quote={message.title}>
                       <FacebookIcon size={32} round={true} />
                     </FacebookShareButton>
-                    <TwitterShareButton
-                      url={message.link}
-                      title={message.title}
-                    >
+                    <TwitterShareButton url={message.link} title={message.title}>
                       <TwitterIcon size={32} round={true} />
                     </TwitterShareButton>
-                    <TelegramShareButton
-                      url={message.link}
-                      title={message.title}
-                    >
+                    <TelegramShareButton url={message.link} title={message.title}>
                       <TelegramIcon size={32} round={true} />
                     </TelegramShareButton>
 
-                    <LinkedinShareButton
-                      url={message.link}
-                      title={message.title}
-                      source={message.link}
-                    >
+                    <LinkedinShareButton url={message.link} title={message.title} source={message.link}>
                       <LinkedinIcon size={32} round={true} />
                     </LinkedinShareButton>
 
-                    <WhatsappShareButton
-                      url={message.link}
-                      title={message.title}
-                    >
+                    <WhatsappShareButton url={message.link} title={message.title}>
                       <WhatsappIcon size={32} round={true} />
                     </WhatsappShareButton>
                   </div>

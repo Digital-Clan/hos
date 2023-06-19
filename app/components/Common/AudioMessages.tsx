@@ -71,11 +71,7 @@ const AudioMessageCard = ({
     return <button onClick={() => playAudio(id)}>Listen</button>;
   };
 
-  const handleShareMessage = (
-    link: string,
-    title: string,
-    minister: string
-  ) => {
+  const handleShareMessage = (link: string, title: string, minister: string) => {
     handleOpenDialog({
       link,
       title,
@@ -84,21 +80,19 @@ const AudioMessageCard = ({
   };
 
   return (
-    <div className="w-full flex flex-col items-stretch md:flex-row-reverse md:h-[250px] lg:h-[326px]">
-      <div className="w-full h-full md:w-[55%] md:h-auto">
+    <div className="flex w-full flex-col items-stretch md:h-[250px] md:flex-row-reverse lg:h-[326px]">
+      <div className="h-full w-full md:h-auto md:w-[55%]">
         <img
           src={image}
           alt={title}
-          className="w-full h-full object-fill rounded-tr-[32px] rounded-tl-[32px] md:rounded-none"
+          className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-none"
         />
       </div>
       <div
-        className="px-5 py-8 flex flex-col space-y-5 md:px-8 lg:justify-between
-      rounded-bl-[24px] bg-[#F2FDFF] lg:bg-[#F7F7F7] rounded-br-[24px] lg:w-[45%] lg:p-10 md:rounded-none"
+        className="flex flex-col space-y-5 rounded-bl-[24px] rounded-br-[24px] bg-[#F2FDFF] px-5
+      py-8 md:rounded-none md:px-8 lg:w-[45%] lg:justify-between lg:bg-[#F7F7F7] lg:p-10"
       >
-        <p className="text-heading-4 font-bold lg:text-[28px] lg:leading-[36px]">
-          {title}
-        </p>
+        <p className="text-heading-4 font-bold lg:text-[28px] lg:leading-[36px]">{title}</p>
         <p className="text-detail font-general-sans font-medium text-body lg:text-xl lg:leading-[32px]">
           By: {minister}
         </p>
@@ -108,17 +102,14 @@ const AudioMessageCard = ({
           </audio>
           {getPlaybackStatus(id)}
         </div> */}
-        <div className="flex space-x-2 items-center">
+        <div className="flex items-center space-x-2">
           <CalendarIcon />
           <span className="text-body-1 font-general-sans font-medium text-black lg:text-base lg:leading-[26px]">
             {date}
           </span>
         </div>
         <div className="flex items-center justify-between space-x-3">
-          <button
-            className="flex items-center space-x-2"
-            onClick={() => handleShareMessage(link, title, minister)}
-          >
+          <button className="flex items-center space-x-2" onClick={() => handleShareMessage(link, title, minister)}>
             <ShareIcon />
             <span className="text-para-1x">Share</span>
           </button>
@@ -126,10 +117,7 @@ const AudioMessageCard = ({
             <ListenIcon />
             <span className="text-para-1x">Listen</span>
           </button>
-          <button
-            className="flex items-center space-x-2"
-            onClick={handleDownload}
-          >
+          <button className="flex items-center space-x-2" onClick={handleDownload}>
             <DownloadIcon />
             <span className="text-para-1x">Download</span>
           </button>
@@ -147,8 +135,7 @@ export default function AudioMessages() {
       minister: "Prophet Sunday Iyunade",
       date: "Sunday, 22nd April 2023",
       link: "https://cdn.trendybeatz.com/audio/Burna-Boy-Alone-[TrendyBeatz.com].mp3",
-      image:
-        "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
+      image: "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
     },
     {
       id: 2,
@@ -156,8 +143,7 @@ export default function AudioMessages() {
       minister: "Prophet Sunday Iyunade",
       date: "Sunday, 22nd April 2023",
       link: "https://cdn.trendybeatz.com/audio/Burna-Boy-I-Be-Common-Person-(TrendyBeatz.com).mp3",
-      image:
-        "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
+      image: "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
     },
   ];
 
@@ -187,16 +173,12 @@ export default function AudioMessages() {
 
       <section className="px-5 py-10">
         <div className="container-block">
-          <h2 className="font-medium text-base leading-[20px] mb-5 text-help sm:text-lg md:text-xl lg:text-[32px] lg:mb-8">
+          <h2 className="mb-5 text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:mb-8 lg:text-[32px]">
             Audio Messages
           </h2>
           <div className="mt-5 flex flex-col space-y-10">
             {audioMessages.map((audioMessage) => (
-              <AudioMessageCard
-                key={audioMessage.id}
-                item={audioMessage}
-                handleOpenDialog={handleOpenDialog}
-              />
+              <AudioMessageCard key={audioMessage.id} item={audioMessage} handleOpenDialog={handleOpenDialog} />
             ))}
           </div>
         </div>

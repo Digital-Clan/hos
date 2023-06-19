@@ -1,12 +1,6 @@
 export default function CalendarIcon() {
   return (
-    <svg
-      width="16"
-      height="17"
-      viewBox="0 0 16 17"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M5.33333 1.83333V3.83333"
         stroke="#656565"

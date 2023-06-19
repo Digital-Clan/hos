@@ -14,8 +14,7 @@
 
 @font-face {
   font-family: "Aeonik";
-  src: url("../public/fonts/Aeonik-Bold.woff") format("woff"),
-    url("../public/fonts/Aeonik-Bold.woff2") format("woff2");
+  src: url("../public/fonts/Aeonik-Bold.woff") format("woff"), url("../public/fonts/Aeonik-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -242,13 +241,11 @@
 }
 
 .button--red:hover span {
-  animation: MoveScaleUpInitial 0.3s forwards,
-    MoveScaleUpEndRed 0.3s forwards 0.3s;
+  animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEndRed 0.3s forwards 0.3s;
 }
 
 .button--blue:hover span {
-  animation: MoveScaleUpInitial 0.3s forwards,
-    MoveScaleUpEndBlue 0.3s forwards 0.3s;
+  animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEndBlue 0.3s forwards 0.3s;
 }
 
 @keyframes MoveScaleUpInitial {
@@ -392,12 +389,7 @@
 }
 
 .black-link {
-  background-image: linear-gradient(
-    to right,
-    #b94d4d,
-    #b94d4d 50%,
-    #121212 50%
-  );
+  background-image: linear-gradient(to right, #b94d4d, #b94d4d 50%, #121212 50%);
 }
 
 .button-link svg {
