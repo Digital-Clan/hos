@@ -35,6 +35,12 @@ module.exports = {
         "h-1": ["26px", "32px"],
         "h-1-2x": ["56px", "65px"],
       },
+      backgroundImage: {
+        "memoriam-home-bg-pc":
+          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686698208/hos/memoriam-img-pc_aaz5j8.png')",
+        "memoriam-home-bg-mobile":
+          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686664429/hos/memoriam-img-mobile_sasva8.png')",
+      },
     },
   },
   plugins: [],

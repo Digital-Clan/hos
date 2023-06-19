@@ -1,8 +1,17 @@
 import Link from "next/link";
 
-export default function Memoriam({ showButton }: { showButton: boolean }) {
+interface Props {
+  showButton?: boolean;
+  classNames?: string;
+}
+
+export default function Memoriam({ showButton, classNames }: Props) {
   return (
-    <section className="px-5 pb-10 pt-28 home-memoriam text-white lg:pb-20">
+    <section
+      className={`px-5 pb-10 w-full pt-28 text-white lg:pb-20
+      ${classNames ? classNames : ""}
+      `}
+    >
       <div className="container-block lg:flex lg:justify-end">
         <div className="lg:w-[560px]">
           <span className="block font-general-sans text-detail lg:text-sm-1x lg:font-semibold lg:text-[#C4C4C4]">
