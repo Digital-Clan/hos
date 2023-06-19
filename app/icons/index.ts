@@ -15,3 +15,4 @@ export { default as ListenIcon } from "./Listen";
 export { default as DownloadIcon } from "./Download";
 export { default as VideoMobileIcon } from "./VideoMobile";
 export { default as VideoDesktopIcon } from "./VideoDesktop";
+export { default as PlusIcon } from "./Plus";

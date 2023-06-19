@@ -29,6 +29,7 @@ module.exports = {
         "bt-m": ["15px", "24px"],
         "bt-d": ["23px", "20px"],
         "xs-m": ["12px", "19px"],
+        "xs-t": ["14px", "21px"],
         "xs-d": ["20px", "36px"],
         "sm-m": ["14px", "21px"],
         "sm-t": ["16px", "24px"],
@@ -45,6 +46,9 @@ module.exports = {
         "h3-m": ["18px", "24px"],
         "h3-t": ["20px", "28px"],
         "h3-d": ["40px", "53px"],
+        "h4-m": ["16px", "20px"],
+        "h4-t": ["18px", "24px"],
+        "h4-d": ["28px", "36px"],
       },
       backgroundImage: {
         "memoriam-home-d":
@@ -57,6 +61,12 @@ module.exports = {
         "media-m":
           "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686926800/hos/media-hero-mobile-bg_ztkmuv.png')",
         "media-d": "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686926807/hos/media-hero-bg_b7ludx.png')",
+        about: "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686975511/hos/about-hero-bg_nurzs2.png')",
+        blog: "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686974388/hos/blog-hero-bg_hard2p.png')",
+        "events-m":
+          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686916798/hos/events-hero-mobile-bg_q2bhpn.png')",
+        "events-d":
+          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686909635/hos/events-hero-bg_giheqn.png')",
       },
     },
   },
