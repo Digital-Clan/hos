@@ -25,7 +25,6 @@ module.exports = {
         btn: "40px",
       },
       fontSize: {
-        "btn-2x": ["30px", "48px"],
         "bt-m": ["15px", "24px"],
         "bt-d": ["23px", "20px"],
         "bt-d2": ["23px", "37px"],

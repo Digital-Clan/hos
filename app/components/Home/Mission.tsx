@@ -4,23 +4,23 @@ import Image from "next/image";
 
 export default function Mission() {
   return (
-    <section className="bg-white px-5 py-10">
+    <section className="bg-white px-5 py-10 md:py-12 lg:py-14">
       <div className="mx-auto max-w-[930px]">
         <div className="mx-auto max-w-3xl text-center">
-          <span className="text-detail mb-2 block font-general-sans font-medium text-secondary lg:mb-3 lg:text-sm-1x lg:font-semibold">
+          <span className="mb-2 block font-general-sans text-sm-m font-medium text-secondary md:text-sm-t lg:mb-3 lg:text-[26px] lg:font-semibold lg:leading-[28px]">
             OUR MISSION
           </span>
-          <h2 className="text-heading-2 mx-auto w-[210px] font-bold sm:w-[380px] sm:text-3xl md:text-4xl lg:text-[40px] lg:leading-[52px]">
+          <h2 className="mx-auto w-[210px] text-h2-m font-bold sm:w-[380px] md:text-h2-t lg:text-h2-d">
             Hour of solution is a body that believes.
           </h2>
-          <p className="text-body-1 my-5 font-general-sans font-medium text-body sm:text-base md:text-lg lg:mb-7 lg:text-2xl lg:leading-[38px]">
+          <p className="my-5 font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:mb-7 lg:text-p1-d">
             We are an inter-denominational group of God&apos;s people who believe in the saving power of Jesus Christ.
             Our mission is to raise people who are part of God&apos;s End Time Army.
           </p>
           <div>
             <Link href="/">
-              <button className="button button--blue font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border border-primary px-16 py-3 font-bold outline-none lg:px-20 lg:py-6">
-                <span className="text-button text-center font-general-sans font-medium text-white lg:text-btn-1x lg:font-semibold">
+              <button className="button button--blue font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border border-primary px-16 py-3 font-bold outline-none lg:px-20 lg:py-4">
+                <span className="text-center font-general-sans text-bt-m font-medium text-white md:text-lg lg:text-bt-d2 lg:font-semibold">
                   Read More
                 </span>
               </button>
