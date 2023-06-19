@@ -65,7 +65,7 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="text-smallest mt-8 px-5 text-center font-general-sans font-medium lg:px-8 lg:text-xl lg:leading-[36px]">
+        <div className="lg:text-xs-d mt-8 px-5 text-center font-general-sans text-xs-m font-medium lg:px-8">
           <p>{new Date().getFullYear()} © Hour of Solution. All rights reserved.</p>
         </div>
       </div>

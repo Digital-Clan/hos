@@ -34,7 +34,7 @@ export default function Nav() {
             href="/donate"
             className="flex items-center space-x-3 rounded-[56px] bg-white px-4 py-2 transition-transform duration-200 ease-in-out hover:scale-90 lg:px-10 lg:py-4"
           >
-            <span className="text-[15px] text-black lg:text-btn-1x lg:font-semibold">Donate</span>
+            <span className="text-bt-m text-black lg:text-bt-d lg:font-semibold">Donate</span>
             <span className="heart-animation">
               <HeartIcon />
             </span>

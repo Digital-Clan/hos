@@ -102,86 +102,6 @@
   line-height: 32px;
 }
 
-@media (min-width: 768px) {
-  /* .text-smallest {
-    font-size: 14px;
-    line-height: 22px;
-  } */
-
-  /* .text-detail {
-    font-size: 20px;
-    line-height: 32px;
-  } */
-
-  /* .text-body {
-    font-size: 24px;
-    line-height: 38px;
-  } */
-
-  /* .text-button {
-    font-size: 23px;
-    line-height: 37px;
-  } */
-
-  /* .text-heading-4 {
-    font-size: 18px;
-    line-height: 24px;
-  } */
-
-  /* .text-heading-3 {
-    font-size: 32px;
-    line-height: 42px;
-  } */
-
-  /* .text-heading-2 {
-    font-size: 40px;
-    line-height: 53px;
-  } */
-
-  /* .text-heading-1 {
-    font-size: 56px;
-    line-height: 65px;
-  } */
-}
-
-@media (min-width: 1024px) {
-  /* .text-smallest {
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  .text-detail {
-    font-size: 20px;
-    line-height: 32px;
-  }
-
-  .text-body {
-    font-size: 24px;
-    line-height: 38px;
-  }
-
-  .text-button {
-    font-size: 23px;
-    line-height: 37px;
-  }
-  
-  .text-heading-4 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  
-  .text-heading-3 {
-    font-size: 32px;
-    line-height: 42px;
-  }
-
-  
-  .text-heading-1 {
-    font-size: 56px;
-    line-height: 65px;
-  } */
-}
-
 /* Animations */
 /* Buttons */
 .button {
@@ -464,8 +384,20 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 70vh;
+  height: 220px;
   width: 100%;
   background-color: #fff2f2;
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .memorial-page::before {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .memorial-page::before {
+    height: 490px;
+  }
 }

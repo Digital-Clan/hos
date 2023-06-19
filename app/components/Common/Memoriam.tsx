@@ -42,7 +42,7 @@ export default function Memoriam({
           <p
             className={`
           ${showButton ? "mb-8 lg:mb-12" : ""}
-          text-body-1 max-w-2xl font-general-sans font-medium text-body-white lg:text-2xl lg:leading-[38px]`}
+          max-w-2xl font-general-sans text-p1-m font-medium text-body-white md:text-p1-t lg:text-p1-d`}
           >
             {description}
           </p>
@@ -56,13 +56,13 @@ export default function Memoriam({
               <Link href={buttonLink ? buttonLink : "/memorial"}>
                 {buttonType === "red" ? (
                   <button className="button button--red font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border-none px-16 py-3 font-medium outline-none lg:w-auto lg:px-12 lg:py-6 lg:font-semibold">
-                    <span className="text-button font-general-sans font-medium uppercase text-white lg:text-btn-1x lg:font-semibold">
+                    <span className="font-general-sans text-bt-m font-medium uppercase text-white lg:text-bt-d lg:font-semibold">
                       {buttonText ? buttonText : "Learn More"}
                     </span>
                   </button>
                 ) : (
                   <button className="button button--transparent font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border-none px-16 py-3 font-medium outline-none lg:w-auto lg:px-12 lg:py-6 lg:font-semibold">
-                    <span className="text-button font-general-sans font-medium uppercase text-white lg:text-btn-1x lg:font-semibold">
+                    <span className="font-general-sans text-bt-m font-medium uppercase text-white lg:text-bt-d lg:font-semibold">
                       {buttonText ? buttonText : "Learn More"}
                     </span>
                   </button>
