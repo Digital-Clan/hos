@@ -4,15 +4,15 @@ export default function TermsAndConditions() {
       <section className="px-5 py-12 lg:py-16">
         <div className="container-block">
           <div className="max-w-5xl lg:max-w-6xl">
-            <h1 className="text-h-1 lg:text-h-1-2x mb-5 font-black text-black md:mb-7 md:text-3xl lg:mb-10">
+            <h1 className="mb-5 text-h1-m font-black text-black md:mb-7 md:text-h1-t lg:mb-10 lg:text-h1-d">
               Terms and conditions
             </h1>
             <div className="flex flex-col space-y-10 lg:space-y-14">
               <div>
-                <h2 className="mb-3 text-h-3 font-bold text-[#4C4C4C] md:text-xl lg:text-h-3-2x">
+                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">
                   1. Acceptance of Terms
                 </h2>
-                <p className="font-general-sans text-para-1x font-medium text-body md:text-base md:leading-[27px] lg:text-para-2x">
+                <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   By accessing and using the website &apos;devotedskies.org,&apos; you acknowledge that you have read,
                   understood, and agree to be bound by these terms and conditions. If you do not agree to these terms,
                   please refrain from using this website.
@@ -20,10 +20,10 @@ export default function TermsAndConditions() {
               </div>
 
               <div>
-                <h2 className="mb-3 text-h-3 font-bold text-[#4C4C4C] md:text-xl lg:text-h-3-2x">
+                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">
                   2. Intellectual Property
                 </h2>
-                <p className="font-general-sans text-para-1x font-medium text-body md:text-base md:leading-[27px] lg:text-para-2x">
+                <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   All content on &apos;devotedskies.org,&apos; including text, graphics, logos, images, videos, and
                   software, is the property of Devoted Skies or its licensors and is protected by intellectual property
                   laws. You may not use, reproduce, modify, or distribute any content from this website without prior
@@ -32,12 +32,12 @@ export default function TermsAndConditions() {
               </div>
 
               <div>
-                <h2 className="mb-3 text-h-3 font-bold text-[#4C4C4C] md:text-xl lg:text-h-3-2x">3. User Conduct</h2>
-                <p className="font-general-sans text-para-1x font-medium text-body md:text-base md:leading-[27px] lg:text-para-2x">
+                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">3. User Conduct</h2>
+                <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   When using &apos;devotedskies.org,&apos; you agree to abide by all applicable laws and regulations.
                   You further agree not to:
                 </p>
-                <ul className="mt-5 flex flex-col space-y-2 font-general-sans text-para-1x font-medium text-body md:text-base md:leading-[27px] lg:text-para-2x">
+                <ul className="mt-5 flex flex-col space-y-2 font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   <li>
                     a. Use this website in any way that may impair its functionality or interfere with other users&apos;
                     access to it
@@ -52,10 +52,10 @@ export default function TermsAndConditions() {
               </div>
 
               <div>
-                <h2 className="mb-3 text-h-3 font-bold text-[#4C4C4C] md:text-xl lg:text-h-3-2x">
+                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">
                   4. Third-Party Links
                 </h2>
-                <p className="font-general-sans text-para-1x font-medium text-body md:text-base md:leading-[27px] lg:text-para-2x">
+                <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   Hour of Solution may contain links to third-party websites for your convenience. Hour of Solution does
                   not endorse or control the content or practices of these third-party websites. You acknowledge and
                   agree that Devoted Skies is not responsible for any aspect of these websites, and your use of such
