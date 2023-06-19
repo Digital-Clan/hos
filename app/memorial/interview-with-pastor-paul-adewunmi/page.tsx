@@ -1,9 +1,39 @@
 /* eslint-disable @next/next/no-img-element */
+import { Fragment } from "react";
+import { interviewData } from "@/app/data/interview";
+import { twMerge } from "tailwind-merge";
+
+function Text({ text, additionnalClasses }: { text: string; additionnalClasses?: string }) {
+  return (
+    <p
+      className={twMerge(
+        "font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d",
+        additionnalClasses
+      )}
+    >
+      {text}
+    </p>
+  );
+}
+
+function Item({ question, answers }: { question: string; answers: string[] }) {
+  return (
+    <div className="flex flex-col space-y-3 lg:space-y-5">
+      <Text text={question} additionnalClasses="text-blac font-semibold" />
+      <div className="flex flex-col space-y-5">
+        {answers.map((answer, index) => (
+          <Text key={index} text={answer} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function Interview() {
   return (
-    <section className="px-5 py-12 lg:py-16">
+    <section className="px-5 py-12 lg:py-16 xl:py-20">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-5 lg:mb-10">
+        <div className="mb-5 md:mb-10 lg:mb-14">
           <h2 className="mb-5 text-center text-h1-m font-black text-black md:text-4xl lg:mb-10 lg:text-h1-d">
             Interview with the Pastor
           </h2>
@@ -14,33 +44,20 @@ export default function Interview() {
           />
         </div>
 
-        {/* <div>
-          <p className="text-body text-para-1x font-general-sans font-medium md:text-base md:leading-[27px] lg:text-para-2x">
-            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet
-            consectetur dolor sit amet lorem ipsum, amet consectetur dolor sit amet lorem sit. ipsum sit amet
-            consectetur adipscising. Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit
-            amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet. Lorem ipsum dolor sit amet consectetur
-            adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet
-            consectetur dolor sit amet lorem sit. ipsum sit amet consectetur adipscising. Lorem ipsum dolor sit amet
-            consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem
-            ipsum, amet.
-          </p>
+        <div>
+          <div className="mb-10 flex flex-col space-y-6 lg:space-y-12">
+            <Text text={interviewData.firstIntroduction} />
+            <Text text={interviewData.secondIntroduction} />
+          </div>
 
-          <h2 className="mt-8 text-h-3 font-bold text-[#4C4C4C] mb-3 md:text-xl lg:text-h-3-2x lg:mt-10">
-            Lorem ipsum dolor sit amet?
-          </h2>
-
-          <p className="text-body text-para-1x font-general-sans font-medium md:text-base md:leading-[27px] lg:text-para-2x">
-            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet
-            consectetur dolor sit amet lorem ipsum, amet consectetur dolor sit amet lorem sit. ipsum sit amet
-            consectetur adipscising. Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit
-            amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet. Lorem ipsum dolor sit amet consectetur
-            adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem ipsum, amet
-            consectetur dolor sit amet lorem sit. ipsum sit amet consectetur adipscising. Lorem ipsum dolor sit amet
-            consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet consectetur dolor sit amet lorem
-            ipsum, amet.
-          </p>
-        </div> */}
+          <div className="flex flex-col space-y-12 lg:space-y-14">
+            {interviewData.session.map(({ question, answers }, index) => (
+              <Fragment key={index}>
+                <Item question={question} answers={answers} />
+              </Fragment>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

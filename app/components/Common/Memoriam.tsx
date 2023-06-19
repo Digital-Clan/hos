@@ -31,7 +31,6 @@ export default function Memoriam({
         ${additionnalClasses && additionnalClasses}
       `)}
     >
-      {/* <div className={container-block lg:flex lg:justify-end}> */}
       <div
         className={twMerge(`
         container-block lg:flex lg:justify-end
