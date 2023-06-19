@@ -200,7 +200,8 @@
 
 .button--white,
 .button--red,
-.button--blue {
+.button--blue,
+.button--transparent {
   font-weight: bold;
   overflow: hidden;
 }
@@ -220,15 +221,23 @@
   background: #304098;
 }
 
+.button--transparent {
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fefefe;
+}
+
 .button--white span,
 .button--red span,
-.button--blue span {
+.button--blue span,
+.button--transparent span {
   display: block;
   position: relative;
   z-index: 10;
 }
 
-.button--white:hover span {
+.button--white:hover span,
+.button--transparent:hover span {
   animation: MoveScaleUpInitial 0.3s forwards, MoveScaleUpEnd 0.3s forwards 0.3s;
 }
 
@@ -287,7 +296,8 @@
 
 .button--white::before,
 .button--red::before,
-.button--blue::before {
+.button--blue::before,
+.button--transparent::before {
   overflow: hidden;
   content: "";
   width: 120%;
@@ -299,7 +309,8 @@
   transform: translate3d(0, 68%, 0) scale3d(0, 0, 0);
 }
 
-.button--white::before {
+.button--white::before,
+.button--transparent::before {
   background: #304098;
 }
 
@@ -313,21 +324,24 @@
 
 .button--white:hover::before,
 .button--red:hover::before,
-.button--blue:hover::before {
+.button--blue:hover::before,
+.button--transparent:hover::before {
   transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
   transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 }
 
 .button--white::after,
 .button--red::after,
-.button--blue::after {
+.button--blue::after,
+.button--transparent::after {
   overflow: hidden;
   content: "";
   transform: translate3d(0, -100%, 0);
   transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 }
 
-.button--white::after {
+.button--white::after,
+.button--transparent::after {
   background: #304098;
 }
 
@@ -341,7 +355,8 @@
 
 .button--white:hover::after,
 .button--red:hover::after,
-.button--blue:hover::after {
+.button--blue:hover::after,
+.button--transparent:hover::after {
   transform: translate3d(0, 0, 0);
   transition-duration: 0.05s;
   transition-delay: 0.5s;
@@ -399,18 +414,6 @@
   background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png");
   background-size: cover;
   background-position: center right;
-}
-
-.home-memoriam {
-  background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686664429/hos/memoriam-img-mobile_sasva8.png");
-  background-size: cover;
-}
-
-@media (min-width: 768px) {
-  .home-memoriam {
-    background-image: url("https://res.cloudinary.com/dljsalifp/image/upload/v1686698208/hos/memoriam-img-pc_aaz5j8.png");
-    background-size: cover;
-  }
 }
 
 .trumpet-left {

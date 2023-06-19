@@ -8,8 +8,22 @@ export default function Home() {
       <Mission />
       <Memoriam
         showButton={true}
-        classNames="bg-cover bg-memoriam-home-bg-mobile sm:bg-memoriam-home-bg-pc"
-      />
+        buttonType="red"
+        additionnalClasses="bg-cover bg-memoriam-home-mobile sm:bg-memoriam-home-pc"
+        description="Pastor Paul Adewunmi was a man of exceptional 
+        character while he was here with us. He lived a 
+        life that glorified GOD in his time on earth. This
+        section is dedicated to his memory and to the
+        continuation of the ministry he started based 
+        on instructions given to him by the Holy Spirit."
+      >
+        <span className="block font-general-sans text-detail lg:text-sm-1x lg:font-semibold lg:text-[#C4C4C4]">
+          IN MEMORIAM
+        </span>
+        <h2 className="my-2 max-w-[240px] text-heading-2 font-bold md:text-2xl lg:text-[40px] lg:leading-[53px] lg:mb-6 lg:max-w-full">
+          A life dedicated to the service of GOD.
+        </h2>
+      </Memoriam>
       <Events />
     </main>
   );
