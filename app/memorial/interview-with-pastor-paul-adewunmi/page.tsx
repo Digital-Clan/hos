@@ -20,7 +20,7 @@ export default function Interview() {
   return (
     <section className="memorial-page relative px-5 py-12 lg:py-16 xl:py-20">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-5 md:mb-10 lg:mb-14">
+        <div className="mb-10 md:mb-14 lg:mb-20">
           <h2 className="mb-5 text-center text-h1-m font-black text-black md:text-4xl lg:mb-10 lg:text-h1-d">
             Interview with the Pastor
           </h2>
