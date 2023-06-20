@@ -13,14 +13,14 @@ export default function PostShare() {
         <div className="flex w-full items-center justify-center space-x-7">
           <TwitterShareButton
             url={url}
-            title="testing"
+            title=""
             className="transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-150"
           >
             <TwitterIcon fillColor="#121212" />
           </TwitterShareButton>
           <FacebookShareButton
             url={url}
-            title="testing"
+            title=""
             className="transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-150"
           >
             <FacebookIcon fillColor="#121212" />
