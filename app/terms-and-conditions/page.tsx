@@ -9,22 +9,22 @@ export default function TermsAndConditions() {
             </h1>
             <div className="flex flex-col space-y-10 lg:space-y-14">
               <div>
-                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">
+                <h2 className="mb-3 text-h3-m font-bold text-black md:text-h3-t lg:text-h3-d">
                   1. Acceptance of Terms
                 </h2>
                 <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
-                  By accessing and using the website &apos;devotedskies.org,&apos; you acknowledge that you have read,
-                  understood, and agree to be bound by these terms and conditions. If you do not agree to these terms,
-                  please refrain from using this website.
+                  By accessing and using the website &apos;hourofsolutionuk.org,&apos; you acknowledge that you have
+                  read, understood, and agree to be bound by these terms and conditions. If you do not agree to these
+                  terms, please refrain from using this website.
                 </p>
               </div>
 
               <div>
-                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">
+                <h2 className="mb-3 text-h3-m font-bold text-black md:text-h3-t lg:text-h3-d">
                   2. Intellectual Property
                 </h2>
                 <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
-                  All content on &apos;devotedskies.org,&apos; including text, graphics, logos, images, videos, and
+                  All content on &apos;hourofsolutionuk.org,&apos; including text, graphics, logos, images, videos, and
                   software, is the property of Devoted Skies or its licensors and is protected by intellectual property
                   laws. You may not use, reproduce, modify, or distribute any content from this website without prior
                   written permission from Devoted Skies.
@@ -32,10 +32,10 @@ export default function TermsAndConditions() {
               </div>
 
               <div>
-                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">3. User Conduct</h2>
+                <h2 className="mb-3 text-h3-m font-bold text-black md:text-h3-t lg:text-h3-d">3. User Conduct</h2>
                 <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
-                  When using &apos;devotedskies.org,&apos; you agree to abide by all applicable laws and regulations.
-                  You further agree not to:
+                  When using &apos;hourofsolutionuk.org,&apos; you agree to abide by all applicable laws and
+                  regulations. You further agree not to:
                 </p>
                 <ul className="mt-5 flex flex-col space-y-2 font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   <li>
@@ -52,9 +52,7 @@ export default function TermsAndConditions() {
               </div>
 
               <div>
-                <h2 className="mb-3 text-h3-m font-bold text-[#4C4C4C] md:text-h3-t lg:text-h3-d">
-                  4. Third-Party Links
-                </h2>
+                <h2 className="mb-3 text-h3-m font-bold text-black md:text-h3-t lg:text-h3-d">4. Third-Party Links</h2>
                 <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   Hour of Solution may contain links to third-party websites for your convenience. Hour of Solution does
                   not endorse or control the content or practices of these third-party websites. You acknowledge and
