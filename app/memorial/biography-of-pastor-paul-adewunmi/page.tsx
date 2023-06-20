@@ -8,7 +8,7 @@ export default function Biography() {
       <div className="mx-auto max-w-5xl">
         <div className="mb-10 md:mb-14 lg:mb-20">
           <h2 className="mb-5 text-center text-h1-m font-black text-black md:text-4xl lg:mb-10 lg:text-h1-d">
-            Biography of the Pastor
+            Biography of Pastor Paul Adewunmi
           </h2>
           <img
             src="https://res.cloudinary.com/dljsalifp/image/upload/v1687184095/hos/pastor-bio-bg-2_vriare.png"
