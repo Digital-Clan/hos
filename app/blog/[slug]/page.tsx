@@ -6,6 +6,7 @@ export default function BlogPost() {
       <PostHeader />
       <PostBody />
       <PostShare />
+      <PostComments />
     </main>
   );
 }

@@ -16,3 +16,4 @@ export { default as DownloadIcon } from "./Download";
 export { default as VideoMobileIcon } from "./VideoMobile";
 export { default as VideoDesktopIcon } from "./VideoDesktop";
 export { default as PlusIcon } from "./Plus";
+export { default as UserIcon } from "./User";
