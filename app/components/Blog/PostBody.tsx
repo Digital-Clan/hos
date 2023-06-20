@@ -1,13 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
 export default function PostBody() {
   return (
-    <section className="-mt-32 px-5 pb-10">
-      <div className="">
+    <section className="-mt-32 px-5 pb-10 sm:-mt-44">
+      <div className="mx-auto max-w-[1037px]">
         <div className="mb-8 w-full">
           <img
             src="https://res.cloudinary.com/dljsalifp/image/upload/v1687250930/hos/blog-img-3_prahuz.png"
             alt=""
-            className="h-[240px] w-full rounded-[32px] sm:h-[350px] md:h-[240px]"
+            className="w-full rounded-[32px] object-cover md:h-[460px] lg:h-[490px]"
           />
         </div>
 
