@@ -16,6 +16,7 @@ module.exports = {
         help: "#909090",
         "inactive-white": "#B1B1B1",
         "body-white": "#CECECE",
+        "light-red": "#FFF2F2",
       },
       fontFamily: {
         sans: ["Aeonik", defaultTheme.fontFamily.sans],

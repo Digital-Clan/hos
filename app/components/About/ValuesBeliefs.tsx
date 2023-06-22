@@ -34,7 +34,7 @@ export default function ValuesBeliefs() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-[#FFF2F2] px-5 py-8 md:py-10">
+        <div className="w-full bg-light-red px-5 py-8 md:py-10">
           <div className="mr-auto max-w-[624px] lg:px-7">
             <h2 className="mb-4 sm:mb-6">
               <span className="mb-2 block font-general-sans text-xs-m font-medium uppercase text-secondary md:text-xs-t lg:mb-0 lg:text-xs-d lg:font-semibold">

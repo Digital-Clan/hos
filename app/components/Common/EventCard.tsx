@@ -30,7 +30,7 @@ export default function EventCard({
       </div>
       <div
         className={`p-5 
-      ${liveEvent ? "bg-[#F2FDFF]" : "bg-[#FFF2F2]"}
+      ${liveEvent ? "bg-[#F2FDFF]" : "bg-light-red"}
       rounded-bl-[24px] rounded-br-[24px] md:rounded-br-none md:rounded-tl-[24px] lg:w-[45%] lg:rounded-bl-[48px] lg:rounded-br-none lg:rounded-tl-[48px] lg:p-10`}
       >
         {liveEvent ? (
