@@ -25,9 +25,9 @@ export default function TermsAndConditions() {
                 </h2>
                 <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   All content on &apos;hourofsolutionuk.org,&apos; including text, graphics, logos, images, videos, and
-                  software, is the property of Devoted Skies or its licensors and is protected by intellectual property
-                  laws. You may not use, reproduce, modify, or distribute any content from this website without prior
-                  written permission from Devoted Skies.
+                  software, is the property of Hour of Solution or its licensors and is protected by intellectual
+                  property laws. You may not use, reproduce, modify, or distribute any content from this website without
+                  prior written permission from Hour of Solution.
                 </p>
               </div>
 
@@ -56,7 +56,7 @@ export default function TermsAndConditions() {
                 <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
                   Hour of Solution may contain links to third-party websites for your convenience. Hour of Solution does
                   not endorse or control the content or practices of these third-party websites. You acknowledge and
-                  agree that Devoted Skies is not responsible for any aspect of these websites, and your use of such
+                  agree that Hour of Solution is not responsible for any aspect of these websites, and your use of such
                   websites is at your own risk.
                 </p>
               </div>
