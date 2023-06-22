@@ -1,0 +1,27 @@
+/* eslint-disable @next/next/no-img-element */
+export default function Visioner() {
+  return (
+    <section className="about-visioner relative bg-light-red px-5 py-10 md:py-16 lg:py-20">
+      <div className="relative z-10 mx-auto max-w-5xl">
+        <div className="mb-5 md:mb-7 lg:mb-10">
+          <img
+            src="https://res.cloudinary.com/dljsalifp/image/upload/v1687402808/hos/about-pastor-img_h7cx4i.png"
+            alt="Pastor Paul Adewunmi"
+          />
+        </div>
+        <div>
+          <p className="mb-2 block font-general-sans text-xs-m font-medium uppercase text-secondary md:text-xs-t lg:mb-0 lg:text-xs-d lg:font-semibold">
+            Our Visioner
+          </p>
+          <h2 className="mb-3 text-h3-m font-bold md:text-h3-t lg:mb-5 lg:text-h3-d">Pastor Paul Adewunmi</h2>
+          <p className="font-general-sans text-sm-m font-medium text-body sm:text-sm-t lg:text-p1-d">
+            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet
+            consectetur dolor sit amet lorem ipsum, amet consectetur dolor sit amet lorem ipsum sit un. consectetur
+            adipsising elit, dolor lorem ipusm dolor sit amet, dolor sit amet lorem. Lorem ipsum dolor sit amet
+            consectetur dolor sit, adipscising elit, dolor sit amet dolor sit amet dolo.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -310,14 +310,32 @@
   z-index: -1;
 }
 
+.about-visioner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #fff;
+}
+
 @media (min-width: 768px) {
   .memorial-page::before {
     height: 350px;
+  }
+
+  .about-visioner::before {
+    height: 180px;
   }
 }
 
 @media (min-width: 1024px) {
   .memorial-page::before {
     height: 490px;
+  }
+
+  .about-visioner::before {
+    height: 250px;
   }
 }
