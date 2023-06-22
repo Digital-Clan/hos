@@ -16,22 +16,24 @@ export default function Nav() {
 
   return (
     <>
-      {isMenuOpen && (
-        <div className="absolute right-0 top-0 z-20 w-full bg-primary px-5 pb-10 pt-24 text-white lg:hidden">
-          <ul className="flex flex-col space-y-7">
-            {links.map((link) => (
-              <Link
-                onClick={() => setIsMenuOpen(false)}
-                href={link.href}
-                key={link.id}
-                className="link white-link text-left text-h4-t font-bold"
-              >
-                {link.name}
-              </Link>
-            ))}
-          </ul>
-        </div>
-      )}
+      <div
+        className={`
+      ${isMenuOpen ? "transalte-y-0" : "-translate-y-full"}
+      absolute right-0 top-0 z-20 w-full bg-primary px-5 pb-10 pt-24 text-white transition-transform duration-500 ease-in-out lg:hidden`}
+      >
+        <ul className="flex flex-col space-y-7">
+          {links.map((link) => (
+            <Link
+              onClick={() => setIsMenuOpen(false)}
+              href={link.href}
+              key={link.id}
+              className="link white-link text-left text-h4-t font-bold"
+            >
+              {link.name}
+            </Link>
+          ))}
+        </ul>
+      </div>
       <nav className="relative z-[50] bg-primary p-5 text-white lg:py-6">
         <div className="container-block flex items-center justify-between">
           <Link onClick={() => setIsMenuOpen(false)} href="/" className="text-xl lg:text-3xl">
