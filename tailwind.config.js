@@ -68,6 +68,8 @@ module.exports = {
         "events-d":
           "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686909635/hos/events-hero-bg_giheqn.png')",
         donate: "url('https://res.cloudinary.com/dljsalifp/image/upload/v1686658930/hos/home-hero-bg_pnpz3s.png')",
+        "about-mission":
+          "url('https://res.cloudinary.com/dljsalifp/image/upload/v1687401811/hos/about-mission-bg_boyhgl.png')",
       },
     },
   },
