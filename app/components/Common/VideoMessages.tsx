@@ -13,7 +13,7 @@ interface VideoMessageCardProps {
   };
 }
 
-interface SwiperButtonsProps {
+export interface SwiperButtonsProps {
   prevButtonRef: any;
   nextButtonRef: any;
 }
