@@ -9,10 +9,14 @@ export default function PostHeader() {
             Blog
           </span>
         </Link>
-        <h1 className="my-5 text-h1-m font-black md:my-8 md:text-h1-t lg:my-10 lg:text-h1-d">
+        <h1 className="my-7 text-h1-m font-black md:my-8 md:text-h1-t lg:my-10 lg:text-h1-d">
           Budding Character for Great and mighty things.
         </h1>
-        <p className="text-h4-m font-bold md:text-h4-t lg:text-h4-d lg:font-medium">May 12, 2023</p>
+        <div className="flex items-center justify-center space-x-3 text-h4-m font-bold md:text-h4-t lg:text-h4-d lg:font-medium">
+          <span>May 12, 2023</span>
+          <span>•</span>
+          <span>Oluwaseun Adewunmi</span>
+        </div>
       </div>
     </section>
   );
