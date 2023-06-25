@@ -15,7 +15,7 @@ export default function Hero() {
           description="Pastor Paul Adewunmi was a man of exceptional character while he was here with us. He lived a life that glorified GOD in his time on earth."
         >
           <h2 className="my-2 text-h2-m font-bold md:text-h2-t lg:mb-6 lg:max-w-full lg:text-h2-d">
-            Biography of the Pastor
+            Biography of Pastor Paul Adewunmi
           </h2>
         </Memoriam>
         <Memoriam
@@ -29,7 +29,7 @@ export default function Hero() {
           description="Pastor Paul Adewunmi was a man of exceptional character while he was here with us. He lived a life that glorified GOD in his time on earth."
         >
           <h2 className="my-2 text-h2-m font-bold md:text-h2-t lg:mb-6 lg:max-w-full lg:text-h2-d">
-            Interview with the Pastor
+            An interview with Pastor Paul Adewunmi
           </h2>
         </Memoriam>
       </div>
