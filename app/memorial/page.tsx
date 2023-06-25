@@ -1,5 +1,5 @@
-import { Memoriam, AudioMessages, VideoMessages } from "../components/Common";
 import { Hero } from "../components/Memorial";
+import { Memoriam, AudioMessages, VideoMessages } from "../components/Common";
 
 export default function Memorial() {
   return (
