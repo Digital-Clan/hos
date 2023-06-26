@@ -2,39 +2,13 @@
 import Link from "next/link";
 import { EventCard } from "../Common";
 import { ArrowIcon } from "@/app/icons";
+import { Event } from "@/sanity/lib/types";
 
-export default function Events() {
-  const events = [
-    {
-      id: 1,
-      title: "DIVINE SETTLEMENT",
-      liveEvent: true,
-      scripture: "1 Peter 5:10",
-      minister: "Prophet Sunday Iyunade",
-      date: "Sunday, 22nd April 2023",
-      timeStart: "10:00 AM",
-      timeEnd: "06:00 PM",
-      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
-      liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
-      image:
-        "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
-    },
-    {
-      id: 2,
-      title: "DIVINE SETTLEMENT",
-      liveEvent: true,
-      scripture: "1 Peter 5:10",
-      minister: "Prophet Sunday Iyunade",
-      date: "Sunday, 22nd April 2023",
-      timeStart: "10:00 AM",
-      timeEnd: "06:00 PM",
-      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
-      liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
-      image:
-        "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
-    },
-  ];
+type Props = {
+  events: Event[];
+};
 
+export default function Events({ events }: Props) {
   return (
     <section className="relative bg-[#FEFEFE] py-14">
       <div className="trumpet-left absolute -top-3 left-0 h-[160px] w-[80px] lg:-top-16 lg:h-[520px] lg:w-[260px]" />
@@ -49,8 +23,8 @@ export default function Events() {
         {events.length > 0 && (
           <>
             <div className="mt-10 flex w-full flex-col space-y-10 px-5 sm:mt-14 md:mt-20 lg:space-y-12">
-              {events.map((event) => (
-                <EventCard key={event.id} event={event} />
+              {events.map((event, index) => (
+                <EventCard key={index} {...event} />
               ))}
             </div>
             <div className="mt-10 flex items-center justify-center px-5 lg:justify-end">

@@ -1,7 +1,10 @@
 import { Hero, Mission, Events } from "@/app/components/Home";
 import { Memoriam } from "@/app/components/Common";
+import { getLiveEvents } from "@/sanity/lib/util";
 
-export default function Home() {
+export default async function Home() {
+  const liveEvents = await getLiveEvents();
+
   return (
     <main>
       <Hero />
@@ -24,7 +27,7 @@ export default function Home() {
           A life dedicated to the service of GOD.
         </h2>
       </Memoriam>
-      <Events />
+      <Events events={liveEvents} />
     </main>
   );
 }
