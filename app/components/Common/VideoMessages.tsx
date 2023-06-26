@@ -3,15 +3,12 @@ import { useRef } from "react";
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useSwiper } from "swiper/react";
+import { Video } from "@/sanity/lib/types";
 import "swiper/css";
 
-interface VideoMessageCardProps {
-  item: {
-    title: string;
-    src: string;
-    embedCode: string;
-  };
-}
+type Props = {
+  videoMessages: Video[];
+};
 
 export interface SwiperButtonsProps {
   prevButtonRef: any;
@@ -28,7 +25,7 @@ const SwiperButtons = ({ prevButtonRef, nextButtonRef }: SwiperButtonsProps) => 
   );
 };
 
-const VideoMessageCard = ({ item: { title, embedCode } }: VideoMessageCardProps) => {
+const VideoMessageCard = ({ title, embedCode }: Video) => {
   return (
     <div className="video-message flex w-full flex-col space-y-5">
       <div className="h-[240px] sm:h-[320px]">
@@ -48,46 +45,7 @@ const VideoMessageCard = ({ item: { title, embedCode } }: VideoMessageCardProps)
   );
 };
 
-export default function VideoMessages() {
-  const videoMessages = [
-    {
-      id: 1,
-      title: "Daily Prophetic Encounter with Prophet Sunday Iyunade",
-      src: "https://www.youtube.com/watch?v=_y_CCiwKzQw",
-      embedCode: "ZNxNFzAFBiM",
-    },
-    {
-      id: 2,
-      title: "Daily Prophetic Encounter with Prophet Sunday Iyunade",
-      src: "https://www.youtube.com/watch?v=_y_CCiwKzQw",
-      embedCode: "ZNxNFzAFBiM",
-    },
-    {
-      id: 3,
-      title: "Daily Prophetic Encounter with Prophet Sunday Iyunade",
-      src: "https://www.youtube.com/watch?v=_y_CCiwKzQw",
-      embedCode: "ZNxNFzAFBiM",
-    },
-    {
-      id: 4,
-      title: "Daily Prophetic Encounter with Prophet Sunday Iyunade",
-      src: "https://www.youtube.com/watch?v=_y_CCiwKzQw",
-      embedCode: "ZNxNFzAFBiM",
-    },
-    {
-      id: 5,
-      title: "Daily Prophetic Encounter with Prophet Sunday Iyunade",
-      src: "https://www.youtube.com/watch?v=_y_CCiwKzQw",
-      embedCode: "ZNxNFzAFBiM",
-    },
-    {
-      id: 6,
-      title: "Daily Prophetic Encounter with Prophet Sunday Iyunade",
-      src: "https://www.youtube.com/watch?v=_y_CCiwKzQw",
-      embedCode: "ZNxNFzAFBiM",
-    },
-  ];
-
+export default function VideoMessages({ videoMessages }: Props) {
   const prevButtonRef = useRef<HTMLButtonElement | null>(null);
   const nextButtonRef = useRef<HTMLButtonElement | null>(null);
 
@@ -195,9 +153,9 @@ export default function VideoMessages() {
               },
             }}
           >
-            {videoMessages.map((videoMessage) => (
-              <SwiperSlide key={videoMessage.id}>
-                <VideoMessageCard item={videoMessage} />
+            {videoMessages.map((videoMessage, index) => (
+              <SwiperSlide key={index}>
+                <VideoMessageCard {...videoMessage} />
               </SwiperSlide>
             ))}
 

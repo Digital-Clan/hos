@@ -1,6 +1,10 @@
 import { AudioMessages, VideoMessages } from "@/app/components/Common";
+import { getAudioMessages, getVideoMessages } from "@/sanity/lib/util";
 
-export default function Media() {
+export default async function Media() {
+  const audioMessages = await getAudioMessages();
+  const videoMessages = await getVideoMessages();
+
   return (
     <main>
       <header className="bg-media-m bg-cover bg-center px-5 py-16 text-center text-white sm:py-24 md:px-8 md:py-32 lg:bg-media-d lg:py-36 lg:text-left">
@@ -13,8 +17,8 @@ export default function Media() {
           </div>
         </div>
       </header>
-      <VideoMessages />
-      <AudioMessages />
+      <VideoMessages videoMessages={videoMessages} />
+      <AudioMessages audioMessages={audioMessages} />
     </main>
   );
 }

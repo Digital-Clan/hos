@@ -22,3 +22,16 @@ export type Event = {
   live: boolean;
   link: string;
 };
+
+export type Audio = {
+  title: string;
+  link: string;
+  coverImage: string;
+  date: string;
+  minister: string;
+};
+
+export type Video = {
+  title: string;
+  embedCode: string;
+};

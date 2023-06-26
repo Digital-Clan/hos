@@ -1,5 +1,5 @@
 import { client } from "./client";
-import { TeamMember, About, Event } from "./types";
+import { TeamMember, About, Event, Audio, Video } from "./types";
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
   return await client.fetch(
@@ -27,4 +27,14 @@ export async function getUpcomingEvents(): Promise<Event[]> {
   return await client.fetch(
     `*[_type == "event" && live == false] | order(_createdAt desc) { title, date, minister, sermon, "coverImage": coverImage.asset->url, startTime, endTime, address, live, link }`
   );
+}
+
+export async function getAudioMessages(): Promise<Audio[]> {
+  return await client.fetch(
+    `*[_type == "audio"] | order(_createdAt desc) { title, link, "coverImage": coverImage.asset->url, date, minister }`
+  );
+}
+
+export async function getVideoMessages(): Promise<Video[]> {
+  return await client.fetch(`*[_type == "video"] | order(_createdAt desc) { title, embedCode }`);
 }

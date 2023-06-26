@@ -3,7 +3,11 @@
 import { useState, useRef } from "react";
 import { ShareIcon, ListenIcon, DownloadIcon, CalendarIcon } from "@/app/icons";
 import ShareDialog from "./ShareDialog";
+import { Audio } from "@/sanity/lib/types";
 
+type Props = {
+  audioMessages: Audio[];
+};
 export interface Message {
   link: string;
   title: string;
@@ -11,19 +15,12 @@ export interface Message {
 }
 
 interface AudioMessageCardProps {
-  item: {
-    id: number;
-    title: string;
-    minister: string;
-    date: string;
-    link: string;
-    image: string;
-  };
+  item: Audio;
   handleOpenDialog: (message: Message) => void;
 }
 
 const AudioMessageCard = ({
-  item: { id, title, minister, date, link, image },
+  item: { title, minister, link, coverImage, date },
   handleOpenDialog,
 }: AudioMessageCardProps) => {
   const handleDownload = () => {
@@ -83,9 +80,9 @@ const AudioMessageCard = ({
     <div className="flex w-full flex-col items-stretch md:h-[250px] md:flex-row-reverse lg:h-[326px]">
       <div className="h-full w-full md:h-auto md:w-[55%]">
         <img
-          src={image}
+          src={coverImage}
           alt={title}
-          className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-none"
+          className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-none md:object-cover"
         />
       </div>
       <div
@@ -123,26 +120,7 @@ const AudioMessageCard = ({
   );
 };
 
-export default function AudioMessages() {
-  const audioMessages = [
-    {
-      id: 1,
-      title: "DAILY PROPHETIC ENCOUNTER WITH PROPHET SUNDAY.",
-      minister: "Prophet Sunday Iyunade",
-      date: "Sunday, 22nd April 2023",
-      link: "https://cdn.trendybeatz.com/audio/Burna-Boy-Alone-[TrendyBeatz.com].mp3",
-      image: "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
-    },
-    {
-      id: 2,
-      title: "DAILY PROPHETIC ENCOUNTER WITH PROPHET SUNDAY.",
-      minister: "Prophet Sunday Iyunade",
-      date: "Sunday, 22nd April 2023",
-      link: "https://cdn.trendybeatz.com/audio/Burna-Boy-I-Be-Common-Person-(TrendyBeatz.com).mp3",
-      image: "https://res.cloudinary.com/dljsalifp/image/upload/v1686936293/hos/audio-message-img_mhgitb.png",
-    },
-  ];
-
+export default function AudioMessages({ audioMessages }: Props) {
   const [isShareDialogOpen, setIsShareDialogOpen] = useState<boolean>(false);
   const [currentMessage, setCurrentMessage] = useState<Message>({
     link: "",
@@ -173,8 +151,8 @@ export default function AudioMessages() {
             Audio Messages
           </h2>
           <div className="mt-5 flex flex-col space-y-10">
-            {audioMessages.map((audioMessage) => (
-              <AudioMessageCard key={audioMessage.id} item={audioMessage} handleOpenDialog={handleOpenDialog} />
+            {audioMessages.map((audioMessage, index) => (
+              <AudioMessageCard key={index} item={audioMessage} handleOpenDialog={handleOpenDialog} />
             ))}
           </div>
         </div>
