@@ -2,7 +2,7 @@
 import { getBio } from "@/sanity/lib/util";
 import Bio from "./Bio";
 
-export default async function Biography() {
+export default async function Page() {
   const bio = await getBio();
 
   return <Bio image={bio.image} biography={bio.biography} />;

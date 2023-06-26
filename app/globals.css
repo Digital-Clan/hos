@@ -354,19 +354,39 @@
 }
 
 /* Blogpost */
-.blogpost br .biography br {
+.blogpost br .biography br,
+.interview br {
   display: none !important;
 }
 
 .blogpost p,
 .blogpost li,
 .biography p {
+  margin-bottom: 30px;
+}
+
+.interview p {
+  margin-bottom: 50px;
+}
+
+.blogpost p,
+.blogpost li,
+.biography p,
+.interview p {
   font-family: "GeneralSans", sans-serif;
   color: #777777;
   font-size: 15px;
   line-height: 25px;
-  margin-bottom: 30px;
   font-weight: 500;
+}
+
+.interview h2 {
+  font-family: "GeneralSans", sans-serif;
+  font-weight: 600;
+  color: #121212;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 10px;
 }
 
 .blogpost h2,
@@ -390,7 +410,9 @@
 @media (min-width: 768px) {
   .blogpost p,
   .biography p,
-  .blogpost li {
+  .interview p,
+  .blogpost li,
+  .interview h2 {
     font-size: 18px;
     line-height: 28px;
   }
@@ -409,7 +431,9 @@
 @media (min-width: 1024px) {
   .blogpost p,
   .biography p,
-  .blogpost li {
+  .interview p,
+  .blogpost li,
+  .interview h2 {
     font-size: 24px;
     line-height: 38px;
   }

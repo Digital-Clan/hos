@@ -53,4 +53,5 @@ export type PastorBio = {
 
 export type PastorInterview = {
   interview: PortableTextBlock[];
+  image: string;
 };

@@ -56,6 +56,6 @@ export async function getBio(): Promise<PastorBio> {
   return await client.fetch(`*[_type == "biography"][0]{ biography, "image": image.asset->url}`);
 }
 
-export async function getInterview(): Promise<PastorInterview[]> {
-  return await client.fetch(`*[_type == "interview"][0].interview`);
+export async function getInterview(): Promise<PastorInterview> {
+  return await client.fetch(`*[_type == "interview"][0]{ interview, "image": image.asset->url}`);
 }
