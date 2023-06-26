@@ -45,3 +45,12 @@ export type Post = {
   date: string;
   author: string;
 };
+
+export type PastorBio = {
+  biography: PortableTextBlock[];
+  image: string;
+};
+
+export type PastorInterview = {
+  interview: PortableTextBlock[];
+};

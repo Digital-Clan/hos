@@ -354,12 +354,13 @@
 }
 
 /* Blogpost */
-.blogpost br {
+.blogpost br .biography br {
   display: none !important;
 }
 
 .blogpost p,
-.blogpost li {
+.blogpost li,
+.biography p {
   font-family: "GeneralSans", sans-serif;
   color: #777777;
   font-size: 15px;
@@ -388,6 +389,7 @@
 
 @media (min-width: 768px) {
   .blogpost p,
+  .biography p,
   .blogpost li {
     font-size: 18px;
     line-height: 28px;
@@ -406,6 +408,7 @@
 
 @media (min-width: 1024px) {
   .blogpost p,
+  .biography p,
   .blogpost li {
     font-size: 24px;
     line-height: 38px;

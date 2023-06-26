@@ -1,5 +1,5 @@
 import { client } from "./client";
-import { TeamMember, About, Event, Audio, Video, Post } from "./types";
+import { TeamMember, About, Event, Audio, Video, Post, PastorBio, PastorInterview } from "./types";
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
   return await client.fetch(
@@ -50,4 +50,12 @@ export async function getPostBySlug(slug: string): Promise<Post> {
     `*[_type == "post" && slug.current == $slug][0]{ title, "slug": slug.current, content, "coverImage": coverImage.asset->url, date, "author": author->name }`,
     { slug }
   );
+}
+
+export async function getBio(): Promise<PastorBio> {
+  return await client.fetch(`*[_type == "biography"][0]{ biography, "image": image.asset->url}`);
+}
+
+export async function getInterview(): Promise<PastorInterview[]> {
+  return await client.fetch(`*[_type == "interview"][0].interview`);
 }
