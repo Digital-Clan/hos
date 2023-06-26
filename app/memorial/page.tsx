@@ -2,6 +2,12 @@ import { Hero } from "../components/Memorial";
 import { getAudioMessages, getVideoMessages } from "@/sanity/lib/util";
 import { Memoriam, AudioMessages, VideoMessages } from "../components/Common";
 
+export const metadata = {
+  title: "Memorial - Hour of Solution",
+  description:
+    "We are an inter-denominational group of God's people who believe in the saving power of Jesus Christ. Our mission is to raise people who are part of God's End Time Army.",
+};
+
 export default async function Memorial() {
   const audioMessages = await getAudioMessages();
   const videoMessages = await getVideoMessages();

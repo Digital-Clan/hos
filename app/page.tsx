@@ -2,6 +2,12 @@ import { Hero, Mission, Events } from "@/app/components/Home";
 import { Memoriam } from "@/app/components/Common";
 import { getLiveEvents } from "@/sanity/lib/util";
 
+export const metadata = {
+  title: "Hour of Solution - Home",
+  description:
+    "We are an inter-denominational group of God's people who believe in the saving power of Jesus Christ. Our mission is to raise people who are part of God's End Time Army.",
+};
+
 export default async function Home() {
   const liveEvents = await getLiveEvents();
 
