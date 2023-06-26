@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
@@ -37,7 +38,11 @@ export default function Nav() {
       <nav className="relative z-[50] bg-primary p-5 text-white lg:py-6">
         <div className="container-block flex items-center justify-between">
           <Link onClick={() => setIsMenuOpen(false)} href="/" className="text-xl lg:text-3xl">
-            Logo ipsum
+            <img
+              className="h-[50px] w-[50px] md:h-[70px] md:w-[70px]"
+              src="/hour-of-solution-logo.jpg"
+              alt="Hour of Solution Logo"
+            />
           </Link>
 
           <ul className="hidden lg:flex lg:space-x-12">
