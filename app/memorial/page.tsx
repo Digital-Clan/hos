@@ -1,7 +1,11 @@
 import { Hero } from "../components/Memorial";
+import { getAudioMessages, getVideoMessages } from "@/sanity/lib/util";
 import { Memoriam, AudioMessages, VideoMessages } from "../components/Common";
 
-export default function Memorial() {
+export default async function Memorial() {
+  const audioMessages = await getAudioMessages();
+  const videoMessages = await getVideoMessages();
+
   return (
     <main className="mx-auto max-w-screen-2xl">
       <Memoriam
@@ -22,8 +26,8 @@ export default function Memorial() {
         </h2>
       </Memoriam>
       <Hero />
-      <VideoMessages />
-      <AudioMessages />
+      <VideoMessages videoMessages={videoMessages} />
+      <AudioMessages audioMessages={audioMessages} />
     </main>
   );
 }
