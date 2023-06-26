@@ -1,5 +1,5 @@
 import { client } from "./client";
-import { TeamMember, About, Event, Audio, Video } from "./types";
+import { TeamMember, About, Event, Audio, Video, Post } from "./types";
 
 export async function getTeamMembers(): Promise<TeamMember[]> {
   return await client.fetch(
@@ -37,4 +37,17 @@ export async function getAudioMessages(): Promise<Audio[]> {
 
 export async function getVideoMessages(): Promise<Video[]> {
   return await client.fetch(`*[_type == "video"] | order(_createdAt desc) { title, embedCode }`);
+}
+
+export async function getPosts(): Promise<Post[]> {
+  return await client.fetch(
+    `*[_type == "post"] | order(_createdAt desc) { title, "slug": slug.current, content, excerpt, "coverImage": coverImage.asset->url, date, "author": author->name }`
+  );
+}
+
+export async function getPostBySlug(slug: string): Promise<Post> {
+  return await client.fetch(
+    `*[_type == "post" && slug.current == $slug][0]{ title, "slug": slug.current, content, "coverImage": coverImage.asset->url, date, "author": author->name }`,
+    { slug }
+  );
 }

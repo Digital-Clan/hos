@@ -1,6 +1,14 @@
+"use client";
 import Link from "next/link";
+import moment from "moment";
 
-export default function PostHeader() {
+type Props = {
+  title: string;
+  date: string;
+  author: string;
+};
+
+export default function PostHeader({ title, date, author }: Props) {
   return (
     <section className="bg-black px-5 pb-44 pt-16 sm:pb-60 md:pt-20 lg:pt-24">
       <div className="mx-auto max-w-[350px] text-center text-white md:max-w-2xl">
@@ -9,13 +17,11 @@ export default function PostHeader() {
             Blog
           </span>
         </Link>
-        <h1 className="my-7 text-h1-m font-black md:my-8 md:text-h1-t lg:my-10 lg:text-h1-d">
-          Budding Character for Great and mighty things.
-        </h1>
+        <h1 className="my-7 text-h1-m font-black md:my-8 md:text-h1-t lg:my-10 lg:text-h1-d">{title}</h1>
         <div className="flex items-center justify-center space-x-3 text-h4-m font-bold md:text-h4-t lg:text-h4-d lg:font-medium">
-          <span>May 12, 2023</span>
+          <span>{moment(date).format("MMMM DD, YYYY")}</span>
           <span>•</span>
-          <span>Oluwaseun Adewunmi</span>
+          <span>{author}</span>
         </div>
       </div>
     </section>

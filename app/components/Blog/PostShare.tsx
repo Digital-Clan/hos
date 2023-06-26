@@ -1,9 +1,8 @@
 "use client";
 import { TwitterIcon, FacebookIcon } from "@/app/icons";
-
 import { FacebookShareButton, TwitterShareButton } from "react-share";
 
-export default function PostShare() {
+export default function PostShare({ title }: { title: string }) {
   const url = typeof window !== "undefined" ? window.location.href : "";
 
   return (
@@ -13,14 +12,14 @@ export default function PostShare() {
         <div className="flex w-full items-center justify-center space-x-7">
           <TwitterShareButton
             url={url}
-            title=""
+            title={title}
             className="transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-150"
           >
             <TwitterIcon fillColor="#121212" />
           </TwitterShareButton>
           <FacebookShareButton
             url={url}
-            title=""
+            title={title}
             className="transition duration-300 ease-in-out hover:-translate-y-2 hover:scale-150"
           >
             <FacebookIcon fillColor="#121212" />

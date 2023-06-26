@@ -1,10 +1,12 @@
 import { Hero, PostsGrid } from "@/app/components/Blog";
+import { getPosts } from "@/sanity/lib/util";
 
-export default function Blog() {
+export default async function Blog() {
+  const posts = await getPosts();
   return (
     <main>
       <Hero />
-      <PostsGrid />
+      <PostsGrid posts={posts} />
     </main>
   );
 }

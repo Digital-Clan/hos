@@ -352,3 +352,72 @@
 .team-card:hover > img {
   filter: blur(5px);
 }
+
+/* Blogpost */
+.blogpost br {
+  display: none !important;
+}
+
+.blogpost p,
+.blogpost li {
+  font-family: "GeneralSans", sans-serif;
+  color: #777777;
+  font-size: 15px;
+  line-height: 25px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.blogpost h2,
+.blogpost h3 {
+  font-family: "Aeonik", sans-serif;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #4c4c4c;
+}
+
+.blogpost h2 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.blogpost h3 {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+@media (min-width: 768px) {
+  .blogpost p,
+  .blogpost li {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .blogpost h2 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .blogpost h3 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blogpost p,
+  .blogpost li {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  .blogpost h2 {
+    font-size: 40px;
+    line-height: 53px;
+  }
+
+  .blogpost h3 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+}

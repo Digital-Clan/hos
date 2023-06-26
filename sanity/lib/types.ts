@@ -35,3 +35,13 @@ export type Video = {
   title: string;
   embedCode: string;
 };
+
+export type Post = {
+  title: string;
+  slug: string;
+  content: PortableTextBlock[];
+  excerpt: string;
+  coverImage: string;
+  date: string;
+  author: string;
+};
