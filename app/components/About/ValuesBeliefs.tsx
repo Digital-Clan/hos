@@ -1,4 +1,7 @@
-export default function ValuesBeliefs() {
+import { PortableText } from "@portabletext/react";
+import { PortableTextBlock } from "sanity";
+
+export default function ValuesBeliefs({ beliefs }: { beliefs: PortableTextBlock[] }) {
   const values = ["Growth", "Purpose", "Spirituality", "Worship", "Excellence", "Love", "Leadership"];
 
   return (
@@ -43,10 +46,9 @@ export default function ValuesBeliefs() {
               <span className="block text-h3-m font-bold md:text-h3-t lg:text-h3-d">Beliefs</span>
             </h2>
 
-            <p className="font-general-sans text-sm-m font-medium text-body sm:text-sm-t lg:text-p1-d">
-              Lorem ipsum dolor sit amet consectetur elit dolor sit amet, dolor sit amet lorem ipsum sit amet dolor sit
-              amet dolor sit amet,lorem ipsum lorem dolor sit. sit amet, dolor sit amet lorem ipsum sit amet dolor
-            </p>
+            <div className="font-general-sans text-sm-m font-medium text-body sm:text-sm-t lg:text-p1-d">
+              <PortableText value={beliefs} />
+            </div>
           </div>
         </div>
       </div>
