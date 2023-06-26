@@ -1,5 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-export default function Visioner() {
+import { PortableTextBlock } from "sanity";
+import { PortableText } from "@portabletext/react";
+
+export default function Visioner({ visioner }: { visioner: PortableTextBlock[] }) {
   return (
     <section className="about-visioner relative bg-light-red px-5 py-10 md:py-16 lg:py-20">
       <div className="relative z-10 mx-auto max-w-5xl">
@@ -14,12 +17,9 @@ export default function Visioner() {
             Our Visioner
           </p>
           <h2 className="mb-3 text-h3-m font-bold md:text-h3-t lg:mb-5 lg:text-h3-d">Pastor Paul Adewunmi</h2>
-          <p className="font-general-sans text-sm-m font-medium text-body sm:text-sm-t lg:text-p1-d">
-            Lorem ipsum dolor sit amet consectetur adipscising elit, dolor sit amet dolor sit amet dolor sit amet
-            consectetur dolor sit amet lorem ipsum, amet consectetur dolor sit amet lorem ipsum sit un. consectetur
-            adipsising elit, dolor lorem ipusm dolor sit amet, dolor sit amet lorem. Lorem ipsum dolor sit amet
-            consectetur dolor sit, adipscising elit, dolor sit amet dolor sit amet dolo.
-          </p>
+          <div className="font-general-sans text-sm-m font-medium text-body sm:text-sm-t lg:text-p1-d">
+            <PortableText value={visioner} />
+          </div>
         </div>
       </div>
     </section>
