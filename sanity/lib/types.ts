@@ -10,3 +10,15 @@ export type About = {
   beliefs: PortableTextBlock[];
   ourVisioner: PortableTextBlock[];
 };
+
+export type Event = {
+  title: string;
+  minister: string;
+  sermon: string;
+  coverImage: string;
+  startTime: string;
+  endTime: string;
+  address: string;
+  live: boolean;
+  link: string;
+};

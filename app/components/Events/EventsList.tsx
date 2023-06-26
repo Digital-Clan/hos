@@ -1,79 +1,44 @@
+"use client";
 import EventCard from "../Common/EventCard";
+import { Event } from "@/sanity/lib/types";
 
-export default function EventsList() {
-  const liveEvents = [
-    {
-      id: 1,
-      title: "DIVINE SETTLEMENT",
-      liveEvent: true,
-      scripture: "1 Peter 5:10",
-      minister: "Prophet Sunday Iyunade",
-      date: "Sunday, 22nd April 2023",
-      timeStart: "10:00 AM",
-      timeEnd: "06:00 PM",
-      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
-      liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
-      image:
-        "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
-    },
-  ];
+type Props = {
+  liveEvents: Event[];
+  upcomingEvents: Event[];
+};
 
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: "DIVINE SETTLEMENT",
-      liveEvent: false,
-      scripture: "1 Peter 5:10",
-      minister: "Prophet Sunday Iyunade",
-      date: "Sunday, 22nd April 2023",
-      timeStart: "10:00 AM",
-      timeEnd: "06:00 PM",
-      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
-      liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
-      image:
-        "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
-    },
-    {
-      id: 2,
-      title: "DIVINE SETTLEMENT",
-      liveEvent: false,
-      scripture: "1 Peter 5:10",
-      minister: "Prophet Sunday Iyunade",
-      date: "Sunday, 22nd April 2023",
-      timeStart: "10:00 AM",
-      timeEnd: "06:00 PM",
-      venue: "Kent Hill Park, Milton Keynes Timbold Dr, Kent Hill, Milton Keynes MK7 6BZ",
-      liveLink: "https://www.youtube.com/watch?v=7X0J5XQw7o8",
-      image:
-        "https://res.cloudinary.com/dljsalifp/image/upload/v1686680465/hos/divine-settlement-ministering_lfxaze.png",
-    },
-  ];
-
+export default function EventsList({ liveEvents, upcomingEvents }: Props) {
   return (
-    <section className="px-5 py-12 md:px-8">
-      <div className="container-block">
-        <div className="mb-20 lg:mb-24">
-          <h2 className="mb-5 text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:mb-8 lg:text-[32px]">
-            Live Events
-          </h2>
-          <div className="flex flex-col space-y-10">
-            {liveEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
-          </div>
-        </div>
+    <>
+      {liveEvents.length !== 0 && upcomingEvents.length !== 0 ? (
+        <section className="px-5 py-12 md:px-8">
+          <div className="container-block">
+            <div className="mb-20 lg:mb-24">
+              <h2 className="mb-5 text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:mb-8 lg:text-[32px]">
+                Live Events
+              </h2>
+              <div className="flex flex-col space-y-10">
+                {liveEvents.map((event, index: number) => (
+                  <EventCard key={index} {...event} />
+                ))}
+              </div>
+            </div>
 
-        <div>
-          <h2 className="mb-5 text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:mb-8 lg:text-[32px]">
-            Upcoming Events
-          </h2>
-          <div className="flex flex-col space-y-10">
-            {upcomingEvents.map((event) => (
-              <EventCard key={event.id} event={event} />
-            ))}
+            <div>
+              <h2 className="mb-5 text-base font-medium leading-[20px] text-help sm:text-lg md:text-xl lg:mb-8 lg:text-[32px]">
+                Upcoming Events
+              </h2>
+              <div className="flex flex-col space-y-10">
+                {upcomingEvents.map((event, index) => (
+                  <EventCard key={index} {...event} />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </section>
+      ) : (
+        <p className="py-5 text-center text-p1-m text-body md:text-p1-t lg:text-p1-d">No events found</p>
+      )}
+    </>
   );
 }

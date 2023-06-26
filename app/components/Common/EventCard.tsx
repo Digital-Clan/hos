@@ -1,39 +1,35 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+import moment from "moment";
 import { CalendarIcon, TimeIcon, LocationIcon, VideoIcon, PlusIcon } from "@/app/icons";
-
-interface EventCardProps {
-  id: number;
-  image: string;
-  title: string;
-  liveEvent: boolean;
-  scripture: string;
-  minister: string;
-  timeStart: string;
-  timeEnd: string;
-  venue: string;
-  date: string;
-}
+import { Event } from "@/sanity/lib/types";
 
 export default function EventCard({
-  event: { id, image, title, liveEvent, scripture, minister, timeStart, timeEnd, venue, date },
-}: {
-  event: EventCardProps;
-}) {
+  coverImage,
+  title,
+  sermon,
+  minister,
+  startTime,
+  endTime,
+  address,
+  live,
+  link,
+}: Event) {
   return (
-    <div key={id} className="flex w-full flex-col items-stretch md:flex-row-reverse">
+    <div className="flex w-full flex-col items-stretch md:flex-row-reverse">
       <div className="h-full w-full md:h-auto md:w-[55%]">
         <img
-          src={image}
+          src={coverImage}
           alt={title}
           className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-br-[48px] md:rounded-tl-none md:rounded-tr-[48px] md:object-cover lg:rounded-br-[48px] lg:rounded-tr-[48px] xl:h-[450px]"
         />
       </div>
       <div
         className={`p-5 
-      ${liveEvent ? "bg-[#F2FDFF]" : "bg-light-red"}
+      ${live ? "bg-[#F2FDFF]" : "bg-light-red"}
       rounded-bl-[24px] rounded-br-[24px] md:rounded-br-none md:rounded-tl-[24px] lg:w-[45%] lg:rounded-bl-[48px] lg:rounded-br-none lg:rounded-tl-[48px] lg:p-10`}
       >
-        {liveEvent ? (
+        {live ? (
           <p className="font-general-sans text-xs-m font-medium uppercase text-primary md:text-xs-t lg:text-xs-d">
             Live Event
           </p>
@@ -43,7 +39,7 @@ export default function EventCard({
           </p>
         )}
         <p className="mb-2 mt-3 text-h4-m font-bold md:text-h4-t lg:mb-5 lg:text-h4-d">{title}</p>
-        <p className="font-general-sans text-xs-m font-medium text-body md:text-xs-t lg:text-xs-d">{scripture}</p>
+        <p className="font-general-sans text-xs-m font-medium text-body md:text-xs-t lg:text-xs-d">{sermon}</p>
         <p className="font-general-sans text-xs-t font-medium text-black lg:text-xl lg:leading-[32px]">
           Ministering: {minister}
         </p>
@@ -52,25 +48,25 @@ export default function EventCard({
             <div className="flex items-center space-x-2">
               <TimeIcon />
               <span className="font-general-sans text-xs-m font-medium text-black md:text-xs-t lg:text-sm-t">
-                {timeStart} - {timeEnd}
+                {moment(startTime).format("h:mm A")} - {moment(endTime).format("h:mm A")}
               </span>
             </div>
             <div className="flex items-center space-x-2">
               <CalendarIcon />
               <span className="font-general-sans text-xs-m font-medium text-black md:text-xs-t lg:text-sm-t">
-                {date}
+                {moment(startTime).format("dddd, Do MMMM YYYY")}
               </span>
             </div>
           </div>
           <div className="flex items-center space-x-2">
             <LocationIcon />
             <span className="font-general-sans text-xs-m font-medium text-black md:text-xs-t lg:text-sm-t">
-              {venue}
+              {address}
             </span>
           </div>
         </div>
-        {liveEvent ? (
-          <a href="" className="black-link link mt-7 inline-flex items-center space-x-3 lg:mt-10">
+        {live ? (
+          <a href={link} className="black-link link mt-7 inline-flex items-center space-x-3 lg:mt-10">
             <VideoIcon fillColor="#121212" />
             <span className="font-general-sans text-sm-m font-medium md:text-sm-t lg:text-xs-d">WATCH LIVE</span>
           </a>
