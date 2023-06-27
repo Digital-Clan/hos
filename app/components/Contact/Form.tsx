@@ -15,15 +15,19 @@ export default function Form() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e: any) => {
     e.preventDefault();
-    // console.log(formData);
-    setShowConfirmationModal(true);
-    setFormData({
-      fullname: "",
-      email: "",
-      subject: "",
-      message: "",
+
+    fetch("https://hos-contact.vercel.app/api/contact", {
+      method: "POST",
+      body: JSON.stringify(formData),
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    }).then((res) => {
+      if (!res.ok) throw new Error("Failed to send message");
+      return res.json();
     });
   };
 
@@ -93,7 +97,7 @@ export default function Form() {
                 <button
                   type="submit"
                   className={`
-              w-full rounded-[64px] px-8 py-4 text-center text-para-1x text-white md:w-auto md:px-14 md:text-lg lg:px-16
+              text-para-1x w-full rounded-[64px] px-8 py-4 text-center text-white md:w-auto md:px-14 md:text-lg lg:px-16
               ${
                 formData.fullname && formData.email && formData.subject && formData.message
                   ? "bg-primary"
