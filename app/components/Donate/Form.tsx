@@ -143,7 +143,7 @@ export default function Form() {
     },
   ];
 
-  const [currentForm, setCurrentForm] = useState<Form>(headers[1]);
+  const [currentForm, setCurrentForm] = useState<Form>(headers[2]);
   const [formData, setFormData] = useState({
     amount: "",
     selectAmount: "",
