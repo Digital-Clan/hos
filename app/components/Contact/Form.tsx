@@ -24,6 +24,7 @@ export default function Form() {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
+        Origin: "https://hos-contact.vercel.app",
       },
     }).then((res) => {
       if (!res.ok) throw new Error("Failed to send message");
