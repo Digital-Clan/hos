@@ -120,8 +120,52 @@ function ContactBilling({
   );
 }
 
-function PaymentDetails() {
-  return <div>payment details</div>;
+function PaymentDetails({ amount }: { amount: string }) {
+  const [selectedOption, setSelectedOption] = useState<number>(0);
+  const paymentOptions = [
+    { id: 1, name: "PayPal" },
+    { id: 2, name: "Credit Card(Stripe)" },
+    { id: 3, name: "Bank Transfer" },
+  ];
+
+  return (
+    <div>
+      <div className="mb-6">
+        <p className="mb-2 font-general-sans text-xs-t font-medium text-[#A3A3A3]">Total amount to be donated:</p>
+        <p className="text-h4-m font-bold">{amount}</p>
+      </div>
+
+      <div>
+        <p className="mb-2 font-general-sans text-xs-t font-medium text-[#A3A3A3]">Payment method:</p>
+        <div className="flex flex-col space-y-3">
+          {paymentOptions.map((option) => (
+            <div
+              onClick={() => setSelectedOption(option.id)}
+              className="flex cursor-pointer items-center space-x-3"
+              key={option.id}
+            >
+              <div
+                className={`
+            ${selectedOption === option.id ? "border-primary" : "border-[#AAAAAA]"}
+            flex h-5 w-5 items-center justify-center rounded-full border-2`}
+              >
+                <div
+                  className={`h-3 w-3 rounded-full ${selectedOption === option.id ? "bg-primary" : "bg-transparent"}`}
+                ></div>
+              </div>
+              <p
+                className={`
+              ${selectedOption === option.id ? "text-black" : "text-[#AAAAAA]"}
+              font-general-sans text-p1-m font-medium md:text-p1-t lg:text-p1-d`}
+              >
+                {option.name}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default function Form() {
@@ -146,7 +190,7 @@ export default function Form() {
   const [currentForm, setCurrentForm] = useState<Form>(headers[2]);
   const [formData, setFormData] = useState({
     amount: "",
-    selectAmount: "",
+    selectAmount: "$50",
     firstName: "",
     lastName: "",
     email: "",
@@ -179,7 +223,7 @@ export default function Form() {
       case 2:
         return <ContactBilling {...formData} handleChange={handleChange} />;
       case 3:
-        return <PaymentDetails />;
+        return <PaymentDetails amount={formData.selectAmount} />;
       default:
         return (
           <DonationAmount
