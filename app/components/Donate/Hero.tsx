@@ -4,8 +4,7 @@ export default function Hero() {
       <div className="mx-auto max-w-[578px] text-center">
         <h1 className="mb-5 text-h1-m font-black md:text-h1-t lg:mb-8 lg:text-h1-d">Support our cause</h1>
         <p className="font-general-sans text-p1-m text-body-white sm:text-base md:text-p1-t lg:text-p1-d">
-          Lorem ipsum dolor sit amet consectetur adipssising elit, dolor sit amet, lorem ipsum dolor sit amet, dolor sit
-          amet, lorem ipsum dolor sit amet lorem ipsum.
+          Contribute to what God is doing in the lives of people around the world through your generosity.
         </p>
       </div>
     </header>
