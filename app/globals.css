@@ -448,3 +448,13 @@
     line-height: 42px;
   }
 }
+
+/* Beliefs */
+.beliefs ul {
+  list-style: disc;
+  padding: 0 20px;
+}
+
+.beliefs ul li:not(:last-child) {
+  margin-bottom: 20px;
+}

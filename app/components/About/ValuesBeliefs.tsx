@@ -16,7 +16,7 @@ export default function ValuesBeliefs({ beliefs }: { beliefs: PortableTextBlock[
               <span className="block text-h3-m font-bold md:text-h3-t lg:text-h3-d">Core Values</span>
             </h2>
 
-            <div className="grid grid-cols-3 gap-x-5 gap-y-3">
+            <div className="grid grid-cols-3 gap-x-5 gap-y-3 lg:grid-cols-1 lg:gap-y-5">
               {values.map((value, index) => (
                 <div className="flex items-center space-x-3" key={index}>
                   <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ export default function ValuesBeliefs({ beliefs }: { beliefs: PortableTextBlock[
               <span className="block text-h3-m font-bold md:text-h3-t lg:text-h3-d">Beliefs</span>
             </h2>
 
-            <div className="font-general-sans text-sm-m font-medium text-body sm:text-sm-t lg:text-p1-d">
+            <div className="beliefs font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
               <PortableText value={beliefs} />
             </div>
           </div>
