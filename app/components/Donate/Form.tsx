@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState } from "react";
+import { countries } from "@/app/data/countries";
 
 type FormProps = {
   isFinal: boolean;
@@ -151,7 +152,11 @@ function ContactBilling({
               onChange={(e) => handleChange(e)}
             >
               <option value="">Select country</option>
-              <option value="Reason3">Reason 3</option>
+              {countries.map((country, index) => (
+                <option key={index} value={country}>
+                  {country}
+                </option>
+              ))}
             </select>
           </div>
         </div>
