@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import ConfirmationModal from "./ConfirmationModal";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Form() {
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
@@ -18,18 +20,25 @@ export default function Form() {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    fetch("https://hos-contact.vercel.app/api/contact", {
-      method: "POST",
-      body: JSON.stringify(formData),
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        Origin: "https://hos-contact.vercel.app",
-      },
-    }).then((res) => {
-      if (!res.ok) throw new Error("Failed to send message");
-      return res.json();
-    });
+    try {
+      await fetch("https://hos-contact.vercel.app/api/contact", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      setShowConfirmationModal(true);
+      setFormData({
+        fullname: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch {
+      toast.error("Something went wrong. Please try again later.");
+    }
   };
 
   const handleModalClose = () => {
@@ -113,6 +122,8 @@ export default function Form() {
           </div>
         </div>
       </section>
+
+      <ToastContainer />
 
       <ConfirmationModal showConfirmationModal={showConfirmationModal} handleModalClose={handleModalClose} />
     </>
