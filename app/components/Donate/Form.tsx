@@ -310,7 +310,7 @@ export default function Form({ isFinal, handleIsFinal }: FormProps) {
   });
 
   const [selectedPaymentOption, setSelectedPaymentOption] = useState<number>(0);
-
+  const [filledForms, setFilledForms] = useState<number[]>([]);
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -326,6 +326,14 @@ export default function Form({ isFinal, handleIsFinal }: FormProps) {
   const handleNext = (id: number) => {
     setCurrentForm(headers[id]);
     // console.log(formData);
+
+    if (formData.amount !== "" || formData.selectAmount !== "") {
+      setFilledForms([...filledForms, 1]);
+    }
+
+    if (formData.firstName !== "") {
+      setFilledForms([...filledForms, 2]);
+    }
   };
 
   const switchForm = (form: number) => {
@@ -464,14 +472,20 @@ export default function Form({ isFinal, handleIsFinal }: FormProps) {
                 <div className="flex max-w-[300px] items-center space-x-3" key={header.id}>
                   <button
                     className={`
-              ${header.id === currentForm.id ? "bg-primary text-white" : "bg-[#F6F6F6] text-[#B7B7B7]"}
+              ${
+                filledForms.includes(header.id) || currentForm.id === header.id
+                  ? "bg-primary text-white"
+                  : "bg-[#F6F6F6] text-[#B7B7B7]"
+              }
               flex h-5 w-5 items-center justify-center rounded-full p-2  font-general-sans text-xs-m font-medium md:h-6 md:w-6 md:text-xs-t`}
                   >
                     {header.id}
                   </button>
                   <span
                     className={`
-              ${header.id === currentForm.id ? " text-black" : "text-[#B7B7B7]"}
+              ${filledForms.includes(header.id) ? " text-primary" : ""}
+              ${currentForm.id === header.id ? " text-black" : ""}
+              ${currentForm.id !== header.id && !filledForms.includes(header.id) ? " text-[#B7B7B7]" : ""}
               font-general-sans text-xs-m font-medium sm:text-xs-t md:text-p1-m lg:text-xs-d`}
                   >
                     {header.tag}
