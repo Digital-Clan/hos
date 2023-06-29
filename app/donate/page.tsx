@@ -1,4 +1,4 @@
-import { Hero, Form } from "../components/Donate";
+import DonateWrapper from "../components/Donate/DonateWrapper";
 
 export const metadata = {
   title: "Donate - Hour of Solution",
@@ -9,8 +9,7 @@ export const metadata = {
 export default function Donate() {
   return (
     <main>
-      <Hero />
-      <Form />
+      <DonateWrapper />
     </main>
   );
 }
