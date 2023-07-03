@@ -23,7 +23,7 @@ export default async function Media() {
           </div>
         </div>
       </header>
-      <VideoMessages videoMessages={videoMessages} />
+      {/* <VideoMessages videoMessages={videoMessages} /> */}
       <AudioMessages audioMessages={audioMessages} />
     </main>
   );

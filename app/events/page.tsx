@@ -11,6 +11,9 @@ export default async function Events() {
   const liveEvents = await getLiveEvents();
   const upcomingEvents = await getUpcomingEvents();
 
+  // console.log(liveEvents);
+  console.log(upcomingEvents);
+
   return (
     <main>
       <Hero />
