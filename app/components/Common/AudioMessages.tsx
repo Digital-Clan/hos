@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import moment from "moment";
 import { ShareIcon, ListenIcon, DownloadIcon, CalendarIcon } from "@/app/icons";
 import ShareDialog from "./ShareDialog";
@@ -31,57 +31,21 @@ const AudioMessageCard = ({
   };
 
   const audioRef = useRef<HTMLAudioElement>(null);
-  const [currentTime, setCurrentTime] = useState<number>(0);
-  const [currentSongIndex, setCurrentSongIndex] = useState<number | null>(null);
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
-  const playAudio = (id: number) => {
-    audioRef.current?.play();
-
-    if (currentSongIndex) {
-      setCurrentSongIndex(null);
-    } else {
-      setCurrentSongIndex(id);
+  const playAudio = (index: number) => {
+    if (audioRef.current) {
+      audioRef.current.play();
+      setIsPlaying(true);
     }
-
-    // setCurrentSongIndex(id);
-
-    // if (currentSongIndex === id && isPlaying) {
-    //   if (audioRef.current) {
-    //     audioRef.current.pause();
-    //     setIsPlaying(false);
-    //   }
-    // } else {
-    //   if (audioRef.current) {
-    //     setCurrentSongIndex(id);
-    //     audioRef.current.src = link;
-    //     audioRef.current.play();
-    //     setIsPlaying(true);
-    //     audioRef.current.currentTime = currentTime;
-    //   }
-    // }
   };
 
   const pauseAudio = () => {
-    audioRef.current?.pause();
-    setCurrentSongIndex(null);
-
-    // if (audioRef.current) {
-    //   setCurrentTime(audioRef.current.currentTime);
-    //   setIsPlaying(false);
-    // }
+    if (audioRef.current) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    }
   };
-
-  // const getPlaybackStatus = (id: number) => {
-  //   if (currentSongIndex === id) {
-  //     return isPlaying ? (
-  //       <button onClick={pauseAudio}>Pause</button>
-  //     ) : (
-  //       <button onClick={() => playAudio(id)}>Listen</button>
-  //     );
-  //   }
-  //   return <button onClick={() => playAudio(id)}>Listen</button>;
-  // };
 
   const handleShareMessage = (link: string, title: string, minister: string) => {
     handleOpenDialog({
@@ -90,10 +54,6 @@ const AudioMessageCard = ({
       minister,
     });
   };
-
-  useEffect(() => {
-    console.log(currentSongIndex);
-  }, [currentSongIndex]);
 
   return (
     <div className="flex w-full flex-col items-stretch md:h-[250px] md:flex-row-reverse lg:h-[326px]">
@@ -110,11 +70,11 @@ const AudioMessageCard = ({
       >
         <p className="text-h4-m font-bold md:text-h4-t lg:text-h4-d">{title}</p>
         <p className="font-general-sans text-sm-m font-medium text-body md:text-sm-t lg:text-h3-t">By: {minister}</p>
-        <div className="border border-red-500">
-          <audio ref={audioRef} className="w-full" controls>
-            <source src={link} type="audio/mpeg" />
-          </audio>
-        </div>
+        {/* <div className="border border-red-500"> */}
+        <audio ref={audioRef} className=" w-full" controls>
+          <source src={link} type="audio/mpeg" />
+        </audio>
+        {/* </div> */}
         <div className="flex items-center space-x-2">
           <CalendarIcon />
           <span className="font-general-sans text-sm-m font-medium text-black md:text-sm-t">
@@ -126,7 +86,7 @@ const AudioMessageCard = ({
             <ShareIcon />
             <span className="text-p1-m">Share</span>
           </button>
-          {currentSongIndex === index ? (
+          {isPlaying ? (
             <button onClick={pauseAudio} className="flex items-center space-x-2">
               <ListenIcon />
               <span className="text-p1-m">Pause</span>
