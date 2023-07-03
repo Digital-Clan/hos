@@ -21,10 +21,6 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
     }
   };
 
-  useEffect(() => {
-    checkLiveOrUpcoming();
-  }, []);
-
   return (
     <div className="flex w-full flex-col items-stretch md:flex-row-reverse">
       <div className="h-full w-full md:h-auto md:w-[55%]">
@@ -37,7 +33,7 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
       <div
         className={`p-5 
       ${checkLiveOrUpcoming() ? "bg-[#F2FDFF]" : "bg-light-red"}
-      rounded-bl-[24px] rounded-br-[24px] md:rounded-br-none md:rounded-tl-[24px] lg:w-[45%] lg:rounded-bl-[48px] lg:rounded-br-none lg:rounded-tl-[48px] lg:p-10`}
+      rounded-bl-[24px] rounded-br-[24px] md:w-[45%] md:rounded-br-none md:rounded-tl-[24px] lg:rounded-bl-[48px] lg:rounded-br-none lg:rounded-tl-[48px] lg:p-10`}
       >
         {checkLiveOrUpcoming() ? (
           <p className="font-general-sans text-xs-m font-medium uppercase text-primary md:text-xs-t lg:text-xs-d">
