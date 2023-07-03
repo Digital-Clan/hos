@@ -49,12 +49,6 @@ export const event = {
       validation: (Rule: Rule) => Rule.required(),
     },
     {
-      name: "live",
-      title: "Live",
-      type: "boolean",
-      validation: (Rule: Rule) => Rule.required(),
-    },
-    {
       name: "link",
       title: "Link",
       type: "url",
