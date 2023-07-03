@@ -1,5 +1,5 @@
 import { Hero, EventsList } from "../components/Events";
-import { getLiveEvents, getUpcomingEvents } from "@/sanity/lib/util";
+import { getEvents } from "@/sanity/lib/util";
 
 export const metadata = {
   title: "Events - Hour of Solution",
@@ -7,19 +7,15 @@ export const metadata = {
     "We are an inter-denominational group of God's people who believe in the saving power of Jesus Christ. Our mission is to raise people who are part of God's End Time Army.",
 };
 
-export const revalidate = 60;
+export const revalidate = 30;
 
 export default async function Events() {
-  const liveEvents = await getLiveEvents();
-  const upcomingEvents = await getUpcomingEvents();
-
-  // console.log(liveEvents);
-  // console.log(upcomingEvents);
+  const events = await getEvents();
 
   return (
     <main>
       <Hero />
-      <EventsList liveEvents={liveEvents} upcomingEvents={upcomingEvents} />
+      <EventsList events={events} />
     </main>
   );
 }
