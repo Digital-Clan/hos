@@ -7,12 +7,14 @@ export const metadata = {
     "We are an inter-denominational group of God's people who believe in the saving power of Jesus Christ. Our mission is to raise people who are part of God's End Time Army.",
 };
 
+export const revalidate = 60;
+
 export default async function Events() {
   const liveEvents = await getLiveEvents();
   const upcomingEvents = await getUpcomingEvents();
 
   // console.log(liveEvents);
-  console.log(upcomingEvents);
+  // console.log(upcomingEvents);
 
   return (
     <main>
