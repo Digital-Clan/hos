@@ -1,4 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
+import moment from "moment";
 import Link from "next/link";
 import { EventCard } from "../Common";
 import { ArrowIcon } from "@/app/icons";
@@ -9,6 +11,26 @@ type Props = {
 };
 
 export default function Events({ events }: Props) {
+  const filteredUpcomingEvents = events.filter((event) => {
+    const eventDate = moment(event.startTime);
+    const currentDate = moment();
+    const diff = eventDate.diff(currentDate, "seconds");
+    return diff > 0;
+  });
+
+  const filterLiveEvents = events.filter((event) => {
+    const eventStartTime = moment(event.startTime);
+    const eventEndTime = moment(event.endTime);
+    const currentDate = moment();
+
+    const diffStart = eventStartTime.diff(currentDate, "seconds");
+    const diffEnd = eventEndTime.diff(currentDate, "seconds");
+
+    return diffStart < 0 && diffEnd > 0;
+  });
+
+  const updatedEvents = [...filterLiveEvents, ...filteredUpcomingEvents];
+
   return (
     <section className="relative bg-[#FEFEFE] py-14">
       <div className="trumpet-left absolute -top-3 left-0 h-[160px] w-[80px] lg:-top-16 lg:h-[520px] lg:w-[260px]" />
@@ -20,10 +42,10 @@ export default function Events({ events }: Props) {
       </div>
 
       <div className="container-block relative z-10">
-        {events.length > 0 && (
+        {updatedEvents.length > 0 && (
           <>
             <div className="mt-10 flex w-full flex-col space-y-10 px-5 sm:mt-14 md:mt-20 lg:space-y-12">
-              {events.map((event, index) => (
+              {updatedEvents.map((event, index) => (
                 <EventCard key={index} {...event} />
               ))}
             </div>

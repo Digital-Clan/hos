@@ -1,6 +1,6 @@
 import { Hero, Mission, Events } from "@/app/components/Home";
 import { Memoriam } from "@/app/components/Common";
-import { getLiveEvents } from "@/sanity/lib/util";
+import { getEvents } from "@/sanity/lib/util";
 
 export const metadata = {
   title: "Hour of Solution - Home",
@@ -11,7 +11,7 @@ export const metadata = {
 export const revalidate = 30;
 
 export default async function Home() {
-  const liveEvents = await getLiveEvents();
+  const events = await getEvents();
 
   return (
     <main>
@@ -35,7 +35,7 @@ export default async function Home() {
           A life dedicated to the service of GOD.
         </h2>
       </Memoriam>
-      <Events events={liveEvents} />
+      <Events events={events} />
     </main>
   );
 }
