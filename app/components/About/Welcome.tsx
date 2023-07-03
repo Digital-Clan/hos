@@ -1,4 +1,7 @@
-export default function Welcome() {
+import { PortableText } from "@portabletext/react";
+import { PortableTextBlock } from "sanity";
+
+export default function Welcome({ message }: { message: PortableTextBlock[] }) {
   return (
     <section className="px-5 py-10 md:py-16">
       <div className="mx-auto max-w-3xl text-center">
@@ -6,10 +9,9 @@ export default function Welcome() {
           Welcome to Hour of Solution
         </h2>
 
-        <p className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
-          We are an inter-denominational group of God&apos;s people who believe in the saving power of Jesus Christ. Our
-          mission is to raise people who are part of God&apos;s End Time Army.
-        </p>
+        <div className="font-general-sans text-p1-m font-medium text-body md:text-p1-t lg:text-p1-d">
+          <PortableText value={message} />
+        </div>
       </div>
     </section>
   );

@@ -6,6 +6,13 @@ export const about = {
   type: "document",
   fields: [
     {
+      name: "welcomeMessage",
+      title: "Welcome Message",
+      type: "array",
+      of: [{ type: "block" }],
+      validation: (Rule: Rule) => Rule.required(),
+    },
+    {
       name: "beliefs",
       title: "Beliefs",
       type: "array",

@@ -16,7 +16,7 @@ export default async function About() {
   return (
     <main>
       <Hero />
-      <Welcome />
+      <Welcome message={about[0].welcomeMessage} />
       <ValuesBeliefs beliefs={about[0].beliefs} />
       <Mission />
       <Visioner visioner={about[0].ourVisioner} />

@@ -7,6 +7,7 @@ export type TeamMember = {
 };
 
 export type About = {
+  welcomeMessage: PortableTextBlock[];
   beliefs: PortableTextBlock[];
   ourVisioner: PortableTextBlock[];
 };

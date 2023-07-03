@@ -8,7 +8,7 @@ export async function getTeamMembers(): Promise<TeamMember[]> {
 }
 
 export async function getAbout(): Promise<About[]> {
-  return await client.fetch(`*[_type == "about"] | order(_createdAt desc) { beliefs, ourVisioner }`);
+  return await client.fetch(`*[_type == "about"] | order(_createdAt desc) { welcomeMessage, beliefs, ourVisioner }`);
 }
 
 export async function getEvents(): Promise<Event[]> {
