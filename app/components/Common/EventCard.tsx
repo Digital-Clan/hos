@@ -1,20 +1,30 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { useEffect } from "react";
 import moment from "moment";
 import { CalendarIcon, TimeIcon, LocationIcon, VideoIcon, PlusIcon } from "@/app/icons";
 import { Event } from "@/sanity/lib/types";
 
-export default function EventCard({
-  coverImage,
-  title,
-  sermon,
-  minister,
-  startTime,
-  endTime,
-  address,
-  live,
-  link,
-}: Event) {
+export default function EventCard({ coverImage, title, sermon, minister, startTime, endTime, address, link }: Event) {
+  const checkLiveOrUpcoming = () => {
+    const eventStartTime = moment(startTime);
+    const eventEndTime = moment(endTime);
+    const currentDate = moment();
+
+    const diffStart = eventStartTime.diff(currentDate, "seconds");
+    const diffEnd = eventEndTime.diff(currentDate, "seconds");
+
+    if (diffStart < 0 && diffEnd > 0) {
+      return true;
+    } else if (diffStart > 0) {
+      return false;
+    }
+  };
+
+  useEffect(() => {
+    checkLiveOrUpcoming();
+  }, []);
+
   return (
     <div className="flex w-full flex-col items-stretch md:flex-row-reverse">
       <div className="h-full w-full md:h-auto md:w-[55%]">
@@ -26,10 +36,10 @@ export default function EventCard({
       </div>
       <div
         className={`p-5 
-      ${live ? "bg-[#F2FDFF]" : "bg-light-red"}
+      ${checkLiveOrUpcoming() ? "bg-[#F2FDFF]" : "bg-light-red"}
       rounded-bl-[24px] rounded-br-[24px] md:rounded-br-none md:rounded-tl-[24px] lg:w-[45%] lg:rounded-bl-[48px] lg:rounded-br-none lg:rounded-tl-[48px] lg:p-10`}
       >
-        {live ? (
+        {checkLiveOrUpcoming() ? (
           <p className="font-general-sans text-xs-m font-medium uppercase text-primary md:text-xs-t lg:text-xs-d">
             Live Event
           </p>
@@ -65,7 +75,7 @@ export default function EventCard({
             </span>
           </div>
         </div>
-        {live ? (
+        {checkLiveOrUpcoming() ? (
           <a href={link} className="black-link link mt-7 inline-flex items-center space-x-3 lg:mt-10">
             <VideoIcon fillColor="#121212" />
             <span className="font-general-sans text-sm-m font-medium md:text-sm-t lg:text-xs-d">WATCH LIVE</span>
