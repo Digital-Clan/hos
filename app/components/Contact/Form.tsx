@@ -84,9 +84,13 @@ export default function Form() {
                     onChange={(e) => handleFormData(e)}
                   >
                     <option value="">Reason for contacting us</option>
-                    <option value="Reason1">Reason 1</option>
-                    <option value="Reason2">Reason 2</option>
-                    <option value="Reason3">Reason 3</option>
+                    <option value="I just accepted Christ and I need guidance">
+                      I just accepted Christ and I need guidance
+                    </option>
+                    <option value="I have a prayer request">I have a prayer request</option>
+                    <option value="I would like to share my Testimony">I would like to share my Testimony</option>
+                    <option value="I want to join Hour of Solution">I want to join Hour of Solution</option>
+                    <option value="I have a question">I have a question</option>
                   </select>
                 </div>
 
