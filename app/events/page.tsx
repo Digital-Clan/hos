@@ -1,5 +1,6 @@
 import { Hero, EventsList } from "../components/Events";
 import { getEvents } from "@/sanity/lib/util";
+// import Eve from "../components/Events/Eve";
 
 export const metadata = {
   title: "Events - Hour of Solution",
@@ -16,6 +17,7 @@ export default async function Events() {
     <main>
       <Hero />
       <EventsList events={events} />
+      {/* <Eve /> */}
     </main>
   );
 }
