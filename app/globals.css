@@ -359,6 +359,10 @@
   display: none !important;
 }
 
+.blogpost * {
+  color: #000 !important;
+}
+
 .blogpost p,
 .blogpost li,
 .biography p {
@@ -399,19 +403,19 @@
 .blogpost h2 {
   font-size: 18px;
   line-height: 24px;
-  color: #121212;
+  /* color: #121212; */
 }
 
 .blogpost h3 {
   font-size: 16px;
   line-height: 22px;
   /* color: #4c4c4c; */
-  color: #121212;
+  /* color: #121212; */
 }
 
 .blogpost em,
 .blogpost strong {
-  color: #121212;
+  /* color: #121212; */
 }
 
 @media (min-width: 768px) {

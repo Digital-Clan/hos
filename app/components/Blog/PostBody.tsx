@@ -16,7 +16,7 @@ export default function PostBody({ image, content }: Props) {
           <img src={image} alt="" className="w-full rounded-[32px] object-cover md:h-[460px] lg:h-[490px]" />
         </div>
 
-        <div className="blogpost">
+        <div className="blogpost text-red-500">
           <PortableText value={content} />
         </div>
       </div>
