@@ -13,7 +13,7 @@ export default function Visioner({ visioner }: { visioner: PortableTextBlock[] }
             alt="Pastor Paul Adewunmi"
           />
         </div>
-        <div>
+        <div className="text-center">
           <p className="mb-2 block font-general-sans text-xs-m font-medium uppercase text-secondary md:text-xs-t lg:mb-0 lg:text-xs-d lg:font-semibold">
             Our Visioner
           </p>
