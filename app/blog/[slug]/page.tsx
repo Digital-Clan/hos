@@ -9,12 +9,12 @@ type Props = {
   };
 };
 
-export async function generateMetadata({ params }: Props, parent?: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const slug = params.slug;
   const post = await getPostBySlug(slug);
 
   return {
-    title: post.title,
+    title: `${post.title} - Blog`,
     description: post.excerpt,
     openGraph: {
       images: [
