@@ -408,7 +408,7 @@ export default function Form({ isFinal, handleIsFinal }: FormProps) {
               </h2>
 
               <div className="mx-auto flex w-[117px] items-center justify-center">
-                <img src="/natwest.png" alt="natwest" className="" />
+                <img src="/images/natwest.png" alt="natwest" className="" />
               </div>
 
               <div className="flex flex-col space-y-1">
