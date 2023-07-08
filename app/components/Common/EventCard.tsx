@@ -7,6 +7,8 @@ import { Event } from "@/sanity/lib/types";
 import { useSession, useSupabaseClient, useSessionContext } from "@supabase/auth-helpers-react";
 import EventAlertModal from "./EventAlert";
 import LoginAlertModal from "./LoginAlert";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function EventCard({ coverImage, title, sermon, minister, startTime, endTime, address, link }: Event) {
   const session = useSession();
@@ -25,10 +27,7 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
       options: { scopes: "https://www.googleapis.com/auth/calendar" },
     });
 
-    if (error) {
-      console.log(error);
-      console.log("Error signing in with Google");
-    }
+    toast.success("Successfully logged in!");
   }
 
   async function createCalendarEvent() {
@@ -67,7 +66,10 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
 
   const handleSign = () => {
     setShowLoginModal(true);
-    console.log("sign");
+  };
+
+  const handleCloseLoginModal = () => {
+    setShowLoginModal(false);
   };
 
   const checkLiveOrUpcoming = () => {
@@ -84,6 +86,11 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
       return false;
     }
   };
+
+  // const handlesignout = () => {
+  // supabase.auth.signOut();
+  // toast.success("Signed out successfully");
+  // };
 
   return (
     <>
@@ -155,8 +162,14 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
         </div>
       </div>
 
+      <ToastContainer />
+
       <EventAlertModal showAlertModal={showAlertModal} handleModalClose={handleModalClose} />
-      <LoginAlertModal showAlertModal={showLoginModal} handleModalClose={googleSignIn} />
+      <LoginAlertModal
+        showAlertModal={showLoginModal}
+        handleModalClose={googleSignIn}
+        handleCloseLoginModal={handleCloseLoginModal}
+      />
     </>
   );
 }

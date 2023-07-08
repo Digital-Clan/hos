@@ -4,13 +4,14 @@ import { Fragment } from "react";
 interface Props {
   showAlertModal: boolean;
   handleModalClose: () => void;
+  handleCloseLoginModal: () => void;
 }
 
-export default function LoginAlertModal({ showAlertModal, handleModalClose }: Props) {
+export default function LoginAlertModal({ showAlertModal, handleModalClose, handleCloseLoginModal }: Props) {
   return (
     <>
       <Transition appear show={showAlertModal} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={handleModalClose}>
+        <Dialog as="div" className="relative z-10" onClose={handleCloseLoginModal}>
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
