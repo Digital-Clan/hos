@@ -7,8 +7,6 @@ import { Event } from "@/sanity/lib/types";
 import { useSession, useSupabaseClient, useSessionContext } from "@supabase/auth-helpers-react";
 import EventAlertModal from "./EventAlert";
 import LoginAlertModal from "./LoginAlert";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 export default function EventCard({ coverImage, title, sermon, minister, startTime, endTime, address, link }: Event) {
   const session = useSession();
@@ -85,10 +83,10 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
     }
   };
 
-  const handlesignout = () => {
-    supabase.auth.signOut();
-    toast.success("Signed out successfully");
-  };
+  // const handlesignout = () => {
+  //   supabase.auth.signOut();
+  //   toast.success("Signed out successfully");
+  // };
 
   return (
     <>
