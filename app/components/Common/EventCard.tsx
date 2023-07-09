@@ -85,10 +85,10 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
     }
   };
 
-  // const handlesignout = () => {
-  //   supabase.auth.signOut();
-  //   toast.success("Signed out successfully");
-  // };
+  const handlesignout = () => {
+    supabase.auth.signOut();
+    toast.success("Signed out successfully");
+  };
 
   return (
     <>
@@ -159,6 +159,8 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
           )}
         </div>
       </div>
+
+      <button onClick={handlesignout}>Sign out</button>
 
       <EventAlertModal showAlertModal={showAlertModal} handleModalClose={handleModalClose} />
       <LoginAlertModal
