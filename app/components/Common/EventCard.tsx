@@ -26,8 +26,6 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
       provider: "google",
       options: { scopes: "https://www.googleapis.com/auth/calendar" },
     });
-
-    toast.success("Successfully logged in!");
   }
 
   async function createCalendarEvent() {
@@ -88,8 +86,8 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
   };
 
   // const handlesignout = () => {
-  // supabase.auth.signOut();
-  // toast.success("Signed out successfully");
+  //   supabase.auth.signOut();
+  //   toast.success("Signed out successfully");
   // };
 
   return (
@@ -161,8 +159,6 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
           )}
         </div>
       </div>
-
-      <ToastContainer />
 
       <EventAlertModal showAlertModal={showAlertModal} handleModalClose={handleModalClose} />
       <LoginAlertModal
