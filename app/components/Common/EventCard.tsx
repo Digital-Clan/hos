@@ -160,7 +160,7 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
         </div>
       </div>
 
-      <button onClick={handlesignout}>Sign out</button>
+      {/* <button onClick={handlesignout}>Sign out</button> */}
 
       <EventAlertModal showAlertModal={showAlertModal} handleModalClose={handleModalClose} />
       <LoginAlertModal
