@@ -35,6 +35,12 @@ export async function getAudioMessages(): Promise<Audio[]> {
   );
 }
 
+export async function getMemorialAudioMessages(): Promise<Audio[]> {
+  return await client.fetch(
+    `*[_type == "audio"] | order(_createdAt desc) { title, link, "coverImage": coverImage.asset->url, date, minister }`
+  );
+}
+
 export async function getVideoMessages(): Promise<Video[]> {
   return await client.fetch(`*[_type == "video"] | order(_createdAt desc) { title, embedCode }`);
 }

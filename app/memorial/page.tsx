@@ -1,5 +1,5 @@
 import { Hero } from "../components/Memorial";
-import { getAudioMessages, getVideoMessages } from "@/sanity/lib/util";
+import { getVideoMessages, getMemorialAudioMessages } from "@/sanity/lib/util";
 import { Memoriam, AudioMessages, VideoMessages } from "../components/Common";
 
 export const metadata = {
@@ -11,7 +11,7 @@ export const metadata = {
 export const revalidate = 30;
 
 export default async function Memorial() {
-  const audioMessages = await getAudioMessages();
+  const audioMessages = await getMemorialAudioMessages();
   const videoMessages = await getVideoMessages();
 
   return (
