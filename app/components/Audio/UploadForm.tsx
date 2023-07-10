@@ -6,9 +6,9 @@ import { Loader2 } from "lucide-react";
 import copy from "copy-to-clipboard";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import LoadingModal from "../Common/LoadingModal";
 
 export default function UploadForm() {
-  const [uploadedAudio, setUploadedAudio] = useState("");
   const [selectedAudio, setSelectedAudio] = useState<any>(null);
   const [audioTitle, setAudioTitle] = useState("");
   const [audios, setAudios] = useState<any>([]);
@@ -17,15 +17,21 @@ export default function UploadForm() {
   const supabase = useSupabaseClient();
 
   async function handleSubmit() {
+    if (!selectedAudio) {
+      toast.error("Please select an audio file.");
+      return;
+    }
+
+    if (!audioTitle) {
+      toast.error("Please enter a title.");
+      return;
+    }
+
     setLoading(true);
     const id = audioTitle ? audioTitle.replace(/\s+/g, "-").toLowerCase() : uuidv4();
 
     const file = selectedAudio[0];
     await supabase.storage.from("audios").upload(`${id}.mp3`, file);
-
-    // get the url of the uploaded file
-    // const res = supabase.storage.from("audios").getPublicUrl(`${id}.mp3`);
-    // setUploadedAudio(res.data.publicUrl);
     toast.success("Audio uploaded!");
     setLoading(false);
     setAudioTitle("");
@@ -61,17 +67,14 @@ export default function UploadForm() {
     getAudios();
   }
 
-  const handleCopyAudioLink = () => {
-    copy(uploadedAudio);
-    toast.success("Copied to clipboard!");
-  };
-
   useEffect(() => {
     getAudios();
   }, []);
 
   return (
     <>
+      <LoadingModal deleteLoading={deleteLoading} />
+
       <div className="mx-auto max-w-4xl px-5 py-10 text-center lg:py-20">
         <h1 className="mb-5 text-h2-m font-black md:text-h2-t lg:mb-8 lg:text-h2-d">Upload Audio</h1>
         <form>
@@ -92,7 +95,7 @@ export default function UploadForm() {
               type="button"
               onClick={handleSubmit}
               className={`
-            ${loading ? "cursor-not-allowed" : "cursor-pointer"}
+            ${loading ? "cursor-not-allowed" : ""}
             button button--blue font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border border-primary px-16 py-3 font-bold outline-none lg:px-20`}
             >
               <span className="text-center font-general-sans text-bt-m font-medium text-white md:text-lg lg:text-bt-d2 lg:font-semibold">
@@ -130,13 +133,9 @@ export default function UploadForm() {
                       type="button"
                       className="button button--red font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border border-secondary px-5 py-2 font-bold outline-none lg:px-8"
                     >
-                      {deleteLoading ? (
-                        <Loader2 className="animate-spin" size={16} />
-                      ) : (
-                        <span className="text-center font-general-sans text-bt-m font-medium text-white md:text-lg lg:text-bt-d2 lg:font-semibold">
-                          Delete
-                        </span>
-                      )}
+                      <span className="text-center font-general-sans text-bt-m font-medium text-white md:text-lg lg:text-bt-d2 lg:font-semibold">
+                        Delete
+                      </span>
                     </button>
                   </div>
                 </div>
