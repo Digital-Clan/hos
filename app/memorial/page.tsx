@@ -14,6 +14,8 @@ export default async function Memorial() {
   const audioMessages = await getMemorialAudioMessages();
   const videoMessages = await getVideoMessages();
 
+  console.log(audioMessages);
+
   return (
     <main className="mx-auto max-w-screen-2xl">
       <Memoriam

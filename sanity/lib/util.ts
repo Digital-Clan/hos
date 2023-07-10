@@ -37,7 +37,7 @@ export async function getAudioMessages(): Promise<Audio[]> {
 
 export async function getMemorialAudioMessages(): Promise<Audio[]> {
   return await client.fetch(
-    `*[_type == "audio"] | order(_createdAt desc) { title, link, "coverImage": coverImage.asset->url, date, minister }`
+    `*[_type == "memorialAudio"] | order(_createdAt desc) { title, link, "coverImage": coverImage.asset->url, date, minister }`
   );
 }
 
