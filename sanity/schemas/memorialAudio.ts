@@ -1,7 +1,7 @@
 import { Rule } from "sanity";
 
 export const memorialAudio = {
-  name: "audio",
+  name: "memorialAudio",
   title: "Memorial Audio Message",
   type: "document",
   fields: [
