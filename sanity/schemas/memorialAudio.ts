@@ -1,6 +1,6 @@
 import { Rule } from "sanity";
 
-export const audio = {
+export const memorialAudio = {
   name: "audio",
   title: "Memorial Audio Message",
   type: "document",

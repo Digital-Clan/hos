@@ -8,7 +8,8 @@ import { post } from "./post";
 import { author } from "./author";
 import { pastorBio } from "./pastorBio";
 import { pastorInterview } from "./pastorInterview";
+import { memorialAudio } from "./memorialAudio";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [teamMember, about, event, audio, video, post, author, pastorBio, pastorInterview],
+  types: [teamMember, about, event, audio, video, post, author, pastorBio, pastorInterview, memorialAudio],
 };
