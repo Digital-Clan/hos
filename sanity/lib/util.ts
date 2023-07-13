@@ -41,6 +41,10 @@ export async function getMemorialAudioMessages(): Promise<Audio[]> {
   );
 }
 
+export async function getMemorialVideoMessages(): Promise<Video[]> {
+  return await client.fetch(`*[_type == "memorialVideo"] | order(_createdAt desc) { title, embedCode }`);
+}
+
 export async function getVideoMessages(): Promise<Video[]> {
   return await client.fetch(`*[_type == "video"] | order(_createdAt desc) { title, embedCode }`);
 }

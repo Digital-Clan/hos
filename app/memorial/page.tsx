@@ -1,5 +1,5 @@
 import { Hero } from "../components/Memorial";
-import { getVideoMessages, getMemorialAudioMessages } from "@/sanity/lib/util";
+import { getMemorialVideoMessages, getMemorialAudioMessages } from "@/sanity/lib/util";
 import { Memoriam, AudioMessages, VideoMessages } from "../components/Common";
 
 export const metadata = {
@@ -12,9 +12,7 @@ export const revalidate = 30;
 
 export default async function Memorial() {
   const audioMessages = await getMemorialAudioMessages();
-  const videoMessages = await getVideoMessages();
-
-  console.log(audioMessages);
+  const videoMessages = await getMemorialVideoMessages();
 
   return (
     <main className="mx-auto max-w-screen-2xl">
