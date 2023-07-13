@@ -15,7 +15,7 @@ export default function PostsGrid({ posts }: Props) {
           {posts.map(({ title, slug, coverImage, excerpt }, index) => (
             <Link
               href={`/blog/${slug}`}
-              className="cursor-pointer rounded-[32px] border border-[#D8D8D8] transition-transform duration-300 ease-in-out hover:-translate-y-2"
+              className="cursor-pointer overflow-hidden rounded-[32px] border border-[#D8D8D8] transition-transform duration-300 ease-in-out hover:-translate-y-2"
               key={index}
             >
               <img src={coverImage} alt={title} className="h-[240px] w-full sm:h-[350px] md:h-[240px]" />
