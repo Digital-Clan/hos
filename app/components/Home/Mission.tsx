@@ -18,7 +18,7 @@ export default function Mission() {
             Our mission is to raise people who are part of God&apos;s End Time Army.
           </p>
           <div>
-            <Link href="/">
+            <Link href="/about-us">
               <button className="button button--blue font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border border-primary px-16 py-3 font-bold outline-none lg:px-20 lg:py-4">
                 <span className="text-center font-general-sans text-bt-m font-medium text-white md:text-lg lg:text-bt-d2 lg:font-semibold">
                   Read More

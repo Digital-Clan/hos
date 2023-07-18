@@ -13,14 +13,14 @@ export default function Hero() {
           mission is to raise people who are part of God&apos;s End Time Army.
         </p>
         <div className="flex flex-col items-center justify-center space-y-5 sm:flex-row sm:items-center sm:space-x-5 sm:space-y-0 lg:space-x-10 xl:space-x-20">
-          <Link href="/">
+          <Link href="/about-us">
             <button className="button button--white font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border-none px-16 py-3 font-bold outline-none lg:py-4">
               <span className="text-center font-general-sans text-bt-m font-medium text-black md:text-lg lg:text-bt-d2 lg:font-semibold">
                 Connect with Us
               </span>
             </button>
           </Link>
-          <Link href="/" className="">
+          <Link href="https://youtube.com/@hourofsolutionuk" target="_blank" className="">
             <button className="button button--red font-aeonik relative m-0 inline-block overflow-hidden rounded-btn border-none px-16 py-3 font-bold outline-none lg:py-4">
               <span className="!flex items-center justify-center space-x-3">
                 <VideoIcon />
