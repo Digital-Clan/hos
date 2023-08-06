@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { countries } from "@/app/data/countries";
 
 type FormProps = {
@@ -71,7 +71,30 @@ function Input({ name, value, handleChange, placeholder }: Input) {
 }
 
 function DonationAmount({ amount, selectedAmount, handleSelectAmount, handleChange, handleNext }: DonationAmount) {
+  const [isDisabled, setIsDisabled] = useState(true);
   const amounts = ["£20", "£50", "£100"];
+
+  const extractNumber = () => {
+    const num = amount.match(/\d+/g);
+    if (num) {
+      const convertedAmount = Number(num[0]);
+      if (convertedAmount > 0) {
+        setIsDisabled(false);
+      } else {
+        setIsDisabled(true);
+      }
+    } else {
+      setIsDisabled(true);
+    }
+  };
+
+  useEffect(() => {
+    extractNumber();
+
+    if (selectedAmount) {
+      setIsDisabled(false);
+    }
+  }, [amount, selectedAmount]);
 
   return (
     <div className="md:mx-auto md:max-w-xl lg:max-w-3xl">
@@ -99,11 +122,12 @@ function DonationAmount({ amount, selectedAmount, handleSelectAmount, handleChan
 
         <div className="w-full md:flex md:justify-end">
           <button
+            disabled={isDisabled}
             onClick={() => handleNext(1)}
             type="button"
             className={`
               text-para-1x w-full rounded-[64px] px-8 py-4 text-center text-white md:w-auto md:px-14 md:py-3 md:text-lg lg:px-16 lg:py-4
-              ${selectedAmount || amount ? "bg-primary" : "bg-primary opacity-50"}
+              ${isDisabled ? "cursor-not-allowed bg-primary opacity-50" : "bg-primary"}
               `}
           >
             Next
@@ -137,7 +161,6 @@ function ContactBilling({
         <Input name="address" value={address} handleChange={handleChange} placeholder="Address" />
         <div className="flex flex-col space-y-4 md:flex-row md:justify-between md:space-x-3 md:space-y-0">
           <Input name="city" value={city} handleChange={handleChange} placeholder="City" />
-          <Input name="state" value={state} handleChange={handleChange} placeholder="State" />
         </div>
         <div className="flex flex-col space-y-4 md:flex-row md:items-center md:justify-between md:space-x-3 md:space-y-0">
           <Input name="zipCode" value={zipCode} handleChange={handleChange} placeholder="ZIP/Postal code" />{" "}
@@ -164,15 +187,12 @@ function ContactBilling({
 
       <div className="w-full md:flex md:justify-end">
         <button
+          disabled={!email}
           type="button"
           onClick={() => handleNext(2)}
           className={`
               text-para-1x w-full rounded-[64px] px-8 py-4 text-center text-white md:w-auto md:px-14 md:py-3 md:text-lg lg:px-16 lg:py-4
-              ${
-                firstName && lastName && email && address && city && state && zipCode && country
-                  ? "bg-primary"
-                  : "bg-primary opacity-50"
-              }
+              ${email ? "bg-primary" : "cursor-not-allowed bg-primary opacity-50"}
               `}
         >
           Next
@@ -459,12 +479,9 @@ export default function Form({ isFinal, handleIsFinal }: FormProps) {
             )}
 
             <div className="md:mx-auto md:max-w-xl lg:max-w-3xl">
-              <h2 className="mb-5 text-h3-m font-bold md:text-h3-t lg:mb-2 lg:text-center lg:text-h3-d lg:font-medium">
+              <h2 className="mb-7 text-h3-m font-bold md:text-h3-t lg:mb-5 lg:text-center lg:text-h3-d lg:font-medium">
                 {currentForm.header}
               </h2>
-              <p className="hidden text-center font-normal text-[#B5B5B5] lg:mb-10 lg:block lg:text-p1-d">
-                Lorem ipsum dolor sit amet, consectetur elit.
-              </p>
             </div>
 
             <div className="mb-8 flex flex-col space-y-4 md:flex-row md:items-center md:justify-center md:space-x-7 md:space-y-0">
