@@ -2,9 +2,11 @@
 import { useState } from "react";
 import ConfirmationModal from "./ConfirmationModal";
 import { ToastContainer, toast } from "react-toastify";
+import { Loader2 } from "lucide-react";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Form() {
+  const [loading, setLoading] = useState(false);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
   const [formData, setFormData] = useState({
     fullname: "",
@@ -19,6 +21,7 @@ export default function Form() {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       await fetch("https://hos-contact.vercel.app/api/contact", {
@@ -39,6 +42,8 @@ export default function Form() {
     } catch {
       toast.error("Something went wrong. Please try again later.");
     }
+
+    setLoading(false);
   };
 
   const handleModalClose = () => {
@@ -109,17 +114,20 @@ export default function Form() {
 
               <div className="mt-5 md:mt-8 md:flex md:justify-end">
                 <button
+                  disabled={
+                    !formData.fullname || !formData.email || !formData.subject || !formData.message ? true : false
+                  }
                   type="submit"
                   className={`
               text-para-1x w-full rounded-[64px] px-8 py-4 text-center text-white md:w-auto md:px-14 md:text-lg lg:px-16
               ${
                 formData.fullname && formData.email && formData.subject && formData.message
                   ? "bg-primary"
-                  : "bg-primary opacity-50"
+                  : "cursor-not-allowed bg-primary opacity-50"
               }
               `}
                 >
-                  Submit
+                  {loading ? <Loader2 className="ml-2 inline-block animate-spin" size={30} /> : "Submit"}
                 </button>
               </div>
             </form>

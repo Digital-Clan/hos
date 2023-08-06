@@ -66,13 +66,10 @@ export default function ConfirmationModal({ showConfirmationModal, handleModalCl
                   </div>
 
                   <div className="mt-3 text-center">
-                    <p className="text-h3 md:text-xl">Message submitted!</p>
-                    <p className="mb-7 mt-2 text-sm leading-[21px] text-[#B5B5B5] md:text-base">
-                      Lorem ipsum dolor sit amet consectetur.
-                    </p>
+                    <p className="text-h3 mb-7 md:text-xl">Message submitted!</p>
                     <button
                       onClick={handleModalClose}
-                      className="w-full rounded-[64px] bg-[#E6E9FF] px-8 py-3 text-center text-para-1x text-primary md:w-auto md:px-14 md:text-lg lg:px-16"
+                      className="text-para-1x w-full rounded-[64px] bg-[#E6E9FF] px-8 py-3 text-center text-primary md:w-auto md:px-14 md:text-lg lg:px-16"
                     >
                       Close
                     </button>
