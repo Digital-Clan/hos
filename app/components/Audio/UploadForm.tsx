@@ -106,7 +106,7 @@ export default function UploadForm() {
         </form>
 
         <div className="mt-10">
-          {audios.length > 0 ? (
+          {audios?.length > 0 ? (
             <div className="flex flex-col space-y-8 md:space-y-4">
               {audios.map((audio: any) => (
                 <div
