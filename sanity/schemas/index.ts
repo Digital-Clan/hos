@@ -10,6 +10,7 @@ import { pastorBio } from "./pastorBio";
 import { pastorInterview } from "./pastorInterview";
 import { memorialAudio } from "./memorialAudio";
 import { memorialVideo } from "./memorialVideo";
+import { comments } from "./comments";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -24,5 +25,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     pastorInterview,
     memorialAudio,
     memorialVideo,
+    comments,
   ],
 };

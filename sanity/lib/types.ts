@@ -38,6 +38,7 @@ export type Video = {
 };
 
 export type Post = {
+  _id: string;
   title: string;
   slug: string;
   content: PortableTextBlock[];
