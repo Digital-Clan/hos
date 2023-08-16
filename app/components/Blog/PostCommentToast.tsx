@@ -12,7 +12,7 @@ export default function PostCommentToast({ showToast, isSuccess, closeToast }: P
     if (showToast) {
       setTimeout(() => {
         closeToast();
-      }, 3000);
+      }, 2000);
     }
   }, []);
 

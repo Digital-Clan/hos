@@ -2,36 +2,15 @@
 import { useState } from "react";
 import { UserIcon } from "@/app/icons";
 import { Loader2 } from "lucide-react";
+import moment from "moment";
 import PostCommentToast from "./PostCommentToast";
+import type { Comment } from "@/sanity/lib/types";
 
-interface Comment {
-  id: number;
-  name: string;
-  comment: string;
-  date: string;
-  time: string;
-}
-
-export default function PostComments({ postId }: { postId: string }) {
+export default function PostComments({ postId, comments }: { postId: string; comments: Comment[] }) {
   const [isLoading, setIsLoading] = useState(false);
   const [isCommentSuccess, setIsCommentSuccess] = useState(false);
-  const [showToast, setShowToast] = useState(true);
-  const [comments, setComments] = useState<Comment[]>([
-    {
-      id: 1,
-      name: "Ademola Adeniyi",
-      comment: "This is a wonderful piece. Thank you for this!",
-      date: "May 18, 2023",
-      time: "10:43PM",
-    },
-    {
-      id: 2,
-      name: "Abdulsamad Ayoade",
-      comment: "The best blog post I've read in a while. Thanks for this!",
-      date: "May 22, 2023",
-      time: "02:23PM",
-    },
-  ]);
+  const [showToast, setShowToast] = useState(false);
+  const [allComments, setAllComments] = useState<Comment[]>([...comments]);
 
   const [formData, setFormData] = useState({
     fullname: "",
@@ -59,20 +38,27 @@ export default function PostComments({ postId }: { postId: string }) {
         comment: formData.comment,
       }),
     })
-      .then((res) => setIsCommentSuccess(true))
-      .catch((err) => setIsCommentSuccess(false))
-      .finally(() => setIsLoading(false));
+      .then((res) => {
+        setIsCommentSuccess(true);
+      })
+      .catch((err) => {
+        setIsCommentSuccess(false);
+      })
+      .finally(() => {
+        setIsLoading(false);
+        setShowToast(true);
+      });
 
-    // setComments([
-    //   ...comments,
-    //   {
-    //     id: comments.length + 1,
-    //     name: formData.fullname,
-    //     comment: formData.comment,
-    //     date: "May 22, 2023",
-    //     time: "02:23PM",
-    //   },
-    // ]);
+    setAllComments((prev) => [
+      {
+        comment: formData.comment,
+        name: formData.fullname,
+        email: formData.email,
+        _createdAt: moment().format("YYYY-MM-DDTHH:mm:ss[Z]"),
+        _id: String(prev.length + 1),
+      },
+      ...prev,
+    ]);
 
     setFormData({
       fullname: "",
@@ -90,11 +76,13 @@ export default function PostComments({ postId }: { postId: string }) {
       <section className="px-5 py-10 lg:py-16">
         <div className="mx-auto max-w-[1037px]">
           <div className="border-t-2 border-[#EAEAEA] pt-5 lg:border-b-2 lg:py-10">
-            <h2 className="mb-5 text-h3-m font-bold text-help md:text-h3-t lg:text-h3-d lg:font-medium">Comments</h2>
+            <h2 className="mb-5 text-h3-m font-bold text-help md:text-h3-t lg:text-h3-d lg:font-medium">
+              Comments ({allComments.length})
+            </h2>
             {comments.length > 0 ? (
               <div className="flex flex-col space-y-10">
-                {comments.map(({ id, name, comment, date, time }) => (
-                  <div className="flex items-start space-x-3" key={id}>
+                {allComments.map(({ _id, name, comment, _createdAt }) => (
+                  <div className="flex items-start space-x-3" key={_id}>
                     <div>
                       <UserIcon />
                     </div>
@@ -102,13 +90,15 @@ export default function PostComments({ postId }: { postId: string }) {
                       <h3 className="mb-2 text-h4-m font-bold text-black md:text-h4-t lg:text-h4-d">{name}</h3>
                       <p className="mb-2 text-sm text-[#8F8F8F] md:text-sm-t lg:text-sm-d">{comment}</p>
                       <p className="flex items-center space-x-2 text-xs-m text-[#8F8F8F] md:text-xs-t lg:text-xs-d">
-                        <span>{date}</span>
+                        <span>
+                          <span>{moment(_createdAt).format("MMMM DD, YYYY")}</span>
+                        </span>
                         <span>
                           <svg width="8" height="9" viewBox="0 0 8 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="4" cy="4.5" r="4" fill="#D9D9D9" />
                           </svg>
                         </span>
-                        <span>{time}</span>
+                        <span>{moment(_createdAt).format("hh:mm A")}</span>
                       </p>
                     </div>
                   </div>
@@ -116,7 +106,7 @@ export default function PostComments({ postId }: { postId: string }) {
               </div>
             ) : (
               <p className="font-general-sans text-p1-m font-medium text-[#B2B2B2] md:text-p1-t lg:text-p1-d">
-                This blog has no comment yet..
+                This post has no comment yet..
               </p>
             )}
           </div>

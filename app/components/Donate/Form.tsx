@@ -345,7 +345,6 @@ export default function Form({ isFinal, handleIsFinal }: FormProps) {
 
   const handleNext = (id: number) => {
     setCurrentForm(headers[id]);
-    // console.log(formData);
 
     if (formData.amount !== "" || formData.selectAmount !== "") {
       setFilledForms([...filledForms, 1]);

@@ -39,7 +39,7 @@ export default async function BlogPost({ params }: Props) {
       <PostHeader title={post.title} date={post.date} author={post.author} />
       <PostBody image={post.coverImage} content={post.content} />
       <PostShare title={post.title} />
-      <PostComments postId={post._id} />
+      <PostComments postId={post._id} comments={post.comments} />
     </main>
   );
 }

@@ -57,7 +57,13 @@ export async function getPosts(): Promise<Post[]> {
 
 export async function getPostBySlug(slug: string): Promise<Post> {
   return await client.fetch(
-    `*[_type == "post" && slug.current == $slug][0]{ _id, title, "slug": slug.current, content, "coverImage": coverImage.asset->url, date, "author": author->name }`,
+    `
+    *[_type == "post" && slug.current == $slug][0]
+    { _id, title, "slug": slug.current, content, "coverImage": coverImage.asset->url, date, "author": author->name,
+    "comments": *[_type == "comment" && post._ref == ^._id] | order(_createdAt desc) { _id, name, email, comment, _createdAt }
+  }
+    
+    `,
     { slug }
   );
 }

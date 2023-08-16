@@ -1,5 +1,13 @@
 import { PortableTextBlock } from "sanity";
 
+export type Comment = {
+  _id: string;
+  name: string;
+  email: string;
+  comment: string;
+  _createdAt: string;
+};
+
 export type TeamMember = {
   name: string;
   bio: PortableTextBlock[];
@@ -46,6 +54,7 @@ export type Post = {
   coverImage: string;
   date: string;
   author: string;
+  comments: Comment[];
 };
 
 export type PastorBio = {

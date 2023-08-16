@@ -1,14 +1,6 @@
 import { NextResponse } from "next/server";
 import { previewClient } from "@/sanity/lib/client";
 
-export async function GET() {
-  const userData = {
-    name: "John Doe",
-  };
-
-  return NextResponse.json({ data: userData });
-}
-
 export async function POST(request: Request) {
   try {
     const { id, name, email, comment } = await request.json();
@@ -26,7 +18,6 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: "This Worked", success: true });
   } catch (err) {
-    console.log(err);
     return NextResponse.json({ message: err, success: false });
   }
 }
