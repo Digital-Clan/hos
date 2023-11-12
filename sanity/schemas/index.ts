@@ -11,12 +11,14 @@ import { pastorInterview } from "./pastorInterview";
 import { memorialAudio } from "./memorialAudio";
 import { memorialVideo } from "./memorialVideo";
 import { comments } from "./comments";
+import { audioUploads } from "./audio-uploads";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
     teamMember,
     about,
     event,
+    audioUploads,
     audio,
     video,
     post,
