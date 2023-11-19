@@ -6,11 +6,9 @@ import { SessionContextProvider } from "@supabase/auth-helpers-react";
 import "./globals.css";
 
 const supabase = createClient(
-  "https://hsqdaxqgjvpftvisvazo.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhzcWRheHFnanZwZnR2aXN2YXpvIiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODg3NzkyNzksImV4cCI6MjAwNDM1NTI3OX0.VcYO3Yvt2XhSffNmwRSiDusjYcRziaCVXE2JXyFm-uI"
+  "https://uwrsatwdjtovvfukhzmg.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV3cnNhdHdkanRvdnZmdWtoem1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA0MTY1ODIsImV4cCI6MjAxNTk5MjU4Mn0.RgPEFIRas4NBPYN-1lJvJtb_nPd3n5GWGK4mxH3iDZg"
 );
-
-// const CDNURL = "https://hsqdaxqgjvpftvisvazo.supabase.in/storage/v1/object/public/videos";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -68,7 +68,7 @@ export default function EventAlertModal({ showAlertModal, handleModalClose }: Pr
                   <div className="mt-3 text-center">
                     <p className="text-h3 md:text-xl">Event Added!</p>
                     <p className="mb-7 mt-2 text-sm leading-[21px] text-[#B5B5B5] md:text-base">
-                      Your event has been added to your calendar.
+                      The event has been added to your calendar.
                     </p>
                     <button
                       onClick={handleModalClose}
