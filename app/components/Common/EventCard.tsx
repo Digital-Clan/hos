@@ -91,11 +91,11 @@ export default function EventCard({ coverImage, title, sermon, minister, startTi
   return (
     <>
       <div className="flex w-full flex-col items-stretch md:flex-row-reverse">
-        <div className="h-full w-full md:h-auto md:w-[55%]">
+        <div className="h-full w-full md:h-auto md:w-[55%] lg:h-[500px]">
           <img
             src={coverImage}
             alt={title}
-            className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-br-[48px] md:rounded-tl-none md:rounded-tr-[48px] md:object-cover lg:rounded-br-[48px] lg:rounded-tr-[48px] xl:h-[450px]"
+            className="h-full w-full rounded-tl-[32px] rounded-tr-[32px] object-fill md:rounded-br-[48px] md:rounded-tl-none md:rounded-tr-[48px] lg:h-full lg:rounded-br-[48px] lg:rounded-tr-[48px]"
           />
         </div>
         <div
